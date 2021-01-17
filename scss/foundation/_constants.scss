@@ -1,0 +1,128 @@
+$basic_color:#333333;
+$font: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+$color_post:#E6636C;
+$color_letter:#58B3E5;
+$light_gray:#efefef;
+$gray:#666666;
+$white:#ffffff;
+$border_black: #eeeeee;
+
+//フォントサイズ
+$font_ttl: 24px;
+$font_l: 20px;
+$font_m: 18px; 
+$font_n: 16px;
+$font_sp_m: 14px;
+$font_sp_normal: 12px;
+$font_ss: 10px;
+
+//画面幅
+$sp_wide:640px;
+$sp_min:320px;
+
+// レイアウト幅
+$layout_width_inner: 320px;
+
+// ブレークポイント
+$breakpoints: (
+  "sp-min": "screen and (max-width: #{$layout_width_inner})",
+  "sp-wide": "screen and (min-width: #{$layout_width_inner + 1px})",
+);
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// リンクボタン
+@mixin link_btn_white($background:#fff,$font-color:#E6636C){
+  width: 100%;
+  max-width: 600px;
+  background: $background;
+  color: $font-color;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 12px 10px;
+  border: solid 2px $color_post;
+  border-radius: 30px;
+  margin-left:auto;
+  margin-right: auto;
+}
+@mixin link_btn_red($background:#E6636C,$font-color:#fff){
+  width: 100%;
+  max-width: 600px;
+  background: $background;
+  color: $font-color;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 12px 10px;
+  border: solid 2px $color_post;
+  border-radius: 30px;
+  margin-left:auto;
+  margin-right: auto;
+}
+// display
+@mixin d_block{
+  display: block;
+}
+@mixin d_inline_block{
+  display: inline-block;
+}
+@mixin d_inline{
+  display: inline;
+}
+
+.fontawesome_icon{
+  position: relative;
+}
+.fontawesome_icon::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+}
+
+.twitter_icon::before{
+  content:'\f099'; 
+  font-size: 16px;
+}
+.pen_icon::before{
+  content:'\f099'; 
+  font-size: 12px;   
+}
+.post_link_txt_icon::before{
+  content: '\f105';
+  font-size: 12px;
+  left: auto;
+  right: 0;
+}
+.link_icon_red::before{
+  content: '\f061';
+  font-size: 14px;
+  left: auto;
+  right: 0;
+}
+.border_solid{
+  border-bottom: dashed 1px $gray;
+}
+
+@mixin before($width, $height, $position,$background){
+  content: '';
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: $background;
+  background-size: contain;
+  position: $position;
+}
+@mixin after($width, $height, $position){
+  content: '';
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: $background;
+  background-size: contain;
+  position: $position;
+}

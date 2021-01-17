@@ -1,0 +1,46 @@
+.l_header{
+    width: 100%;
+    background:$white;
+    border-bottom: solid 1px $border_black;
+    padding-top:12px;
+    padding-bottom: 12px;
+}
+.l_inner{
+    max-width: $sp_wide;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.l_inner_wide{
+    max-width: $sp_wide;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+// ポストレイアウト
+$post_flex_left:80px;
+.l_post{
+    min-height:120px;
+    .l_post_link{
+        @include d_block;
+        .l_post_top{
+        padding-bottom: 16px;
+        align-items: center;
+        }
+    .l_post_left_blc{
+        flex-basis:　$post_flex_left;
+        text-align: center;
+        padding:0 8px;
+    }
+    .l_post_right_blc{
+        flex-basis: calc(100% - #{$post_flex_left});
+    }
+}
+}
+
+
+// フッター
+.footer_list_item{
+    padding: 0 8px;
+}

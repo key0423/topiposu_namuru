@@ -1,0 +1,40 @@
+.u_header_right{
+    max-width: 120px;
+    flex-basis: 15%;
+}
+.u_header_right{
+    flex-basis: 10%;
+.u_header_right_li{
+    width: 50%;
+    max-width: 42px;
+    .btn_link{
+        padding: 8px;
+    }
+}
+}
+// ログイン後トップ・ポストの背景調整
+$u_bg_up:130px;
+.u_bg_next_up{
+    padding-bottom: $u_bg_up;
+}
+.u_bg_up{
+    margin-top: -#{$u_bg_up};
+    .u_bg_patern_content{
+        margin-top: -4px;
+    }
+}
+
+.u_bg_patern_content{
+    padding-bottom: 40px;
+    border-bottom: solid 7px $color_post;
+}
+.u_post{
+    margin-bottom: 24px;
+}
+
+.u_footer_list{
+    padding: 14px 0 10px;
+    .footer_list_item{
+        margin:0 8px 10px; 
+    }
+}

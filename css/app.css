@@ -1,3 +1,563 @@
-p {
+@charset "UTF-8";
+/*==============================
+foundation
+==============================*/
+.fontawesome_icon {
+  position: relative;
+}
+
+.fontawesome_icon::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+}
+
+.twitter_icon::before {
+  content: '\f099';
+  font-size: 16px;
+}
+
+.pen_icon::before {
+  content: '\f099';
+  font-size: 12px;
+}
+
+.post_link_txt_icon::before {
+  content: '\f105';
+  font-size: 12px;
+  left: auto;
+  right: 0;
+}
+
+.link_icon_red::before {
+  content: '\f061';
+  font-size: 14px;
+  left: auto;
+  right: 0;
+}
+
+.border_solid {
+  border-bottom: dashed 1px #666666;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+body {
+  line-height: 1;
+}
+
+img {
+  width: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  color: #333333;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", 游ゴシック体, "Yu Gothic", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+h2, h3, h4, h5, h6, p, a, table {
+  color: #333333;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex, .flex_center, .flex_side {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex_center {
+  justify-content: center;
+}
+
+.flex_side {
+  justify-content: space-between;
+}
+
+/*==============================
+背景設定(レイアウト)
+==============================*/
+/*----------背景設定----------*/
+.bg_white {
+  background: #ffffff;
+}
+
+.bg_blue {
+  background: url(../img/bg_blue.png);
+}
+
+.bg_gray {
+  background: #efefef;
+}
+
+.bg_patern_top {
+  background: url(../img/bg_patern_ttl.png) no-repeat;
+  background-position: top center;
+  background-size: 100%;
+}
+
+.bg_patern_ttl {
+  position: relative;
+  height: 130px;
+}
+
+.bg_patern {
+  background: url(../img/bg_patern.png) repeat-y;
+  background-size: contain;
+}
+
+/*==============================
+レイアウト内の要素
+==============================*/
+/*----------l_account_sec----------*/
+.l_account_sec {
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.account_box {
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.account_name {
+  color: #333333;
+  font-size: 20px;
+  text-align: center;
+}
+
+.account_id {
+  text-align: center;
+}
+
+.account_img_flame {
+  max-width: 80px;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: solid 1px #efefef;
+}
+
+.account_img_flame .account_img {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.account_icon {
+  padding-left: 1em;
+  padding-bottom: 4px;
+  color: #666666;
+}
+
+.account_link_box .account_link {
+  text-align: right;
+}
+
+/*----------おたより・ポストcvrボタン----------*/
+.cvr_item {
+  flex-basis: 50%;
+}
+
+.cvr_item .cvr_btn {
+  display: block;
+  padding: 16px 16px 16px calc(70px + 2%);
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff;
+}
+
+.cvr_item .cvr_btn::before {
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+}
+
+.cvr_item .cvr_btn::after {
+  content: '\f061';
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cvr_post_btn {
+  background: #E6636C;
+}
+
+.cvr_post_btn .cvr_btn {
+  color: #E6636C;
+}
+
+.cvr_post_btn .cvr_btn::before {
+  content: '';
+  display: inline-block;
+  width: 64px;
+  height: 40px;
+  background: url("../img/cvr_btn01.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.cvr_letter_btn {
+  background: #58B3E5;
+}
+
+.cvr_letter_btn .cvr_btn {
+  color: #58B3E5;
+}
+
+.cvr_letter_btn .cvr_btn::before {
+  content: '';
+  display: inline-block;
+  width: 64px;
+  height: 40px;
+  background: url("../img/cvr_btn02.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+/*----------bg_patern(YourPost調整)----------*/
+.bg_patern_ttl .sec_ttl {
+  z-index: 20;
+  text-align: center;
+  font-size: 16px;
+  position: relative;
+}
+
+.bg_patern_ttl .ttl_en {
+  display: block;
+  text-align: center;
+  max-width: 16%;
+  padding-top: 28px;
+  margin: 0 auto;
+}
+
+.bg_patern_ttl .ttl_jp {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.post_blc {
+  padding: 0 4%;
+}
+
+.post_link {
+  color: #ffffff;
+  background: #E6636C;
+  padding: 16px;
+  border-radius: 12px 12px 0 0;
+}
+
+.post_link a {
+  color: #ffffff;
+}
+
+.post_info {
+  font-size: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.post_info_red {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 10px;
+  background: #ffffff;
+  color: #E6636C;
+  border-radius: 10px;
+}
+
+.post_info_red .info_no {
+  font-size: 10px;
+}
+
+.post_ttl {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  padding-bottom: 8px;
+  border-bottom: dotted 2px #efefef;
+}
+
+.post_txt {
+  color: #ffffff;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  line-height: 1.6;
+}
+
+.post_setting {
+  text-align: right;
+  padding-bottom: 8px;
+}
+
+.post_setting .post_setting_link {
+  font-size: 10px;
+}
+
+.post_link_txt {
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 12px;
+  border-top: solid 2px #ffffff;
+}
+
+.post_link_txt .post_link_txt_icon {
+  padding-right: 16px;
+}
+
+/*==============================
+パーツ関係(ボタン・アイコン)
+==============================*/
+.link_btn_red {
+  width: 100%;
+  max-width: 600px;
+  background: #E6636C;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 12px 10px;
+  border: solid 2px #E6636C;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.link_btn_white {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  color: #E6636C;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 12px 10px;
+  border: solid 2px #E6636C;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.round_link_btn.btn01 {
+  position: fixed;
+  right: 2%;
+  bottom: 72px;
+}
+
+.round_link_btn.btn02 {
+  position: fixed;
+  right: 2%;
+  bottom: 16px;
+}
+
+.round_link_btn .link {
+  display: block;
+  width: 100%;
+  max-width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  height: auto;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/*==============================
+layout
+==============================*/
+.l_header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: solid 1px #eeeeee;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.l_inner {
+  max-width: 640px;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l_inner_wide {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l_post {
+  min-height: 120px;
+}
+
+.l_post .l_post_link {
+  display: block;
+}
+
+.l_post .l_post_link .l_post_top {
+  padding-bottom: 16px;
+  align-items: center;
+}
+
+.l_post .l_post_link .l_post_left_blc {
+  flex-basis: 　 80px;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.l_post .l_post_link .l_post_right_blc {
+  flex-basis: calc(100% - 80px);
+}
+
+.footer_list_item {
+  padding: 0 8px;
+}
+
+/*==============================
+object
+==============================*/
+/*----------component----------*/
+/*----------project----------*/
+/*----------utility----------*/
+.u_header_right {
+  max-width: 120px;
+  flex-basis: 15%;
+}
+
+.u_header_right {
+  flex-basis: 10%;
+}
+
+.u_header_right .u_header_right_li {
+  width: 50%;
+  max-width: 42px;
+}
+
+.u_header_right .u_header_right_li .btn_link {
+  padding: 8px;
+}
+
+.u_bg_next_up {
+  padding-bottom: 130px;
+}
+
+.u_bg_up {
+  margin-top: -130px;
+}
+
+.u_bg_up .u_bg_patern_content {
+  margin-top: -4px;
+}
+
+.u_bg_patern_content {
+  padding-bottom: 40px;
+  border-bottom: solid 7px #E6636C;
+}
+
+.u_post {
+  margin-bottom: 24px;
+}
+
+.u_footer_list {
+  padding: 14px 0 10px;
+}
+
+.u_footer_list .footer_list_item {
+  margin: 0 8px 10px;
 }
