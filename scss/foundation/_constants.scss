@@ -1,6 +1,6 @@
 $basic_color:#333333;
 $font: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
-$color_post:#E6636C;
+$color_post:#ef6b75;
 $color_letter:#58B3E5;
 $light_gray:#efefef;
 $gray:#666666;
@@ -16,21 +16,21 @@ $font_sp_m: 14px;
 $font_sp_normal: 12px;
 $font_ss: 10px;
 
-//画面幅
-$sp_wide:640px;
-$sp_min:320px;
-
 // レイアウト幅
-$layout_width_inner: 320px;
+$layout_width_inner: 375px;
+
+//headerの高さ
+$header_height:64px;
 
 // ブレークポイント
 $breakpoints: (
-  "sp-min": "screen and (max-width: #{$layout_width_inner})",
-  "sp-wide": "screen and (min-width: #{$layout_width_inner + 1px})",
+  'sp_sm': 'screen and (max-width: 320px)',
+  'sp_md': 'screen and (max-width: 375px)',
+  'sp_lg': 'screen and (max-width: 480px)',
 );
 
 // メディアクエリー
-@mixin mq($breakpoint: sp) {
+@mixin mq($breakpoint: sp_sm) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
@@ -63,6 +63,9 @@ $breakpoints: (
   margin-left:auto;
   margin-right: auto;
 }
+
+$sp-wide:640px;
+$sp_min:320px;
 // display
 @mixin d_block{
   display: block;
@@ -74,6 +77,7 @@ $breakpoints: (
   display: inline;
 }
 
+//フォントオーサム
 .fontawesome_icon{
   position: relative;
 }
@@ -83,7 +87,6 @@ $breakpoints: (
   position: absolute;
   left: 0;
 }
-
 .twitter_icon::before{
   content:'\f099'; 
   font-size: 16px;

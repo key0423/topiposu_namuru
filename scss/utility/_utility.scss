@@ -1,24 +1,27 @@
-.u_header_right{
-    max-width: 120px;
-    flex-basis: 15%;
+
+
+// アカウント
+.u_account_top{
+    margin-bottom: 24px;
 }
-.u_header_right{
-    flex-basis: 10%;
-.u_header_right_li{
-    width: 50%;
-    max-width: 42px;
-    .btn_link{
-        padding: 8px;
-    }
+.u_account_mdl{
+    margin-bottom: 24px;
 }
+
+// プロフィール
+.u_section{
+    margin-bottom: 24px;
 }
 // ログイン後トップ・ポストの背景調整
-$u_bg_up:130px;
+$u_bg_up:78px;
 .u_bg_next_up{
+    padding-top: 16px;
     padding-bottom: $u_bg_up;
 }
 .u_bg_up{
-    margin-top: -#{$u_bg_up};
+    max-width: 640px;
+    width: 100%;
+    margin: -80px auto 0;
     .u_bg_patern_content{
         margin-top: -4px;
     }

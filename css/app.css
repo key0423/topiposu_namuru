@@ -125,6 +125,7 @@ body {
   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", 游ゴシック体, "Yu Gothic", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
   font-size: 12px;
   line-height: 1.4;
+  box-sizing: border-box;
 }
 
 h2, h3, h4, h5, h6, p, a, table {
@@ -148,7 +149,7 @@ a {
 
 .flex, .flex_center, .flex_side {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .flex_center {
@@ -192,14 +193,49 @@ a {
 }
 
 /*==============================
-レイアウト内の要素
+header
 ==============================*/
-/*----------l_account_sec----------*/
-.l_account_sec {
-  border-radius: 8px;
-  padding: 12px;
+.header_left {
+  max-width: 120px;
+  width: 100%;
 }
 
+.header_right {
+  width: 90px;
+  align-items: center;
+}
+
+.header_right .header_right_li {
+  width: 40px;
+}
+
+.header_right .header_right_li .btn_link {
+  display: block;
+  padding: 4px;
+}
+
+.header_right .header_right_li:first-child {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  .header_right {
+    width: 82px;
+  }
+  .header_right .header_right_li {
+    width: 36px;
+  }
+  .header_right .header_right_li:first-child {
+    margin-right: 10px;
+  }
+}
+
+/*==============================
+footer
+==============================*/
+/*==============================
+レイアウト内の要素
+==============================*/
 .account_box {
   border-radius: 50%;
   background: #ffffff;
@@ -232,13 +268,18 @@ a {
 }
 
 .account_icon {
-  padding-left: 1em;
+  padding-left: 20px;
   padding-bottom: 4px;
   color: #666666;
 }
 
 .account_link_box .account_link {
   text-align: right;
+}
+
+.cvr_btn_row {
+  max-width: 640px;
+  margin: 0 auto 32px;
 }
 
 /*----------おたより・ポストcvrボタン----------*/
@@ -248,7 +289,7 @@ a {
 
 .cvr_item .cvr_btn {
   display: block;
-  padding: 16px 16px 16px calc(70px + 2%);
+  padding: 16px 16px 16px 28%;
   font-size: 16px;
   font-weight: bold;
   position: relative;
@@ -257,7 +298,7 @@ a {
 
 .cvr_item .cvr_btn::before {
   top: 50%;
-  left: 2%;
+  left: 10px;
   transform: translateY(-50%);
 }
 
@@ -271,19 +312,26 @@ a {
   transform: translateY(-50%);
 }
 
+@media screen and (max-width: 375px) {
+  .cvr_item .cvr_btn {
+    font-size: 10px;
+    padding: 12px 12px 12px 30%;
+  }
+}
+
 .cvr_post_btn {
-  background: #E6636C;
+  background: #ef6b75;
 }
 
 .cvr_post_btn .cvr_btn {
-  color: #E6636C;
+  color: #ef6b75;
 }
 
 .cvr_post_btn .cvr_btn::before {
   content: '';
   display: inline-block;
-  width: 64px;
-  height: 40px;
+  width: 20%;
+  height: 36px;
   background: url("../img/cvr_btn01.png") no-repeat;
   background-size: contain;
   position: absolute;
@@ -300,8 +348,8 @@ a {
 .cvr_letter_btn .cvr_btn::before {
   content: '';
   display: inline-block;
-  width: 64px;
-  height: 40px;
+  width: 20%;
+  height: 36px;
   background: url("../img/cvr_btn02.png") no-repeat;
   background-size: contain;
   position: absolute;
@@ -335,7 +383,7 @@ a {
 
 .post_link {
   color: #ffffff;
-  background: #E6636C;
+  background: #ef6b75;
   padding: 16px;
   border-radius: 12px 12px 0 0;
 }
@@ -355,7 +403,7 @@ a {
   padding: 4px 8px;
   font-size: 10px;
   background: #ffffff;
-  color: #E6636C;
+  color: #ef6b75;
   border-radius: 10px;
 }
 
@@ -410,7 +458,7 @@ a {
   text-align: center;
   letter-spacing: 0.1em;
   padding: 12px 10px;
-  border: solid 2px #E6636C;
+  border: solid 2px #ef6b75;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -425,7 +473,7 @@ a {
   text-align: center;
   letter-spacing: 0.1em;
   padding: 12px 10px;
-  border: solid 2px #E6636C;
+  border: solid 2px #ef6b75;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -462,10 +510,24 @@ layout
 ==============================*/
 .l_header {
   width: 100%;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   background: #ffffff;
   border-bottom: solid 1px #eeeeee;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 2%;
+  align-items: center;
+}
+
+.l_main {
+  padding-top: 64px;
+}
+
+/*----------l_account_sec----------*/
+.l_account_sec {
+  border-radius: 8px;
+  padding: 16px;
 }
 
 .l_inner {
@@ -515,30 +577,27 @@ object
 /*----------component----------*/
 /*----------project----------*/
 /*----------utility----------*/
-.u_header_right {
-  max-width: 120px;
-  flex-basis: 15%;
+.u_account_top {
+  margin-bottom: 24px;
 }
 
-.u_header_right {
-  flex-basis: 10%;
+.u_account_mdl {
+  margin-bottom: 24px;
 }
 
-.u_header_right .u_header_right_li {
-  width: 50%;
-  max-width: 42px;
-}
-
-.u_header_right .u_header_right_li .btn_link {
-  padding: 8px;
+.u_section {
+  margin-bottom: 24px;
 }
 
 .u_bg_next_up {
-  padding-bottom: 130px;
+  padding-top: 16px;
+  padding-bottom: 78px;
 }
 
 .u_bg_up {
-  margin-top: -130px;
+  max-width: 640px;
+  width: 100%;
+  margin: -80px auto 0;
 }
 
 .u_bg_up .u_bg_patern_content {
@@ -547,7 +606,7 @@ object
 
 .u_bg_patern_content {
   padding-bottom: 40px;
-  border-bottom: solid 7px #E6636C;
+  border-bottom: solid 7px #ef6b75;
 }
 
 .u_post {

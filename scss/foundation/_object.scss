@@ -26,13 +26,43 @@
 }
 
 /*==============================
+header
+==============================*/
+.header_left{
+    max-width: 120px;
+    width: 100%;
+}
+.header_right{
+    width: 90px;
+    align-items: center;
+    .header_right_li{
+        width:40px;
+        .btn_link{
+            @include d_block;
+            padding:4px;
+        }
+        &:first-child{
+            margin-right: 10px;
+        }
+    }
+    @include mq(sp_md) {
+        width: 82px; 
+        .header_right_li{
+            width:36px;
+            &:first-child{
+                margin-right: 10px;
+            }
+        }   
+    }
+}
+
+/*==============================
+footer
+==============================*/
+
+/*==============================
 レイアウト内の要素
 ==============================*/
-/*----------l_account_sec----------*/
-.l_account_sec{
-    border-radius:8px;
-    padding:12px;
-}
 .account_box{
     border-radius: 50%;
     background: $white;    
@@ -62,7 +92,7 @@
 }
 //アカウント
 .account_icon{
-    padding-left: 1em;
+    padding-left: 20px;
     padding-bottom: 4px;
     color: $gray;
 }
@@ -73,12 +103,19 @@
     text-align: right;
   }
 }
+
+// コンバージョンボタン
+.cvr_btn_row{
+    max-width: 640px;
+    margin: 0 auto 32px;
+}
+
 /*----------おたより・ポストcvrボタン----------*/
 .cvr_item{
     flex-basis: 50%;
     .cvr_btn{
         @include d_block;
-        padding: 16px 16px 16px calc(70px + 2%);
+        padding: 16px 16px 16px 28%;
         font-size: $font_n;
         font-weight: bold;
         position: relative;
@@ -86,7 +123,7 @@
         0 0 1px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white,0 0 2px $white;
         &::before{
             top: 50%;
-            left: 2%;
+            left: 10px;
             transform: translateY(-50%);
         }
         &::after{
@@ -98,6 +135,10 @@
             top: 50%;
             transform: translateY(-50%);
         }
+        @include mq(sp_md) { 
+            font-size: $font_ss;
+            padding: 12px 12px 12px 30%;
+        }
     }
 }
 .cvr_post_btn{
@@ -105,7 +146,7 @@
     .cvr_btn{
         color: $color_post;
         &::before{
-            @include before(64px, 40px, absolute,#{url("../img/cvr_btn01.png") no-repeat});
+            @include before(20%, 36px, absolute,#{url("../img/cvr_btn01.png") no-repeat});
         }
     }
 }
@@ -114,7 +155,7 @@
     .cvr_btn{
         color: $color_letter;
         &::before{
-            @include before(64px, 40px, absolute,#{url("../img/cvr_btn02.png") no-repeat});
+            @include before(20%, 36px, absolute,#{url("../img/cvr_btn02.png") no-repeat});
         }
     }
 }

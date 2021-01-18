@@ -3,6 +3,7 @@ body{
     font-family: $font;
     font-size: $font_sp_normal;
     line-height: 1.4;
+    box-sizing: border-box;
 }
 h2, h3, h4, h5, h6, p, a, table{ 
     color:$basic_color; 
@@ -21,7 +22,7 @@ a{
 }
 .flex{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 .flex_center{
 	@extend .flex;

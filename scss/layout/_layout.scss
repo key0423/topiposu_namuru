@@ -1,9 +1,22 @@
 .l_header{
     width: 100%;
+    height:  $header_height;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
     background:$white;
     border-bottom: solid 1px $border_black;
-    padding-top:12px;
-    padding-bottom: 12px;
+    padding: 12px 2%;
+    align-items: center;
+}
+// headerぶん
+.l_main{
+    padding-top: $header_height;
+}
+/*----------l_account_sec----------*/
+.l_account_sec{
+    border-radius:8px;
+    padding:16px;
 }
 .l_inner{
     max-width: $sp_wide;
