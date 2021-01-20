@@ -233,6 +233,10 @@ header
 /*==============================
 footer
 ==============================*/
+.footer_list_item {
+  padding: 0 8px;
+}
+
 /*==============================
 レイアウト内の要素
 ==============================*/
@@ -506,6 +510,72 @@ footer
 }
 
 /*==============================
+js用
+==============================*/
+/*----------モーダルウィンドウ用----------*/
+.js_overlay {
+  z-index: 3000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all .3s;
+}
+
+#modalAnounce {
+  display: none;
+}
+
+/*==============================
+お知らせモーダル中身
+==============================*/
+.head_topick_list {
+  max-width: 430px;
+  width: 80%;
+}
+
+.head_topick_list_item {
+  padding: 0 2%;
+}
+
+.txt_link_black {
+  display: block;
+  padding: 8px 12px;
+  border-bottom: soid 1px #efefef;
+}
+
+.txt_link_black:first-child {
+  border-top: soid 1px #efefef;
+}
+
+.txt_link_black .topick_item_left {
+  flex-basis: 32px;
+  margin-right: 12px;
+  text-align: center;
+}
+
+.txt_link_black .topick_item_right {
+  flex-basis: calc( 100% - 24px - $left_item_width);
+}
+
+.topick_item_right .topick_item_category {
+  font-size: 10px;
+  padding: 8px;
+}
+
+.topick_item_right .topick_item_date {
+  font-size: 12px;
+  color: #666666;
+  padding-left: 12px;
+}
+
+.topick_item_right .topick_item_txt {
+  font-size: 12px;
+}
+
+/*==============================
 layout
 ==============================*/
 .l_header {
@@ -565,10 +635,6 @@ layout
 
 .l_post .l_post_link .l_post_right_blc {
   flex-basis: calc(100% - 80px);
-}
-
-.footer_list_item {
-  padding: 0 8px;
 }
 
 /*==============================

@@ -18,7 +18,7 @@
 </div>
 </div>
 <ul class="header_right flex">
-<li class="header_right_li btn_notication">
+<li id="js_announce_btn" class="header_right_li btn_notication" data-modal="modalAnounce">
 <a href="#" class="d_block btn_link">
 <img src="img/icon_notification.svg" alt="通知ボタン">
 </a>
@@ -89,7 +89,7 @@ class="color_lightgray">@</span>minase_minase</a></p>
 </div>
 <div class="flex">
 <div class="l_post_left_blc">
-<span class="post_icon">
+<span class="topick_icon post_icon">
 <!-- ポストのアイコン -->
 <img src="img/post_icon01.png" alt="">
 </span>
@@ -121,7 +121,7 @@ class="color_lightgray">@</span>minase_minase</a></p>
 </div>
 <div class="flex">
 <div class="l_post_left_blc">
-<span class="post_icon">
+<span class="topick_icon post_icon">
 <!-- ポストのアイコン -->
 <img src="img/post_icon01.png" alt="">
 </span>
@@ -150,7 +150,7 @@ class="color_lightgray">@</span>minase_minase</a></p>
 </div>
 <div class="flex">
 <div class="l_post_left_blc">
-<span class="post_icon">
+<span class="topick_icon post_icon">
 <!-- ポストのアイコン -->
 <img src="img/post_icon01.png" alt="">
 </span>
@@ -179,7 +179,7 @@ class="color_lightgray">@</span>minase_minase</a></p>
 </div>
 <div class="flex">
 <div class="l_post_left_blc">
-<span class="post_icon">
+<span class="topick_icon post_icon">
 <!-- ポストのアイコン -->
 <img src="img/post_icon01.png" alt="">
 </span>
@@ -208,7 +208,36 @@ class="color_lightgray">@</span>minase_minase</a></p>
 </div>
 <div class="flex">
 <div class="l_post_left_blc">
-<span class="post_icon">
+<span class="topick_icon post_icon">
+<!-- ポストのアイコン -->
+<img src="img/post_icon01.png" alt="">
+</span>
+</div>
+<div class="l_post_right_blc">
+<p class="post_ttl"><a href="#">最近ハマったものはなんですか？最近ハマったものはなんですか？</a></p>
+<p class="post_txt"><a href="#">テキストテストテキストテキスト</a>
+</p>
+<p class="post_setting"><a href="#" class="post_setting_link">編集する</a></p>
+</div>
+</div>
+<p class="post_link_txt">
+<span class="fontawesome_icon post_link_txt_icon">最新のおたよりをのぞいてみる</span>
+</p>
+</div>
+</li>
+<li class="l_post u_post">
+<div class="l_post_link post_link">
+<div class="l_post_top flex">
+<p class="l_post_left_blc post_info">回答募集中</p>
+<div class="l_post_right_blc">
+<p class="post_info_red">
+未読<span class="info_no">2</span>
+件</p>
+</div>
+</div>
+<div class="flex">
+<div class="l_post_left_blc">
+<span class="topick_icon post_icon">
 <!-- ポストのアイコン -->
 <img src="img/post_icon01.png" alt="">
 </span>
@@ -237,36 +266,7 @@ class="color_lightgray">@</span>minase_minase</a></p>
 </div>
 <div class="flex">
 <div class="l_post_left_blc">
-<span class="post_icon">
-<!-- ポストのアイコン -->
-<img src="img/post_icon01.png" alt="">
-</span>
-</div>
-<div class="l_post_right_blc">
-<p class="post_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-<p class="post_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
-</p>
-<p class="post_setting"><a href="#" class="post_setting_link">編集する</a></p>
-</div>
-</div>
-<p class="post_link_txt">
-<span class="fontawesome_icon post_link_txt_icon">最新のおたよりをのぞいてみる</span>
-</p>
-</div>
-</li>
-<li class="l_post u_post">
-<div class="l_post_link post_link">
-<div class="l_post_top flex">
-<p class="l_post_left_blc post_info">回答募集中</p>
-<div class="l_post_right_blc">
-<p class="post_info_red">
-未読<span class="info_no">2</span>
-件</p>
-</div>
-</div>
-<div class="flex">
-<div class="l_post_left_blc">
-<span class="post_icon">
+<span class="topick_icon post_icon">
 <!-- ポストのアイコン -->
 <img src="img/post_icon01.png" alt="">
 </span>
@@ -316,53 +316,45 @@ class="fontawesome_icon arrow_icon">おたよりをもっと見る</span>
 <p class="copyright"><small>© RYOZEN Scratch Creations</small></p>
 </div>
 </footer>
+
+<!-- 右下ボタン -->
 <div class="u_btn_blc">
 <div id="js_foot_btn01" class="round_link_btn btn01"><a href="#" class="link"><img src="img/round_link_btn01.png" alt="あたらしいポストを作る">
 </a></div>
 <div id="js_foot_btn02" class="round_link_btn btn02"><a href="#" class="link"><img src="img/round_link_btn02.png" alt="おたよりを募集する">
 </a></div>
-
 </div>
-</body>
+
+<!-- 新着情報もーだる -->
+<div class="anounce_box" id="modalAnounce">
+  <div class="anounce_head flex_side">
+    <p class="anounce_ttl">お知らせ</p>
+    <p class="">通知の設定を行う</p>
+  </div>
+
+  <ul class="head_topick_list">
+  <li class="head_topick_list_item">
+    <a href="" class="txt_link_black">
+      <div class="topick_icon topick_item_left">
+        <!-- アイコン -->
+        <img src="img/post_icon01.png" alt="アイコンおると">
+      </div>
+      <div class="topick_item_right">
+        <span class="topick_item_category">不具合</span>
+        <span class="topick_item_date">21.12.30</span>
+        <span class="topick_item_txt">あああああああああ</span>
+      </div>
+    </a>
+  </li>
+  </ul>
+  <p class="anounce_arc_link"><a href="#">お知らせ一覧を見る</a></p>
+</div>
+
 <script
 src="https://code.jquery.com/jquery-3.5.1.js"
 integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
 crossorigin="anonymous"></script>
-<script>
-/*=======================================
-トップへ戻るボタン
-=======================================*/
-const foot_btn01 = $("#js_foot_btn01");
-const foot_btn02 = $("#js_foot_btn02");
-foot_btn01.hide();
-foot_btn02.hide();
-
-$(function(){
-$(window).on("scroll", function(){
-//300以上にスクロールされた or されている時は50msかけてフェードイン/アウト
-if ($(this).scrollTop() > 100) {
-foot_btn01.fadeIn("50");
-foot_btn02.fadeIn("50");
-} else { 
-foot_btn01.fadeOut("50");
-foot_btn02.fadeOut("50");
-}
-
-bodyHeight = $(document).height();
-scrollBottomPosition = $(window).height() + $(window).scrollTop(); // 現在のスクロール位置の画面下部の高さを取得
-footerHeight = $("footer").innerHeight(); // フッター要素の高さを取得
-
-// 残りの表示領域がフッターの高さより低ければ
-if (bodyHeight - scrollBottomPosition <= footerHeight) {
-foot_btn01.hide();
-foot_btn02.hide();
-} else {
-pageTopBtn.css({
-"position":"fixed",
-"bottom": "20px"
-});
-}
-});
-});
-</script>
+<script src="js/jquery-3.0.1.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+</body>
 </html>

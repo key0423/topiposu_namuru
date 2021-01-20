@@ -59,6 +59,9 @@ header
 /*==============================
 footer
 ==============================*/
+.footer_list_item{
+    padding: 0 8px;
+}
 
 /*==============================
 レイアウト内の要素
@@ -283,4 +286,65 @@ footer
 
 .copyright{
     text-align: center;
+}
+
+/*==============================
+js用
+==============================*/
+/*----------モーダルウィンドウ用----------*/
+.js_overlay{
+    z-index:3000;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:120%;
+    background-color:rgba(0,0,0,.4);
+    transition: all .3s;
+}
+#modalAnounce{
+    display: none;
+}
+
+
+/*==============================
+お知らせモーダル中身
+==============================*/
+.head_topick_list{
+    max-width: 430px;
+    width: 80%;
+}
+.head_topick_list_item{
+    padding: 0 2%;
+}
+.txt_link_black{
+    @include d_block;
+    padding: 8px 12px;
+    border-bottom: soid 1px $light_gray;
+    &:first-child{
+        border-top: soid 1px $light_gray;
+    }
+    $left_item_width: 32px;
+    .topick_item_left{
+        flex-basis: 32px;
+        margin-right: 12px;
+        text-align: center;
+    }
+    .topick_item_right{
+        flex-basis: calc( 100% - 24px - $left_item_width);
+    }
+}
+.topick_item_right{
+    .topick_item_category{
+        font-size:$font_ss;
+        padding: 8px;
+    }
+    .topick_item_date{
+        font-size:$font_sp_normal;
+        color: $gray;
+        padding-left: 12px;
+    }
+    .topick_item_txt{
+        font-size:$font_sp_normal;
+    }
 }
