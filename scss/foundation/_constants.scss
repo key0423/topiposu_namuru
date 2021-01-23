@@ -3,7 +3,7 @@ $font: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック�
 $color_post:#ef6b75;
 $color_letter:#58B3E5;
 $light_gray:#efefef;
-$gray:#666666;
+$gray: #666666;
 $white:#ffffff;
 $border_black: #eeeeee;
 
@@ -20,7 +20,7 @@ $font_ss: 10px;
 $layout_width_inner: 375px;
 
 //headerの高さ
-$header_height:64px;
+$header_height: 64px;
 
 // ブレークポイント
 $breakpoints: (
@@ -83,7 +83,6 @@ $sp_min:320px;
 }
 .fontawesome_icon::before {
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
   position: absolute;
   left: 0;
 }
@@ -97,6 +96,14 @@ $sp_min:320px;
 }
 .post_link_txt_icon::before{
   content: '\f105';
+  font-weight: 900;
+  font-size: 12px;
+  left: auto;
+  right: 0;
+}
+.cog_icon::before{
+  content: '\f013';
+  font-weight: 900;
   font-size: 12px;
   left: auto;
   right: 0;
@@ -121,7 +128,8 @@ $sp_min:320px;
   background-size: contain;
   position: $position;
 }
-@mixin after($width, $height, $position){
+
+@mixin after($width, $height, $position, $background){
   content: '';
   display: inline-block;
   width: $width;

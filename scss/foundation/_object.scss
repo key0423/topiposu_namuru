@@ -306,27 +306,43 @@ js用
     display: none;
 }
 
-
 /*==============================
 お知らせモーダル中身
 ==============================*/
-.head_topick_list{
+.anounce_box{
     max-width: 430px;
     width: 80%;
+    position:fixed;
+    top: 60px;
+    right: 2%;
+    z-index:9999;
+    background: $white;
+    padding:16px;
+}
+.anounce_head{
+    align-items: center;
+    .anounce_ttl{
+        font-size: $font_n;
+        font-weight: bold;
+    }
+    .anounce_setting{
+        position: relative;
+    }
 }
 .head_topick_list_item{
     padding: 0 2%;
 }
 .txt_link_black{
-    @include d_block;
     padding: 8px 12px;
-    border-bottom: soid 1px $light_gray;
+    border-bottom: solid 1px $light_gray;
+    width: 100%;
     &:first-child{
-        border-top: soid 1px $light_gray;
+        border-top: solid 1px $light_gray;
     }
     $left_item_width: 32px;
     .topick_item_left{
-        flex-basis: 32px;
+        flex-basis: $left_item_width;
+        width: $left_item_width;
         margin-right: 12px;
         text-align: center;
     }
@@ -338,6 +354,8 @@ js用
     .topick_item_category{
         font-size:$font_ss;
         padding: 8px;
+        background: $light_gray;
+        margin-right: 8px;
     }
     .topick_item_date{
         font-size:$font_sp_normal;
@@ -345,6 +363,8 @@ js用
         padding-left: 12px;
     }
     .topick_item_txt{
+        @include d_block;
         font-size:$font_sp_normal;
+        padding-top: 12px;
     }
 }

@@ -8,7 +8,6 @@ foundation
 
 .fontawesome_icon::before {
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
   position: absolute;
   left: 0;
 }
@@ -25,6 +24,15 @@ foundation
 
 .post_link_txt_icon::before {
   content: '\f105';
+  font-weight: 900;
+  font-size: 12px;
+  left: auto;
+  right: 0;
+}
+
+.cog_icon::before {
+  content: '\f013';
+  font-weight: 900;
   font-size: 12px;
   left: auto;
   right: 0;
@@ -531,9 +539,28 @@ js用
 /*==============================
 お知らせモーダル中身
 ==============================*/
-.head_topick_list {
+.anounce_box {
   max-width: 430px;
   width: 80%;
+  position: fixed;
+  top: 60px;
+  right: 2%;
+  z-index: 9999;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.anounce_head {
+  align-items: center;
+}
+
+.anounce_head .anounce_ttl {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.anounce_head .anounce_setting {
+  position: relative;
 }
 
 .head_topick_list_item {
@@ -541,17 +568,18 @@ js用
 }
 
 .txt_link_black {
-  display: block;
   padding: 8px 12px;
-  border-bottom: soid 1px #efefef;
+  border-bottom: solid 1px #efefef;
+  width: 100%;
 }
 
 .txt_link_black:first-child {
-  border-top: soid 1px #efefef;
+  border-top: solid 1px #efefef;
 }
 
 .txt_link_black .topick_item_left {
   flex-basis: 32px;
+  width: 32px;
   margin-right: 12px;
   text-align: center;
 }
@@ -563,6 +591,8 @@ js用
 .topick_item_right .topick_item_category {
   font-size: 10px;
   padding: 8px;
+  background: #efefef;
+  margin-right: 8px;
 }
 
 .topick_item_right .topick_item_date {
@@ -572,7 +602,9 @@ js用
 }
 
 .topick_item_right .topick_item_txt {
+  display: block;
   font-size: 12px;
+  padding-top: 12px;
 }
 
 /*==============================
