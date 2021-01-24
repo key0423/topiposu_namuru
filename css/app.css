@@ -34,15 +34,14 @@ foundation
   content: '\f013';
   font-weight: 900;
   font-size: 12px;
-  left: auto;
-  right: 0;
 }
 
-.link_icon_red::before {
+.link_icon_right::before {
   content: '\f061';
+  font-weight: 900;
   font-size: 14px;
   left: auto;
-  right: 0;
+  right: 14px;
 }
 
 .border_solid {
@@ -214,7 +213,7 @@ header
 }
 
 .header_right .header_right_li {
-  width: 40px;
+  width: 36px;
 }
 
 .header_right .header_right_li .btn_link {
@@ -485,7 +484,7 @@ footer
   text-align: center;
   letter-spacing: 0.1em;
   padding: 12px 10px;
-  border: solid 2px #ef6b75;
+  border: solid 2px #E6636C;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -528,7 +527,7 @@ js用
   left: 0;
   width: 100%;
   height: 120%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
   transition: all .3s;
 }
 
@@ -547,11 +546,13 @@ js用
   right: 2%;
   z-index: 9999;
   background: #ffffff;
-  padding: 16px;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .anounce_head {
   align-items: center;
+  padding-bottom: 10px;
 }
 
 .anounce_head .anounce_ttl {
@@ -561,20 +562,21 @@ js用
 
 .anounce_head .anounce_setting {
   position: relative;
+  padding-left: 16px;
 }
 
 .head_topick_list_item {
   padding: 0 2%;
 }
 
-.txt_link_black {
-  padding: 8px 12px;
-  border-bottom: solid 1px #efefef;
-  width: 100%;
+.head_topick_list_item:first-child {
+  border-top: solid 1px #efefef;
 }
 
-.txt_link_black:first-child {
-  border-top: solid 1px #efefef;
+.txt_link_black {
+  padding: 8px;
+  border-bottom: solid 1px #efefef;
+  width: 100%;
 }
 
 .txt_link_black .topick_item_left {
@@ -585,13 +587,14 @@ js用
 }
 
 .txt_link_black .topick_item_right {
-  flex-basis: calc( 100% - 24px - $left_item_width);
+  flex-basis: calc(100% - 44px);
 }
 
 .topick_item_right .topick_item_category {
   font-size: 10px;
-  padding: 8px;
   background: #efefef;
+  padding: 4px  8px;
+  border-radius: 8px;
   margin-right: 8px;
 }
 
@@ -605,6 +608,116 @@ js用
   display: block;
   font-size: 12px;
   padding-top: 12px;
+}
+
+.anounce_arc_link {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.anounce_arc_link a {
+  font-size: 14px;
+  padding-right: 20px;
+}
+
+/*==============================
+おたよりを募集しようモーダル
+==============================*/
+.letter_modal_box {
+  background: #ffffff;
+  padding: 40px 16px;
+  max-width: 480px;
+  width: 92%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 2px;
+}
+
+.letter_modal_box .letter_modal_ttl {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.letter_modal_box .letter_modal_ttl .line {
+  display: inline-block;
+  border-bottom: solid 2px #FAB0B2;
+}
+
+.letter_modal_box .letter_modal_ttl::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("../img/batsu.svg");
+  background-size: contain;
+  position: absolute;
+  right: 16px;
+  left: auto;
+  top: 16px;
+}
+
+.q1 .q_txt {
+  font-weight: bold;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.q1 .bosyu_wrap {
+  display: block;
+}
+
+.q1 .bosyu_wrap .letter_modal_post_list {
+  font-size: 14px;
+}
+
+.q1 .bosyu_wrap .letter_modal_post_list .q_sub {
+  font-size: 12px;
+  padding-left: 16px;
+  display: inline-block;
+}
+
+.q2 input[type=checkbox] {
+  display: none;
+}
+
+.q2 .letter_modal_post_list {
+  padding: 12px;
+  display: block;
+  color: #ffffff;
+  background: #58B3E5;
+  margin: 8px;
+}
+
+.letter_modal_box .cancel_btn {
+  text-align: center;
+}
+
+.letter_modal_box .cancel_btn .cancel {
+  font-size: 14px;
+  color: #58B3E5;
+  border-bottom: solid 2px #58B3E5;
+  padding-bottom: 4px;
+}
+
+.letter_modal_box input[type="submit" i] {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  color: #58B3E5;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 12px 10px;
+  border: solid 2px #58B3E5;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*==============================
@@ -675,6 +788,28 @@ object
 /*----------component----------*/
 /*----------project----------*/
 /*----------utility----------*/
+/*==============================
+padding調整
+==============================*/
+.u_pd16 {
+  padding: 16px;
+}
+
+/*==============================
+margin
+==============================*/
+.u_mt40 {
+  margin-top: 40px;
+}
+
+.u_mb16 {
+  margin-bottom: 16px;
+}
+
+.u_mb24 {
+  margin-bottom: 24px;
+}
+
 .u_account_top {
   margin-bottom: 24px;
 }

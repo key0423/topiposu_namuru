@@ -1,6 +1,7 @@
 $basic_color:#333333;
 $font: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
 $color_post:#ef6b75;
+$color_light_pink:#FAB0B2;
 $color_letter:#58B3E5;
 $light_gray:#efefef;
 $gray: #666666;
@@ -9,6 +10,7 @@ $border_black: #eeeeee;
 
 //フォントサイズ
 $font_ttl: 24px;
+$font_ttl_m: 22px;
 $font_l: 20px;
 $font_m: 18px; 
 $font_n: 16px;
@@ -37,7 +39,7 @@ $breakpoints: (
 }
 
 // リンクボタン
-@mixin link_btn_white($background:#fff,$font-color:#E6636C){
+@mixin link_btn_white($background:#fff,$font-color:#E6636C,$border_color:#58B3E5){
   width: 100%;
   max-width: 600px;
   background: $background;
@@ -45,7 +47,7 @@ $breakpoints: (
   text-align: center;
   letter-spacing: 0.1em;
   padding: 12px 10px;
-  border: solid 2px $color_post;
+  border: solid 2px $border_color;
   border-radius: 30px;
   margin-left:auto;
   margin-right: auto;
@@ -101,19 +103,19 @@ $sp_min:320px;
   left: auto;
   right: 0;
 }
+
 .cog_icon::before{
   content: '\f013';
   font-weight: 900;
   font-size: 12px;
-  left: auto;
-  right: 0;
 }
 
-.link_icon_red::before{
+.link_icon_right::before{
   content: '\f061';
+  font-weight: 900;
   font-size: 14px;
   left: auto;
-  right: 0;
+  right: 14px;
 }
 .border_solid{
   border-bottom: dashed 1px $gray;

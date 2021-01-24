@@ -36,7 +36,7 @@ header
     width: 90px;
     align-items: center;
     .header_right_li{
-        width:40px;
+        width:36px;
         .btn_link{
             @include d_block;
             padding:4px;
@@ -256,7 +256,7 @@ footer
 
 // ピンク枠リンクボタン
 .link_btn_white{
-    @include link_btn_white;
+    @include link_btn_white($border_color:#E6636C);
     @include d_block;
 }
 
@@ -299,7 +299,7 @@ js用
     left:0;
     width:100%;
     height:120%;
-    background-color:rgba(0,0,0,.4);
+    background-color:rgba(0,0,0,0.8);
     transition: all .3s;
 }
 #modalAnounce{
@@ -317,28 +317,31 @@ js用
     right: 2%;
     z-index:9999;
     background: $white;
-    padding:16px;
+    padding:10px;
+    border-radius: 8px;
 }
 .anounce_head{
     align-items: center;
+    padding-bottom: 10px;
     .anounce_ttl{
         font-size: $font_n;
         font-weight: bold;
     }
     .anounce_setting{
         position: relative;
+        padding-left: 16px;
     }
 }
 .head_topick_list_item{
     padding: 0 2%;
-}
-.txt_link_black{
-    padding: 8px 12px;
-    border-bottom: solid 1px $light_gray;
-    width: 100%;
     &:first-child{
         border-top: solid 1px $light_gray;
     }
+}
+.txt_link_black{
+    padding: 8px;
+    border-bottom: solid 1px $light_gray;
+    width: 100%;
     $left_item_width: 32px;
     .topick_item_left{
         flex-basis: $left_item_width;
@@ -347,24 +350,114 @@ js用
         text-align: center;
     }
     .topick_item_right{
-        flex-basis: calc( 100% - 24px - $left_item_width);
+        flex-basis: calc(100% - 44px);
     }
 }
 .topick_item_right{
     .topick_item_category{
-        font-size:$font_ss;
-        padding: 8px;
+        font-size: $font_ss;
         background: $light_gray;
+        padding:4px  8px;
+        border-radius: 8px;
         margin-right: 8px;
     }
     .topick_item_date{
-        font-size:$font_sp_normal;
+        font-size: $font_sp_normal;
         color: $gray;
         padding-left: 12px;
     }
     .topick_item_txt{
         @include d_block;
-        font-size:$font_sp_normal;
+        font-size: $font_sp_normal;
         padding-top: 12px;
     }
+}
+.anounce_arc_link{
+    text-align: center;
+    padding: 10px 0;
+    a{
+        font-size: $font_sp_m;
+        padding-right: 20px;
+    }
+}
+
+
+/*==============================
+おたよりを募集しようモーダル
+==============================*/
+.letter_modal_box{
+  background: $white;
+  padding: 40px 16px;
+  max-width: 480px;
+  width: 92%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 9999;
+  border-radius: 2px;
+  .letter_modal_ttl{
+    text-align: center;
+    font-size: $font_ttl_m;
+    font-weight: bold;
+    .line{
+      @include d_inline_block;
+      border-bottom: solid 2px $color_light_pink;
+    }
+    &::before{
+      @include before(32px, 32px, absolute,#{url('../img/batsu.svg')});
+      right: 16px;
+      left: auto;
+      top: 16px;
+    }
+  }
+}
+.q1{
+  .q_txt{
+    font-weight: bold;
+    @include d_block;
+    font-size: $font_n;
+    text-align: center;
+  }
+  .bosyu_wrap{
+    display: block;
+    
+    .letter_modal_post_list{
+      font-size: $font_sp_m;
+      .q_sub{
+        font-size: $font_sp_normal;
+        padding-left: 16px;
+        display: inline-block;
+      }
+    }
+  }
+}
+.q2{
+  input[type=checkbox] {
+    display: none;
+  }
+  .letter_modal_post_list{
+    padding: 12px;
+    @include d_block;
+    color: $white;
+    background: $color_letter;
+    margin: 8px;
+  }
+}
+.letter_modal_box{
+  .cancel_btn{
+    text-align: center;
+    .cancel{
+      font-size: $font_sp_m;
+      color: $color_letter;
+      border-bottom: solid 2px $color_letter;
+      padding-bottom: 4px;
+    }
+  }
+  input[type="submit" i] {
+    @include d_block;
+    border: none;
+    @include link_btn_white($white,$color_letter);
+    
+  }
 }
