@@ -13,17 +13,17 @@ foundation
 }
 
 .twitter_icon::before {
-  content: '\f099';
+  content: "\f099";
   font-size: 16px;
 }
 
 .pen_icon::before {
-  content: '\f099';
+  content: "\f099";
   font-size: 12px;
 }
 
 .post_link_txt_icon::before {
-  content: '\f105';
+  content: "\f105";
   font-weight: 900;
   font-size: 12px;
   left: auto;
@@ -31,13 +31,13 @@ foundation
 }
 
 .cog_icon::before {
-  content: '\f013';
+  content: "\f013";
   font-weight: 900;
   font-size: 12px;
 }
 
 .link_icon_right::before {
-  content: '\f061';
+  content: "\f061";
   font-weight: 900;
   font-size: 14px;
   left: auto;
@@ -135,7 +135,14 @@ body {
   box-sizing: border-box;
 }
 
-h2, h3, h4, h5, h6, p, a, table {
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+table {
   color: #333333;
 }
 
@@ -314,7 +321,7 @@ footer
 }
 
 .cvr_item .cvr_btn::after {
-  content: '\f061';
+  content: "\f061";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
@@ -339,7 +346,7 @@ footer
 }
 
 .cvr_post_btn .cvr_btn::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20%;
   height: 36px;
@@ -349,15 +356,15 @@ footer
 }
 
 .cvr_letter_btn {
-  background: #58B3E5;
+  background: #58b3e5;
 }
 
 .cvr_letter_btn .cvr_btn {
-  color: #58B3E5;
+  color: #58b3e5;
 }
 
 .cvr_letter_btn .cvr_btn::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20%;
   height: 36px;
@@ -464,7 +471,7 @@ footer
 .link_btn_red {
   width: 100%;
   max-width: 600px;
-  background: #E6636C;
+  background: #e6636c;
   color: #fff;
   text-align: center;
   letter-spacing: 0.1em;
@@ -480,11 +487,11 @@ footer
   width: 100%;
   max-width: 600px;
   background: #fff;
-  color: #E6636C;
+  color: #e6636c;
   text-align: center;
   letter-spacing: 0.1em;
   padding: 12px 10px;
-  border: solid 2px #E6636C;
+  border: solid 2px #e6636c;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -528,7 +535,7 @@ js用
   width: 100%;
   height: 120%;
   background-color: rgba(0, 0, 0, 0.8);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 #modalAnounce {
@@ -593,7 +600,7 @@ js用
 .topick_item_right .topick_item_category {
   font-size: 10px;
   background: #efefef;
-  padding: 4px  8px;
+  padding: 4px 8px;
   border-radius: 8px;
   margin-right: 8px;
 }
@@ -644,11 +651,11 @@ js用
 
 .letter_modal_box .letter_modal_ttl .line {
   display: inline-block;
-  border-bottom: solid 2px #FAB0B2;
+  border-bottom: solid 2px #fab0b2;
 }
 
 .letter_modal_box .letter_modal_ttl::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -681,7 +688,7 @@ js用
   display: inline-block;
 }
 
-.q2 input[type=checkbox] {
+.q2 input[type="checkbox"] {
   display: none;
 }
 
@@ -689,7 +696,7 @@ js用
   padding: 12px;
   display: block;
   color: #ffffff;
-  background: #58B3E5;
+  background: #58b3e5;
   margin: 8px;
 }
 
@@ -699,8 +706,8 @@ js用
 
 .letter_modal_box .cancel_btn .cancel {
   font-size: 14px;
-  color: #58B3E5;
-  border-bottom: solid 2px #58B3E5;
+  color: #58b3e5;
+  border-bottom: solid 2px #58b3e5;
   padding-bottom: 4px;
 }
 
@@ -710,11 +717,11 @@ js用
   width: 100%;
   max-width: 600px;
   background: #ffffff;
-  color: #58B3E5;
+  color: #58b3e5;
   text-align: center;
   letter-spacing: 0.1em;
   padding: 12px 10px;
-  border: solid 2px #58B3E5;
+  border: solid 2px #58b3e5;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
