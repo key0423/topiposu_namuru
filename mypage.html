@@ -11,24 +11,31 @@
 </head>
 
 <body>
-  <header class="l_header flex_side">
-    <div class="header_left">
-      <div class="logo">
-        <img src="img/logo.svg" alt="トピぽす">
+  <header class="l_header">
+    <div class="flex_side l_inner"> 
+      <div class="header_left">
+        <div class="logo">
+          <img src="img/logo.svg" alt="トピぽす">
+        </div>
       </div>
+      <ul class="header_right flex">
+        <li id="js_announce_btn" class="header_right_li btn_notication" data-modal="modalAnounce">
+          <a href="#" class="d_block btn_link">
+            <img src="img/icon_notification.svg" alt="通知ボタン">
+          </a>
+        </li>
+        <li class="header_right_li btn_user">
+          <a href="#" class="btn_link">
+            <img src="img/icon_user.svg" alt="ユーザーボタン">
+          </a>
+        </li>
+        <li class="header_right_li btn_user">
+          <a href="#" class="btn_link">
+            <img src="img/icon_faq.svg" alt="faq">
+          </a>
+        </li>
+      </ul>
     </div>
-    <ul class="header_right flex">
-      <li id="js_announce_btn" class="header_right_li btn_notication" data-modal="modalAnounce">
-        <a href="#" class="d_block btn_link">
-          <img src="img/icon_notification.svg" alt="通知ボタン">
-        </a>
-      </li>
-      <li class="header_right_li btn_user">
-        <a href="#" class="btn_link">
-          <img src="img/icon_user.svg" alt="ユーザーボタン">
-        </a>
-      </li>
-    </ul>
   </header>
   <main class="l_main">
     <div class="u_bg_next_up bg_blue">
@@ -62,225 +69,226 @@
       </div>
       <div class="cvr_btn_row">
         <div class="flex">
-          <div class="cvr_post_btn cvr_item">
+          <div class="cvr_mailbox_btn cvr_item">
             <a href="" class="cvr_btn">あたらしく<br>ポストをつくる</a></div>
-          <div class="cvr_letter_btn cvr_item">
-            <a href="" class="cvr_btn">おたよりを<br>募集する</a></div>
+            <div class="cvr_message_btn cvr_item">
+              <a id="js_recruitment_btn" data-message="modalMessage" href="" class="cvr_btn">おたよりを<br>募集する</a>
+            </div>
         </div>
       </div>
     </div>
     <div class="u_bg_up">
       <div class="bg_patern_top">
         <div class="bg_patern_ttl">
-          <h2 class="sec_ttl"><span class="ttl_en"><img src="img/sec_post_ttl.png" alt="Your Post"></span><span
+          <h2 class="sec_ttl"><span class="ttl_en"><img src="img/sec_mailbox_ttl.png" alt="Your mailbox"></span><span
               class="ttl_jp">作成したポスト</span></h2>
         </div>
         <div class="bg_patern u_bg_patern_content">
-          <ul class="post_blc">
+          <ul class="mailbox_blc">
             <!-- ここからループ -->
-            <li class="l_post u_post">
-              <div class="l_post_link post_link">
-                <div class="l_post_top flex">
-                  <p class="l_post_left_blc post_info">回答募集中</p>
-                  <div class="l_post_right_blc">
-                    <p class="post_info_red">
+            <li class="l_mailbox u_mailbox">
+              <div class="l_mailbox_link mailbox_link">
+                <div class="l_mailbox_top flex">
+                  <p class="l_mailbox_left_blc mailbox_info">回答募集中</p>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_info_red">
                       未読<span class="info_no">2</span>
                       件</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <div class="l_post_left_blc">
-                    <span class="topick_icon post_icon">
+                  <div class="l_mailbox_left_blc">
+                    <span class="topick_icon mailbox_icon">
                       <!-- ポストのアイコン -->
-                      <img src="img/post_icon01.png" alt="">
+                      <img src="img/mailbox_icon01.png" alt="">
                     </span>
                   </div>
-                  <div class="l_post_right_blc">
-                    <p class="post_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-                    <p class="post_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
+                    <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="post_setting"><a href="#" class="post_setting_link">編集する</a></p>
+                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="post_link_txt">
-                  <span class="fontawesome_icon post_link_txt_icon">最新のおたよりをのぞいてみる</span>
+                <p class="mailbox_link_txt">
+                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
                 </p>
               </div>
             </li>
 
             <!-- ここまでループ -->
 
-            <li class="l_post u_post">
-              <div class="l_post_link post_link">
-                <div class="l_post_top flex">
-                  <p class="l_post_left_blc post_info">回答募集中</p>
-                  <div class="l_post_right_blc">
-                    <p class="post_info_red">
+            <li class="l_mailbox u_mailbox">
+              <div class="l_mailbox_link mailbox_link">
+                <div class="l_mailbox_top flex">
+                  <p class="l_mailbox_left_blc mailbox_info">回答募集中</p>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_info_red">
                       未読<span class="info_no">2</span>
                       件</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <div class="l_post_left_blc">
-                    <span class="topick_icon post_icon">
+                  <div class="l_mailbox_left_blc">
+                    <span class="topick_icon mailbox_icon">
                       <!-- ポストのアイコン -->
-                      <img src="img/post_icon01.png" alt="">
+                      <img src="img/mailbox_icon01.png" alt="">
                     </span>
                   </div>
-                  <div class="l_post_right_blc">
-                    <p class="post_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-                    <p class="post_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
+                    <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="post_setting"><a href="#" class="post_setting_link">編集する</a></p>
+                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="post_link_txt">
-                  <span class="fontawesome_icon post_link_txt_icon">最新のおたよりをのぞいてみる</span>
+                <p class="mailbox_link_txt">
+                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
                 </p>
               </div>
             </li>
-            <li class="l_post u_post">
-              <div class="l_post_link post_link">
-                <div class="l_post_top flex">
-                  <p class="l_post_left_blc post_info">回答募集中</p>
-                  <div class="l_post_right_blc">
-                    <p class="post_info_red">
+            <li class="l_mailbox u_mailbox">
+              <div class="l_mailbox_link mailbox_link">
+                <div class="l_mailbox_top flex">
+                  <p class="l_mailbox_left_blc mailbox_info">回答募集中</p>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_info_red">
                       未読<span class="info_no">2</span>
                       件</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <div class="l_post_left_blc">
-                    <span class="topick_icon post_icon">
+                  <div class="l_mailbox_left_blc">
+                    <span class="topick_icon mailbox_icon">
                       <!-- ポストのアイコン -->
-                      <img src="img/post_icon01.png" alt="">
+                      <img src="img/mailbox_icon01.png" alt="">
                     </span>
                   </div>
-                  <div class="l_post_right_blc">
-                    <p class="post_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-                    <p class="post_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
+                    <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="post_setting"><a href="#" class="post_setting_link">編集する</a></p>
+                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="post_link_txt">
-                  <span class="fontawesome_icon post_link_txt_icon">最新のおたよりをのぞいてみる</span>
+                <p class="mailbox_link_txt">
+                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
                 </p>
               </div>
             </li>
-            <li class="l_post u_post">
-              <div class="l_post_link post_link">
-                <div class="l_post_top flex">
-                  <p class="l_post_left_blc post_info">回答募集中</p>
-                  <div class="l_post_right_blc">
-                    <p class="post_info_red">
+            <li class="l_mailbox u_mailbox">
+              <div class="l_mailbox_link mailbox_link">
+                <div class="l_mailbox_top flex">
+                  <p class="l_mailbox_left_blc mailbox_info">回答募集中</p>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_info_red">
                       未読<span class="info_no">2</span>
                       件</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <div class="l_post_left_blc">
-                    <span class="topick_icon post_icon">
+                  <div class="l_mailbox_left_blc">
+                    <span class="topick_icon mailbox_icon">
                       <!-- ポストのアイコン -->
-                      <img src="img/post_icon01.png" alt="">
+                      <img src="img/mailbox_icon01.png" alt="">
                     </span>
                   </div>
-                  <div class="l_post_right_blc">
-                    <p class="post_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-                    <p class="post_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
+                    <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="post_setting"><a href="#" class="post_setting_link">編集する</a></p>
+                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="post_link_txt">
-                  <span class="fontawesome_icon post_link_txt_icon">最新のおたよりをのぞいてみる</span>
+                <p class="mailbox_link_txt">
+                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
                 </p>
               </div>
             </li>
-            <li class="l_post u_post">
-              <div class="l_post_link post_link">
-                <div class="l_post_top flex">
-                  <p class="l_post_left_blc post_info">回答募集中</p>
-                  <div class="l_post_right_blc">
-                    <p class="post_info_red">
+            <li class="l_mailbox u_mailbox">
+              <div class="l_mailbox_link mailbox_link">
+                <div class="l_mailbox_top flex">
+                  <p class="l_mailbox_left_blc mailbox_info">回答募集中</p>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_info_red">
                       未読<span class="info_no">2</span>
                       件</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <div class="l_post_left_blc">
-                    <span class="topick_icon post_icon">
+                  <div class="l_mailbox_left_blc">
+                    <span class="topick_icon mailbox_icon">
                       <!-- ポストのアイコン -->
-                      <img src="img/post_icon01.png" alt="">
+                      <img src="img/mailbox_icon01.png" alt="">
                     </span>
                   </div>
-                  <div class="l_post_right_blc">
-                    <p class="post_ttl"><a href="#">最近ハマったものはなんですか？最近ハマったものはなんですか？</a></p>
-                    <p class="post_txt"><a href="#">テキストテストテキストテキスト</a>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？最近ハマったものはなんですか？</a></p>
+                    <p class="mailbox_txt"><a href="#">テキストテストテキストテキスト</a>
                     </p>
-                    <p class="post_setting"><a href="#" class="post_setting_link">編集する</a></p>
+                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="post_link_txt">
-                  <span class="fontawesome_icon post_link_txt_icon">最新のおたよりをのぞいてみる</span>
+                <p class="mailbox_link_txt">
+                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
                 </p>
               </div>
             </li>
-            <li class="l_post u_post">
-              <div class="l_post_link post_link">
-                <div class="l_post_top flex">
-                  <p class="l_post_left_blc post_info">回答募集中</p>
-                  <div class="l_post_right_blc">
-                    <p class="post_info_red">
+            <li class="l_mailbox u_mailbox">
+              <div class="l_mailbox_link mailbox_link">
+                <div class="l_mailbox_top flex">
+                  <p class="l_mailbox_left_blc mailbox_info">回答募集中</p>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_info_red">
                       未読<span class="info_no">2</span>
                       件</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <div class="l_post_left_blc">
-                    <span class="topick_icon post_icon">
+                  <div class="l_mailbox_left_blc">
+                    <span class="topick_icon mailbox_icon">
                       <!-- ポストのアイコン -->
-                      <img src="img/post_icon01.png" alt="">
+                      <img src="img/mailbox_icon01.png" alt="">
                     </span>
                   </div>
-                  <div class="l_post_right_blc">
-                    <p class="post_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-                    <p class="post_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
+                    <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="post_setting"><a href="#" class="post_setting_link">編集する</a></p>
+                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="post_link_txt">
-                  <span class="fontawesome_icon post_link_txt_icon">最新のおたよりをのぞいてみる</span>
+                <p class="mailbox_link_txt">
+                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
                 </p>
               </div>
             </li>
-            <li class="l_post u_post">
-              <div class="l_post_link post_link">
-                <div class="l_post_top flex">
-                  <p class="l_post_left_blc post_info">回答募集中</p>
-                  <div class="l_post_right_blc">
-                    <p class="post_info_red">
+            <li class="l_mailbox u_mailbox">
+              <div class="l_mailbox_link mailbox_link">
+                <div class="l_mailbox_top flex">
+                  <p class="l_mailbox_left_blc mailbox_info">回答募集中</p>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_info_red">
                       未読<span class="info_no">2</span>
                       件</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <div class="l_post_left_blc">
-                    <span class="topick_icon post_icon">
+                  <div class="l_mailbox_left_blc">
+                    <span class="topick_icon mailbox_icon">
                       <!-- ポストのアイコン -->
-                      <img src="img/post_icon01.png" alt="">
+                      <img src="img/mailbox_icon01.png" alt="">
                     </span>
                   </div>
-                  <div class="l_post_right_blc">
-                    <p class="post_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-                    <p class="post_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                  <div class="l_mailbox_right_blc">
+                    <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
+                    <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="post_setting"><a href="#" class="post_setting_link">編集する</a></p>
+                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="post_link_txt">
-                  <span class="fontawesome_icon post_link_txt_icon">最新のおたよりをのぞいてみる</span>
+                <p class="mailbox_link_txt">
+                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
                 </p>
               </div>
             </li>
@@ -335,7 +343,7 @@
         <a href="" class="txt_link_black flex">
           <div class="topick_icon topick_item_left">
             <!-- アイコン -->
-            <img src="img/post_icon01.png" alt="アイコンおると">
+            <img src="img/mailbox_icon01.png" alt="アイコンおると">
           </div>
           <div class="topick_item_right">
             <span class="topick_item_category">不具合</span>
@@ -348,7 +356,7 @@
         <a href="" class="txt_link_black flex">
           <div class="topick_icon topick_item_left">
             <!-- アイコン -->
-            <img src="img/post_icon01.png" alt="アイコンおると">
+            <img src="img/mailbox_icon01.png" alt="アイコンおると">
           </div>
           <div class="topick_item_right">
             <span class="topick_item_category">不具合</span>
@@ -361,7 +369,7 @@
         <a href="" class="txt_link_black flex">
           <div class="topick_icon topick_item_left">
             <!-- アイコン -->
-            <img src="img/post_icon01.png" alt="アイコンおると">
+            <img src="img/mailbox_icon01.png" alt="アイコンおると">
           </div>
           <div class="topick_item_right">
             <span class="topick_item_category">不具合</span>
@@ -377,32 +385,32 @@
 
 
   <!-- ====================おたより募集モーダル==================== -->
-  <div class="letter_modal_box" id="modalLetter">
-    <p class="letter_modal_ttl u_mb24"><span class="line">おたよりを募集してみよう</span></p>
+  <div class="message_modal_box" id="modalMessage">
+    <p class="message_modal_ttl u_mb24"><span class="line">おたよりを募集してみよう</span></p>
     <form method="" action="#">
 
       <div class="bg_gray u_pd16">
         <p class="q1 u_mb24"><span class="q_txt u_mb16">どのポストを募集しますか？※送信後ツイートされます</span><br>
           <span class="bosyu_wrap u_mb24">
             <input id="bosyu1" type="radio" name="q1" value="bosyu1"><label for="bosyu1"
-              class="letter_modal_post_list">ポストを指定せずに募集をかける</label>
+              class="message_modal_mailbox_list">ポストを指定せずに募集をかける</label>
           </span>
           <span class="bosyu_wrap u_mb24">
             <input id="bosyu2" type="radio" name="q1" value="bosyu2" checked>
-            <label for="bosyu2" class="letter_modal_post_list">ポストを指定せずに募集をかける<span
+            <label for="bosyu2" class="message_modal_mailbox_list">ポストを指定せずに募集をかける<span
                 class="q_sub">※以下から1つ選んでください。</span></label>
           </span>
         </p>
 
         <p class="q2">
-          <input id="post_name1" type="checkbox" name="post_name" value="post_name1" checked="checked" /><label
-            for="post_name1" class="letter_modal_post_list">最近ハマったものはなんですか？</label>
+          <input id="mailbox_name1" type="checkbox" name="mailbox_name" value="mailbox_name1" checked="checked" /><label
+            for="mailbox_name1" class="message_modal_mailbox_list">最近ハマったものはなんですか？</label>
 
-          <input id="post_name2" type="checkbox" name="post_name" value="post_name2" />
-          <label for="post_name2" class="letter_modal_post_list">【12月のイラスト】描いてほしいテーマを募集します！</label>
+          <input id="mailbox_name2" type="checkbox" name="mailbox_name" value="mailbox_name2" />
+          <label for="mailbox_name2" class="message_modal_mailbox_list">【12月のイラスト】描いてほしいテーマを募集します！</label>
 
-          <input id="post_name3" type="checkbox" name="post_name" value="post_name3" checked="checked" /><label
-            for="post_name3" class="letter_modal_post_list">普通のおたより、略してふつおた</label>
+          <input id="mailbox_name3" type="checkbox" name="mailbox_name" value="mailbox_name3" checked="checked" /><label
+            for="mailbox_name3" class="message_modal_mailbox_list">普通のおたより、略してふつおた</label>
         </p>
 
       </div>

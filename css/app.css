@@ -2,52 +2,6 @@
 /*==============================
 foundation
 ==============================*/
-.fontawesome_icon {
-  position: relative;
-}
-
-.fontawesome_icon::before {
-  font-family: "Font Awesome 6 Free";
-  position: absolute;
-  left: 0;
-}
-
-.twitter_icon::before {
-  content: "\f099";
-  font-size: 16px;
-}
-
-.pen_icon::before {
-  content: "\f099";
-  font-size: 12px;
-}
-
-.post_link_txt_icon::before {
-  content: "\f105";
-  font-weight: 900;
-  font-size: 12px;
-  left: auto;
-  right: 0;
-}
-
-.cog_icon::before {
-  content: "\f013";
-  font-weight: 900;
-  font-size: 12px;
-}
-
-.link_icon_right::before {
-  content: "\f061";
-  font-weight: 900;
-  font-size: 14px;
-  left: auto;
-  right: 14px;
-}
-
-.border_solid {
-  border-bottom: dashed 1px #666666;
-}
-
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -215,12 +169,12 @@ header
 }
 
 .header_right {
-  width: 90px;
+  width: 124px;
   align-items: center;
 }
 
 .header_right .header_right_li {
-  width: 36px;
+  width: 34px;
 }
 
 .header_right .header_right_li .btn_link {
@@ -228,7 +182,7 @@ header
   padding: 4px;
 }
 
-.header_right .header_right_li:first-child {
+.header_right .header_right_li:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -337,15 +291,15 @@ footer
   }
 }
 
-.cvr_post_btn {
+.cvr_mailbox_btn {
   background: #ef6b75;
 }
 
-.cvr_post_btn .cvr_btn {
+.cvr_mailbox_btn .cvr_btn {
   color: #ef6b75;
 }
 
-.cvr_post_btn .cvr_btn::before {
+.cvr_mailbox_btn .cvr_btn::before {
   content: "";
   display: inline-block;
   width: 20%;
@@ -355,15 +309,15 @@ footer
   position: absolute;
 }
 
-.cvr_letter_btn {
+.cvr_message_btn {
   background: #58b3e5;
 }
 
-.cvr_letter_btn .cvr_btn {
+.cvr_message_btn .cvr_btn {
   color: #58b3e5;
 }
 
-.cvr_letter_btn .cvr_btn::before {
+.cvr_message_btn .cvr_btn::before {
   content: "";
   display: inline-block;
   width: 20%;
@@ -373,7 +327,7 @@ footer
   position: absolute;
 }
 
-/*----------bg_patern(YourPost調整)----------*/
+/*----------bg_patern(Yourmailbox調整)----------*/
 .bg_patern_ttl .sec_ttl {
   z-index: 20;
   text-align: center;
@@ -395,28 +349,28 @@ footer
   padding-top: 10px;
 }
 
-.post_blc {
+.mailbox_blc {
   padding: 0 4%;
 }
 
-.post_link {
+.mailbox_link {
   color: #ffffff;
   background: #ef6b75;
   padding: 16px;
   border-radius: 12px 12px 0 0;
 }
 
-.post_link a {
+.mailbox_link a {
   color: #ffffff;
 }
 
-.post_info {
+.mailbox_info {
   font-size: 10px;
   color: #ffffff;
   text-align: center;
 }
 
-.post_info_red {
+.mailbox_info_red {
   display: inline-block;
   padding: 4px 8px;
   font-size: 10px;
@@ -425,11 +379,11 @@ footer
   border-radius: 10px;
 }
 
-.post_info_red .info_no {
+.mailbox_info_red .info_no {
   font-size: 10px;
 }
 
-.post_ttl {
+.mailbox_ttl {
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -437,23 +391,23 @@ footer
   border-bottom: dotted 2px #efefef;
 }
 
-.post_txt {
+.mailbox_txt {
   color: #ffffff;
   padding-top: 12px;
   padding-bottom: 12px;
   line-height: 1.6;
 }
 
-.post_setting {
+.mailbox_setting {
   text-align: right;
   padding-bottom: 8px;
 }
 
-.post_setting .post_setting_link {
+.mailbox_setting .mailbox_setting_link {
   font-size: 10px;
 }
 
-.post_link_txt {
+.mailbox_link_txt {
   color: #ffffff;
   text-align: center;
   font-size: 14px;
@@ -461,7 +415,7 @@ footer
   border-top: solid 2px #ffffff;
 }
 
-.post_link_txt .post_link_txt_icon {
+.mailbox_link_txt .mailbox_link_txt_icon {
   padding-right: 16px;
 }
 
@@ -474,7 +428,7 @@ footer
   background: #e6636c;
   color: #fff;
   text-align: center;
-  letter-spacing: 0.1em;
+  message-spacing: 0.1em;
   padding: 12px 10px;
   border: solid 2px #ef6b75;
   border-radius: 30px;
@@ -489,7 +443,7 @@ footer
   background: #fff;
   color: #e6636c;
   text-align: center;
-  letter-spacing: 0.1em;
+  message-spacing: 0.1em;
   padding: 12px 10px;
   border: solid 2px #e6636c;
   border-radius: 30px;
@@ -630,7 +584,7 @@ js用
 /*==============================
 おたよりを募集しようモーダル
 ==============================*/
-.letter_modal_box {
+.message_modal_box {
   background: #ffffff;
   padding: 40px 16px;
   max-width: 480px;
@@ -643,18 +597,18 @@ js用
   border-radius: 2px;
 }
 
-.letter_modal_box .letter_modal_ttl {
+.message_modal_box .message_modal_ttl {
   text-align: center;
   font-size: 22px;
   font-weight: bold;
 }
 
-.letter_modal_box .letter_modal_ttl .line {
+.message_modal_box .message_modal_ttl .line {
   display: inline-block;
   border-bottom: solid 2px #fab0b2;
 }
 
-.letter_modal_box .letter_modal_ttl::before {
+.message_modal_box .message_modal_ttl::before {
   content: "";
   display: inline-block;
   width: 32px;
@@ -678,11 +632,11 @@ js用
   display: block;
 }
 
-.q1 .bosyu_wrap .letter_modal_post_list {
+.q1 .bosyu_wrap .message_modal_mailbox_list {
   font-size: 14px;
 }
 
-.q1 .bosyu_wrap .letter_modal_post_list .q_sub {
+.q1 .bosyu_wrap .message_modal_mailbox_list .q_sub {
   font-size: 12px;
   padding-left: 16px;
   display: inline-block;
@@ -692,7 +646,7 @@ js用
   display: none;
 }
 
-.q2 .letter_modal_post_list {
+.q2 .message_modal_mailbox_list {
   padding: 12px;
   display: block;
   color: #ffffff;
@@ -700,18 +654,18 @@ js用
   margin: 8px;
 }
 
-.letter_modal_box .cancel_btn {
+.message_modal_box .cancel_btn {
   text-align: center;
 }
 
-.letter_modal_box .cancel_btn .cancel {
+.message_modal_box .cancel_btn .cancel {
   font-size: 14px;
   color: #58b3e5;
   border-bottom: solid 2px #58b3e5;
   padding-bottom: 4px;
 }
 
-.letter_modal_box input[type="submit" i] {
+.message_modal_box input[type="submit" i] {
   display: block;
   border: none;
   width: 100%;
@@ -719,7 +673,7 @@ js用
   background: #ffffff;
   color: #58b3e5;
   text-align: center;
-  letter-spacing: 0.1em;
+  message-spacing: 0.1em;
   padding: 12px 10px;
   border: solid 2px #58b3e5;
   border-radius: 30px;
@@ -766,26 +720,26 @@ layout
   margin-right: auto;
 }
 
-.l_post {
+.l_mailbox {
   min-height: 120px;
 }
 
-.l_post .l_post_link {
+.l_mailbox .l_mailbox_link {
   display: block;
 }
 
-.l_post .l_post_link .l_post_top {
+.l_mailbox .l_mailbox_link .l_mailbox_top {
   padding-bottom: 16px;
   align-items: center;
 }
 
-.l_post .l_post_link .l_post_left_blc {
+.l_mailbox .l_mailbox_link .l_mailbox_left_blc {
   flex-basis: 　 80px;
   text-align: center;
   padding: 0 8px;
 }
 
-.l_post .l_post_link .l_post_right_blc {
+.l_mailbox .l_mailbox_link .l_mailbox_right_blc {
   flex-basis: calc(100% - 80px);
 }
 
@@ -849,7 +803,7 @@ margin
   border-bottom: solid 7px #ef6b75;
 }
 
-.u_post {
+.u_mailbox {
   margin-bottom: 24px;
 }
 

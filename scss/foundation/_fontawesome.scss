@@ -1,0 +1,48 @@
+//フォントオーサム
+.fontawesome_icon {
+  position: relative;
+}
+.fontawesome_icon::before {
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  left: 0;
+}
+.twitter_icon::before {
+  content: "\f099";
+  font-size: 16px;
+}
+.pen_icon::before {
+  content: "\f099";
+  font-size: 12px;
+}
+.mailbox_link_txt_icon::before {
+  content: "\f105";
+  font-weight: 900;
+  font-size: 12px;
+  left: auto;
+  right: 0;
+}
+
+.cog_icon::before {
+  content: "\f013";
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.link_icon_right::before {
+  content: "\f061";
+  font-weight: 900;
+  font-size: 14px;
+  left: auto;
+  right: 14px;
+}
+.faq_icon::before {
+  content: "\f086";
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.border_solid {
+  border-bottom: dashed 1px $gray;
+}
+

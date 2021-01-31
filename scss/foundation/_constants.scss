@@ -1,9 +1,9 @@
 $basic_color: #333333;
 $font: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", 游ゴシック体, "Yu Gothic", Meiryo, メイリオ, Osaka,
   "MS PGothic", arial, helvetica, sans-serif;
-$color_post: #ef6b75;
+$color_mailbox: #ef6b75;
 $color_light_pink: #fab0b2;
-$color_letter: #58b3e5;
+$color_message: #58b3e5;
 $light_gray: #efefef;
 $gray: #666666;
 $white: #ffffff;
@@ -25,119 +25,11 @@ $layout_width_inner: 375px;
 //headerの高さ
 $header_height: 64px;
 
+$sp-wide: 640px;
+$sp_min: 320px;
 // ブレークポイント
 $breakpoints: (
   "sp_sm": "screen and (max-width: 320px)",
   "sp_md": "screen and (max-width: 375px)",
   "sp_lg": "screen and (max-width: 480px)"
 );
-
-// メディアクエリー
-@mixin mq($breakpoint: sp_sm) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
-// リンクボタン
-@mixin link_btn_white($background: #fff, $font-color: #e6636c, $border_color: #58b3e5) {
-  width: 100%;
-  max-width: 600px;
-  background: $background;
-  color: $font-color;
-  text-align: center;
-  letter-spacing: 0.1em;
-  padding: 12px 10px;
-  border: solid 2px $border_color;
-  border-radius: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@mixin link_btn_red($background: #e6636c, $font-color: #fff) {
-  width: 100%;
-  max-width: 600px;
-  background: $background;
-  color: $font-color;
-  text-align: center;
-  letter-spacing: 0.1em;
-  padding: 12px 10px;
-  border: solid 2px $color_post;
-  border-radius: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-$sp-wide: 640px;
-$sp_min: 320px;
-// display
-@mixin d_block {
-  display: block;
-}
-@mixin d_inline_block {
-  display: inline-block;
-}
-@mixin d_inline {
-  display: inline;
-}
-
-//フォントオーサム
-.fontawesome_icon {
-  position: relative;
-}
-.fontawesome_icon::before {
-  font-family: "Font Awesome 6 Free";
-  position: absolute;
-  left: 0;
-}
-.twitter_icon::before {
-  content: "\f099";
-  font-size: 16px;
-}
-.pen_icon::before {
-  content: "\f099";
-  font-size: 12px;
-}
-.post_link_txt_icon::before {
-  content: "\f105";
-  font-weight: 900;
-  font-size: 12px;
-  left: auto;
-  right: 0;
-}
-
-.cog_icon::before {
-  content: "\f013";
-  font-weight: 900;
-  font-size: 12px;
-}
-
-.link_icon_right::before {
-  content: "\f061";
-  font-weight: 900;
-  font-size: 14px;
-  left: auto;
-  right: 14px;
-}
-.border_solid {
-  border-bottom: dashed 1px $gray;
-}
-
-@mixin before($width, $height, $position, $background) {
-  content: "";
-  display: inline-block;
-  width: $width;
-  height: $height;
-  background: $background;
-  background-size: contain;
-  position: $position;
-}
-
-@mixin after($width, $height, $position, $background) {
-  content: "";
-  display: inline-block;
-  width: $width;
-  height: $height;
-  background: $background;
-  background-size: contain;
-  position: $position;
-}

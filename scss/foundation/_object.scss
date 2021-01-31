@@ -33,15 +33,15 @@ header
   width: 100%;
 }
 .header_right {
-  width: 90px;
+  width: 124px;
   align-items: center;
   .header_right_li {
-    width: 36px;
+    width: 34px;
     .btn_link {
       @include d_block;
       padding: 4px;
     }
-    &:first-child {
+    &:not(:last-child) {
       margin-right: 10px;
     }
   }
@@ -145,25 +145,25 @@ footer
     }
   }
 }
-.cvr_post_btn {
-  background: $color_post;
+.cvr_mailbox_btn {
+  background: $color_mailbox;
   .cvr_btn {
-    color: $color_post;
+    color: $color_mailbox;
     &::before {
       @include before(20%, 36px, absolute, #{url("../img/cvr_btn01.png") no-repeat});
     }
   }
 }
-.cvr_letter_btn {
-  background: $color_letter;
+.cvr_message_btn {
+  background: $color_message;
   .cvr_btn {
-    color: $color_letter;
+    color: $color_message;
     &::before {
       @include before(20%, 36px, absolute, #{url("../img/cvr_btn02.png") no-repeat});
     }
   }
 }
-/*----------bg_patern(YourPost調整)----------*/
+/*----------bg_patern(Yourmailbox調整)----------*/
 // タイトル
 .bg_patern_ttl {
   .sec_ttl {
@@ -187,61 +187,61 @@ footer
 }
 
 // ポスト一覧
-.post_blc {
+.mailbox_blc {
   padding: 0 4%;
 }
-.post_link {
+.mailbox_link {
   color: $white;
-  background: $color_post;
+  background: $color_mailbox;
   padding: 16px;
   border-radius: 12px 12px 0 0;
   a {
     color: $white;
   }
 }
-.post_info {
+.mailbox_info {
   font-size: $font_ss;
   color: $white;
   text-align: center;
 }
-.post_info_red {
+.mailbox_info_red {
   @include d_inline_block;
   padding: 4px 8px;
   font-size: $font_ss;
   background: $white;
-  color: $color_post;
+  color: $color_mailbox;
   border-radius: 10px;
   .info_no {
     font-size: $font_ss;
   }
 }
-.post_ttl {
+.mailbox_ttl {
   font-size: $font_n;
   font-weight: bold;
   color: $white;
   padding-bottom: 8px;
   border-bottom: dotted 2px $light_gray;
 }
-.post_txt {
+.mailbox_txt {
   color: $white;
   padding-top: 12px;
   padding-bottom: 12px;
   line-height: 1.6;
 }
-.post_setting {
+.mailbox_setting {
   text-align: right;
   padding-bottom: 8px;
-  .post_setting_link {
+  .mailbox_setting_link {
     font-size: $font_ss;
   }
 }
-.post_link_txt {
+.mailbox_link_txt {
   color: $white;
   text-align: center;
   font-size: $font_sp_m;
   padding-top: 12px;
   border-top: solid 2px $white;
-  .post_link_txt_icon {
+  .mailbox_link_txt_icon {
     padding-right: 16px;
   }
 }
@@ -384,7 +384,7 @@ js用
 /*==============================
 おたよりを募集しようモーダル
 ==============================*/
-.letter_modal_box {
+.message_modal_box {
   background: $white;
   padding: 40px 16px;
   max-width: 480px;
@@ -395,7 +395,7 @@ js用
   transform: translate(-50%, -50%);
   z-index: 9999;
   border-radius: 2px;
-  .letter_modal_ttl {
+  .message_modal_ttl {
     text-align: center;
     font-size: $font_ttl_m;
     font-weight: bold;
@@ -421,7 +421,7 @@ js用
   .bosyu_wrap {
     display: block;
 
-    .letter_modal_post_list {
+    .message_modal_mailbox_list {
       font-size: $font_sp_m;
       .q_sub {
         font-size: $font_sp_normal;
@@ -435,27 +435,27 @@ js用
   input[type="checkbox"] {
     display: none;
   }
-  .letter_modal_post_list {
+  .message_modal_mailbox_list {
     padding: 12px;
     @include d_block;
     color: $white;
-    background: $color_letter;
+    background: $color_message;
     margin: 8px;
   }
 }
-.letter_modal_box {
+.message_modal_box {
   .cancel_btn {
     text-align: center;
     .cancel {
       font-size: $font_sp_m;
-      color: $color_letter;
-      border-bottom: solid 2px $color_letter;
+      color: $color_message;
+      border-bottom: solid 2px $color_message;
       padding-bottom: 4px;
     }
   }
   input[type="submit" i] {
     @include d_block;
     border: none;
-    @include link_btn_white($white, $color_letter);
+    @include link_btn_white($white, $color_message);
   }
 }

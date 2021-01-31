@@ -7,7 +7,20 @@ $(function () {
     var modal = '#' + $(this).attr('data-modal');
     $(modal).fadeIn('slow');
     //ここまでで表示
-
+    $('.js_overlay').off().click(function () {
+      $(modal).fadeOut('slow');
+      //コールバック関数でフェードアウトと要素の削除
+      $(this).fadeOut('slow', function () {
+        $(this).remove();
+      });
+    });
+  });
+  $('#js_recruitment_btn').click(function () {
+    $('body').append('<div class="js_overlay"></div>');//#js_recruitment_btnをクリックでオーバーレイを挿入
+    $('.js_overlay').fadeIn('slow');//オーバーレイを表示
+    var modal = '#' + $(this).attr('data-message');
+    $(modal).fadeIn('slow');
+    //ここまでで表示
     $('.js_overlay').off().click(function () {
       $(modal).fadeOut('slow');
       //コールバック関数でフェードアウトと要素の削除
