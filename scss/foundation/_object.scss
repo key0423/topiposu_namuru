@@ -208,11 +208,12 @@ footer
   @include d_inline_block;
   padding: 4px 8px;
   font-size: $font_ss;
-  background: $white;
-  color: $color_mailbox;
+  color: $white;
+  border: solid 1px $white;
   border-radius: 10px;
   .info_no {
     font-size: $font_ss;
+    margin: 0 0 0 3px;
   }
 }
 .mailbox_ttl {
@@ -228,21 +229,12 @@ footer
   padding-bottom: 12px;
   line-height: 1.6;
 }
-.mailbox_setting {
-  text-align: right;
-  padding-bottom: 8px;
-  .mailbox_setting_link {
-    font-size: $font_ss;
-  }
-}
-.mailbox_link_txt {
-  color: $white;
-  text-align: center;
-  font-size: $font_sp_m;
-  padding-top: 12px;
-  border-top: solid 2px $white;
-  .mailbox_link_txt_icon {
-    padding-right: 16px;
+.mailbox_link_area {
+  justify-content: flex-end;
+  .mailbox_link_icon {
+    display: block;
+    flex-basis: 28px;
+    margin:0 8px;
   }
 }
 
@@ -384,6 +376,11 @@ js用
 /*==============================
 おたよりを募集しようモーダル
 ==============================*/
+/*----------モーダルウィンドウ用----------*/
+#modalMessage {
+  display: none;
+}
+
 .message_modal_box {
   background: $white;
   padding: 40px 16px;

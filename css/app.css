@@ -128,6 +128,14 @@ a {
   justify-content: space-between;
 }
 
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
 /*==============================
 背景設定(レイアウト)
 ==============================*/
@@ -374,13 +382,14 @@ footer
   display: inline-block;
   padding: 4px 8px;
   font-size: 10px;
-  background: #ffffff;
-  color: #ef6b75;
+  color: #ffffff;
+  border: solid 1px #ffffff;
   border-radius: 10px;
 }
 
 .mailbox_info_red .info_no {
   font-size: 10px;
+  margin: 0 0 0 3px;
 }
 
 .mailbox_ttl {
@@ -398,25 +407,14 @@ footer
   line-height: 1.6;
 }
 
-.mailbox_setting {
-  text-align: right;
-  padding-bottom: 8px;
+.mailbox_link_area {
+  justify-content: flex-end;
 }
 
-.mailbox_setting .mailbox_setting_link {
-  font-size: 10px;
-}
-
-.mailbox_link_txt {
-  color: #ffffff;
-  text-align: center;
-  font-size: 14px;
-  padding-top: 12px;
-  border-top: solid 2px #ffffff;
-}
-
-.mailbox_link_txt .mailbox_link_txt_icon {
-  padding-right: 16px;
+.mailbox_link_area .mailbox_link_icon {
+  display: block;
+  flex-basis: 28px;
+  margin: 0 8px;
 }
 
 /*==============================
@@ -584,6 +582,11 @@ js用
 /*==============================
 おたよりを募集しようモーダル
 ==============================*/
+/*----------モーダルウィンドウ用----------*/
+#modalMessage {
+  display: none;
+}
+
 .message_modal_box {
   background: #ffffff;
   padding: 40px 16px;

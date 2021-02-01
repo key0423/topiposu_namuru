@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/app.css">
-  <script src="https://kit.fontawesome.com/6e25f4903c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- <script src="https://kit.fontawesome.com/6e25f4903c.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -19,6 +20,11 @@
         </div>
       </div>
       <ul class="header_right flex">
+        <li class="header_right_li btn_user">
+            <a href="#" class="btn_link">
+              <img src="img/icon_faq.svg" alt="faq">
+            </a>
+        </li>
         <li id="js_announce_btn" class="header_right_li btn_notication" data-modal="modalAnounce">
           <a href="#" class="d_block btn_link">
             <img src="img/icon_notification.svg" alt="通知ボタン">
@@ -27,11 +33,6 @@
         <li class="header_right_li btn_user">
           <a href="#" class="btn_link">
             <img src="img/icon_user.svg" alt="ユーザーボタン">
-          </a>
-        </li>
-        <li class="header_right_li btn_user">
-          <a href="#" class="btn_link">
-            <img src="img/icon_faq.svg" alt="faq">
           </a>
         </li>
       </ul>
@@ -143,7 +144,7 @@
                   </div>
                 </div>
                 <p class="mailbox_link_txt">
-                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
+                  <span class="fontawesome_icon mailbox_link_txt_icon"></span>
                 </p>
               </div>
             </li>
@@ -168,12 +169,12 @@
                     <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
                     <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="mailbox_link_txt">
-                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
-                </p>
+                <div class="mailbox_link_area flex">
+                  <span class="mailbox_link_icon"><a href="#" ><img src="img/mailbox_btm_icon01.svg" alt=""></a></span>
+                  <span class="mailbox_link_icon"><a href="#" ><img src="img/mailbox_btm_icon02.svg" alt=""></a></span>
+                </div>
               </div>
             </li>
             <li class="l_mailbox u_mailbox">
@@ -226,12 +227,12 @@
                     <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？最近ハマったものはなんですか？</a></p>
                     <p class="mailbox_txt"><a href="#">テキストテストテキストテキスト</a>
                     </p>
-                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="mailbox_link_txt">
-                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
-                </p>
+                <div class="mailbox_link_area flex">
+                    <span class="mailbox_link_icon"><a href="#" ><img src="img/mailbox_btm_icon01.svg" alt=""></a></span>
+                    <span class="mailbox_link_icon"><a href="#" ><img src="img/mailbox_btm_icon02.svg" alt=""></a></span>
+                  </div>
               </div>
             </li>
             <li class="l_mailbox u_mailbox">
@@ -323,10 +324,10 @@
 
   <!-- 右下ボタン -->
   <div class="u_btn_blc">
-    <div id="js_foot_btn01" class="round_link_btn btn01"><a href="#" class="link"><img src="img/round_link_btn01.png"
+    <div id="js_foot_btn01" class="round_link_btn btn01"><a href="#" class="link"><img src="img/round_link_btn01.svg"
           alt="あたらしいポストを作る">
       </a></div>
-    <div id="js_foot_btn02" class="round_link_btn btn02"><a href="#" class="link"><img src="img/round_link_btn02.png"
+    <div id="js_foot_btn02" class="round_link_btn btn02"><a href="#" class="link"><img src="img/round_link_btn02.svg"
           alt="おたよりを募集する">
       </a></div>
   </div>
@@ -335,7 +336,7 @@
   <div class="anounce_box" id="modalAnounce">
     <div class="anounce_head flex_side">
       <p class="anounce_ttl">おしらせ</p>
-      <p class=""><a class="fontawesome_icon cog_icon anounce_setting" href="">通知の設定を行う</a></p>
+      <p class=""><a class="fontawesome_icon gear_icon anounce_setting" href="">通知の設定を行う</a></p>
     </div>
 
     <ul class="head_topick_list">
