@@ -196,10 +196,10 @@ header
 
 @media screen and (max-width: 375px) {
   .header_right {
-    width: 82px;
+    width: 104px;
   }
   .header_right .header_right_li {
-    width: 36px;
+    width: 28px;
   }
   .header_right .header_right_li:first-child {
     margin-right: 10px;
@@ -282,12 +282,9 @@ footer
   transform: translateY(-50%);
 }
 
-.cvr_item .cvr_btn::after {
-  content: "\f061";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+.cvr_item .cvr_btn .right_icon {
   position: absolute;
-  right: 10px;
+  right: 14px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -418,15 +415,60 @@ footer
 }
 
 /*==============================
+ページネーション
+==============================*/
+.pagenation {
+  display: flex;
+  justify-content: center;
+}
+
+.pagenation .page {
+  border: 1px solid #ef6b75;
+  background: #ffffff;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.pagenation .page:last-child {
+  margin-right: 0;
+}
+
+.pagenation .page a {
+  display: inline-block;
+  color: #ef6b75;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.pagenation .page.active a {
+  color: #ffffff;
+  background-color: #ef6b75;
+}
+
+/*==============================
 パーツ関係(ボタン・アイコン)
 ==============================*/
+.link_btn {
+  position: relative;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link_btn .position_right {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .link_btn_red {
   width: 100%;
   max-width: 600px;
   background: #e6636c;
   color: #fff;
   text-align: center;
-  message-spacing: 0.1em;
+  letter-spacing: 0.1em;
   padding: 12px 10px;
   border: solid 2px #ef6b75;
   border-radius: 30px;
@@ -452,14 +494,30 @@ footer
 
 .round_link_btn.btn01 {
   position: fixed;
-  right: 2%;
+  right: calc(50% - 310px);
   bottom: 72px;
+}
+
+@media screen and (max-width: 640px) {
+  .round_link_btn.btn01 {
+    position: fixed;
+    right: 2%;
+    bottom: 72px;
+  }
 }
 
 .round_link_btn.btn02 {
   position: fixed;
-  right: 2%;
+  right: calc(50% - 310px);
   bottom: 16px;
+}
+
+@media screen and (max-width: 640px) {
+  .round_link_btn.btn02 {
+    position: fixed;
+    right: 2%;
+    bottom: 16px;
+  }
 }
 
 .round_link_btn .link {
@@ -682,6 +740,11 @@ js用
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.border_solid {
+  display: inline-block;
+  border-bottom: dashed 1px #666666;
 }
 
 /*==============================

@@ -31,5 +31,6 @@ $sp_min: 320px;
 $breakpoints: (
   "sp_sm": "screen and (max-width: 320px)",
   "sp_md": "screen and (max-width: 375px)",
-  "sp_lg": "screen and (max-width: 480px)"
+  "sp_lg": "screen and (max-width: 480px)",
+  "sp_max": "screen and (max-width: 640px)"
 );

@@ -46,9 +46,9 @@ header
     }
   }
   @include mq(sp_md) {
-    width: 82px;
+    width: 104px;
     .header_right_li {
-      width: 36px;
+      width: 28px;
       &:first-child {
         margin-right: 10px;
       }
@@ -130,12 +130,9 @@ footer
       left: 10px;
       transform: translateY(-50%);
     }
-    &::after {
-      content: "\f061";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
+    .right_icon{
       position: absolute;
-      right: 10px;
+      right: 14px;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -237,10 +234,50 @@ footer
     margin:0 8px;
   }
 }
+/*==============================
+ページネーション
+==============================*/
+.pagenation{
+  display: flex;
+  justify-content: center;
+  .page{
+    border: 1px solid $color_mailbox;
+    background: #ffffff;
+    border-radius: 4px;
+    margin-right: 8px;
+    &:last-child{
+      margin-right: 0;
+    }
+    a{
+      display: inline-block;
+      color: $color_mailbox;
+      padding: 8px 12px;
+      text-decoration: none;
+    }
+  }
+  .page.active{
+    a{
+      color: #ffffff;
+      background-color: $color_mailbox;
+    }
+  }
+}
 
 /*==============================
 パーツ関係(ボタン・アイコン)
 ==============================*/
+.link_btn{
+  position: relative;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  .position_right{
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 .link_btn_red {
   @include link_btn_red;
   @include d_block;
@@ -261,10 +298,16 @@ footer
 // 右下固定ボタン
 .round_link_btn {
   &.btn01 {
-    @include round_link_btn(2%, 72px);
+    @include round_link_btn(calc(50% - 310px), 72px);
+    @include mq(sp_max) {
+      @include round_link_btn(2%, 72px);
+    }
   }
   &.btn02 {
+    @include round_link_btn(calc(50% - 310px), 16px);
+    @include mq(sp_max) {
     @include round_link_btn(2%, 16px);
+    }
   }
   .link {
     display: block;

@@ -54,8 +54,8 @@
             <!-- アカウント名 -->
             <h2 class="account_name">山田タロンヌ</h2>
             <!-- アカウントID -->
-            <p class="account_id"><a class="fontawesome_icon account_icon twitter_icon gray" href="#"><span
-                  class="color_lightgray">@</span>minase_minase</a></p>
+            <p class="account_id"><a class="" href="#"><span
+                  class="color_lightgray"><i class="fab fa-twitter color"></i>@</span>minase_minase</a></p>
           </div>
           <div class="u_account_mdl account_txt_box">
             <!-- 自己紹介文 -->
@@ -65,7 +65,7 @@
           </div>
           <div class="u_account_btm account_link_box">
             <p class="account_link">
-              <a href="#" class="account_icon fontawesome_icon pen_icon border_solid">プロフィールを編集</a>
+              <a href="#" class="u_pdb4 border_solid"><i class="fas fa-pencil-alt"></i>プロフィールを編集</a>
             </p>
           </div>
         </section>
@@ -73,9 +73,9 @@
       <div class="cvr_btn_row">
         <div class="flex">
           <div class="cvr_mailbox_btn cvr_item">
-            <a href="" class="cvr_btn">あたらしく<br>ポストをつくる</a></div>
+            <a href="" class="cvr_btn">あたらしく<br>ポストをつくる<i class="fas fa-arrow-right right_icon"></i></a></div>
             <div class="cvr_message_btn cvr_item">
-              <a id="js_recruitment_btn" data-message="modalMessage" href="" class="cvr_btn">おたよりを<br>募集する</a>
+              <a id="js_recruitment_btn" data-message="modalMessage" href="" class="cvr_btn">おたよりを<br>募集する<i class="fas fa-arrow-right right_icon"></i></a>
             </div>
         </div>
       </div>
@@ -110,17 +110,11 @@
                     <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
                     <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="mailbox_link_txt">
-                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
-                </p>
               </div>
             </li>
-
             <!-- ここまでループ -->
-
             <li class="l_mailbox u_mailbox">
               <div class="l_mailbox_link mailbox_link">
                 <div class="l_mailbox_top flex">
@@ -142,11 +136,10 @@
                     <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
                     <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
                 <p class="mailbox_link_txt">
-                  <span class="fontawesome_icon mailbox_link_txt_icon"></span>
+                  <span class="mailbox_link_txt_icon"></span>
                 </p>
               </div>
             </li>
@@ -200,12 +193,8 @@
                     <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
                     <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="mailbox_link_txt">
-                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
-                </p>
               </div>
             </li>
             <li class="l_mailbox u_mailbox">
@@ -258,12 +247,8 @@
                     <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
                     <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
                 </div>
-                <p class="mailbox_link_txt">
-                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
-                </p>
               </div>
             </li>
             <li class="l_mailbox u_mailbox">
@@ -287,20 +272,23 @@
                     <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
                     <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
-                    <p class="mailbox_setting"><a href="#" class="mailbox_setting_link">編集する</a></p>
                   </div>
-                </div>
-                <p class="mailbox_link_txt">
-                  <span class="fontawesome_icon mailbox_link_txt_icon">最新のおたよりをのぞいてみる</span>
-                </p>
+                </div>                
               </div>
             </li>
           </ul>
           <!-- ページャーここ -->
+          <ul class="pagenation">
+              <li class="page"><a href="#"><i class="fas fa-angle-left"></i></a></li>
+              <li class="page active"><a href="/topics?page=1">1</a></li>
+              <li class="page"><a href="/topics?page=2">2</a></li>
+              <li class="page"><a href="/topics?page=3">3</a></li>
+              <li class="page"><a href="#"><i class="fas fa-angle-right"></i></a></li>
+      </ul>
         </div>
       </div>
-      <p class="link_btn"><a class="link_btn_red fontawesome_icon link_icon_right" href="#">おたよりをもっと見る</a></p>
-      <p class="link_btn"><a class="link_btn_white fontawesome_icon link_icon_right" href="#">おたよりをもっと見る</a>
+      <p class="link_btn"><a class="link_btn_red link_icon_right" href="#">おたよりをもっと見る<span class="position_right"><i class="fas fa-arrow-right"></i></span></a></p>
+      <p class="link_btn"><a class="link_btn_white link_icon_right" href="#">おたよりをもっと見る<span class="position_right"><i class="fas fa-arrow-right"></i></span></a>
       </p>
     </div>
   </main>
@@ -308,7 +296,7 @@
     <div class="l_inner bg_gray">
       <ul class="u_footer_list flex_center">
         <li class="footer_list_item">
-          <a href="" class="txt_link_black"><span class="fontawesome_icon link_icon_right">よくある質問</span></a>
+          <a href="" class="txt_link_black">よくある質問</a>
         </li>
         <li class="footer_list_item">
           <a href="" class="txt_link_black">公式Twitter</a>
@@ -338,7 +326,7 @@
   <div class="anounce_box" id="modalAnounce">
     <div class="anounce_head flex_side">
       <p class="anounce_ttl">おしらせ</p>
-      <p class=""><a class="fontawesome_icon gear_icon anounce_setting" href=""><i class="fas fa-cog"></i>通知の設定を行う</a></p>
+      <p class=""><a class="anounce_setting" href="#"><i class="fas fa-cog fontawesome_icon"></i>通知の設定を行う</a></p>
     </div>
 
     <ul class="head_topick_list">
@@ -382,7 +370,7 @@
         </a>
       </li>
     </ul>
-    <p class="anounce_arc_link"><a class="fontawesome_icon link_icon_right" href="#">おしらせ一覧を見る</a></p>
+    <p class="anounce_arc_link"><a class="link_icon_right" href="#">おしらせ一覧を見る</a></p>
   </div>
   <!-- ====================新着情報もーだる ここまで==================== -->
 
@@ -418,7 +406,7 @@
 
       </div>
       <p class="cancel_btn u_mb24 u_mt40"><a class="cancel" href="">キャンセル</a></p>
-      <p><input class="fontawesome_icon link_icon_right" type="submit" value="送信する"></p>
+      <p><input class="link_icon_right" type="submit" value="送信する"></p>
     </form>
   </div>
   <!-- ====================おたより募集モーダル ここまで==================== -->
