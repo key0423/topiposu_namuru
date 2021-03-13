@@ -1,0 +1,501 @@
+/*==============================
+背景設定(レイアウト)
+==============================*/
+/*----------背景設定----------*/
+.bg_white {
+  background: $white;
+}
+.bg_blue {
+  background: url(../img/bg_blue.png);
+}
+.bg_gray {
+  background: $light_gray;
+}
+.bg_patern_top {
+  background: url(../img/bg_patern_ttl.png) no-repeat;
+  background-position: top center;
+  background-size: 100%;
+}
+.bg_patern_ttl {
+  position: relative;
+  height: 130px;
+}
+.bg_patern {
+  background: url(../img/bg_patern.png) repeat-y;
+  background-size: contain;
+}
+
+/*==============================
+header
+==============================*/
+.header_left {
+  max-width: 120px;
+  width: 100%;
+}
+.header_right {
+  width: 124px;
+  align-items: center;
+  .header_right_li {
+    width: 34px;
+    .btn_link {
+      @include d_block;
+      padding: 4px;
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  @include mq(sp_md) {
+    width: 104px;
+    .header_right_li {
+      width: 28px;
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/*==============================
+footer
+==============================*/
+.footer_list_item {
+  padding: 0 8px;
+}
+
+/*==============================
+レイアウト内の要素
+==============================*/
+.account_box {
+  border-radius: 50%;
+  background: $white;
+}
+.account_name {
+  color: $basic_color;
+  font-size: $font_l;
+  text-align: center;
+}
+.account_id {
+  text-align: center;
+}
+// アカウントイメージ
+.account_img_flame {
+  max-width: 80px;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: solid 1px $light_gray;
+  .account_img {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+//アカウント
+.account_icon {
+  padding-left: 20px;
+  padding-bottom: 4px;
+  color: $gray;
+}
+
+// アカウントテキスト
+.account_link_box {
+  .account_link {
+    text-align: right;
+  }
+}
+
+// コンバージョンボタン
+.cvr_btn_row {
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+/*----------おたより・ポストcvrボタン----------*/
+.cvr_item {
+  flex-basis: 50%;
+  .cvr_btn {
+    @include d_block;
+    padding: 16px 16px 16px 28%;
+    font-size: $font_n;
+    font-weight: bold;
+    position: relative;
+    text-shadow: 0 0 1px $white, 0 0 2px $white, 0 0 2px $white, 0 0 2px $white, 0 0 2px $white, 0 0 2px $white,
+      0 0 2px $white, 0 0 2px $white, 0 0 2px $white, 0 0 2px $white, 0 0 2px $white, 0 0 2px $white, 0 0 2px $white,
+      0 0 2px $white, 0 0 2px $white, 0 0 2px $white;
+    &::before {
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+    .right_icon{
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @include mq(sp_md) {
+      font-size: $font_ss;
+      padding: 12px 12px 12px 30%;
+    }
+  }
+}
+.cvr_mailbox_btn {
+  background: $color_mailbox;
+  .cvr_btn {
+    color: $color_mailbox;
+    &::before {
+      @include before(20%, 36px, absolute, #{url("../img/cvr_btn01.png") no-repeat});
+    }
+  }
+}
+.cvr_message_btn {
+  background: $color_message;
+  .cvr_btn {
+    color: $color_message;
+    &::before {
+      @include before(20%, 36px, absolute, #{url("../img/cvr_btn02.png") no-repeat});
+    }
+  }
+}
+/*----------bg_patern(Yourmailbox調整)----------*/
+// タイトル
+.bg_patern_ttl {
+  .sec_ttl {
+    z-index: 20;
+    text-align: center;
+    font-size: $font_n;
+    position: relative;
+  }
+  .ttl_en {
+    @include d_block;
+    text-align: center;
+    max-width: 16%;
+    padding-top: 28px;
+    margin: 0 auto;
+  }
+  .ttl_jp {
+    @include d_block;
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+// ポスト一覧
+.mailbox_blc {
+  padding: 0 4%;
+}
+.mailbox_link {
+  color: $white;
+  background: $color_mailbox;
+  padding: 16px;
+  border-radius: 12px 12px 0 0;
+  a {
+    color: $white;
+  }
+}
+.mailbox_info {
+  font-size: $font_ss;
+  color: $white;
+  text-align: center;
+}
+.mailbox_info_red {
+  @include d_inline_block;
+  padding: 4px 8px;
+  font-size: $font_ss;
+  color: $white;
+  border: solid 1px $white;
+  border-radius: 10px;
+  .info_no {
+    font-size: $font_ss;
+    margin: 0 0 0 3px;
+  }
+}
+.mailbox_ttl {
+  font-size: $font_n;
+  font-weight: bold;
+  color: $white;
+  padding-bottom: 8px;
+  border-bottom: dotted 2px $light_gray;
+}
+.mailbox_txt {
+  color: $white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  line-height: 1.6;
+}
+.mailbox_link_area {
+  justify-content: flex-end;
+  .mailbox_link_icon {
+    display: block;
+    flex-basis: 28px;
+    margin:0 8px;
+  }
+}
+/*==============================
+ページネーション
+==============================*/
+.pagenation{
+  display: flex;
+  justify-content: center;
+  .page{
+    border: 1px solid $color_mailbox;
+    background: #ffffff;
+    border-radius: 4px;
+    margin-right: 8px;
+    &:last-child{
+      margin-right: 0;
+    }
+    a{
+      display: inline-block;
+      color: $color_mailbox;
+      padding: 8px 12px;
+      text-decoration: none;
+    }
+  }
+  .page.active{
+    a{
+      color: #ffffff;
+      background-color: $color_mailbox;
+    }
+  }
+}
+
+/*==============================
+パーツ関係(ボタン・アイコン)
+==============================*/
+.link_btn{
+  position: relative;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  .position_right{
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.link_btn_red {
+  @include link_btn_red;
+  @include d_block;
+}
+
+// ピンク枠リンクボタン
+.link_btn_white {
+  @include link_btn_white($border_color: #e6636c);
+  @include d_block;
+}
+
+@mixin round_link_btn($right: 2%, $bottom: 16px) {
+  position: fixed;
+  right: $right;
+  bottom: $bottom;
+}
+
+// 右下固定ボタン
+.round_link_btn {
+  &.btn01 {
+    @include round_link_btn(calc(50% - 310px), 72px);
+    @include mq(sp_max) {
+      @include round_link_btn(2%, 72px);
+    }
+  }
+  &.btn02 {
+    @include round_link_btn(calc(50% - 310px), 16px);
+    @include mq(sp_max) {
+    @include round_link_btn(2%, 16px);
+    }
+  }
+  .link {
+    display: block;
+    width: 100%;
+    max-width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    height: auto;
+  }
+}
+
+.copyright {
+  text-align: center;
+}
+
+/*==============================
+js用
+==============================*/
+/*----------モーダルウィンドウ用----------*/
+.js_overlay {
+  z-index: 3000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s;
+}
+#modalAnounce {
+  display: none;
+}
+
+/*==============================
+お知らせモーダル中身
+==============================*/
+.anounce_box {
+  max-width: 430px;
+  width: 80%;
+  position: fixed;
+  top: 60px;
+  right: 2%;
+  z-index: 9999;
+  background: $white;
+  padding: 10px;
+  border-radius: 8px;
+}
+.anounce_head {
+  align-items: center;
+  padding-bottom: 10px;
+  .anounce_ttl {
+    font-size: $font_n;
+    font-weight: bold;
+  }
+  .anounce_setting {
+    position: relative;
+    padding-left: 16px;
+  }
+}
+.head_topick_list_item {
+  padding: 0 2%;
+  &:first-child {
+    border-top: solid 1px $light_gray;
+  }
+}
+.txt_link_black {
+  padding: 8px;
+  border-bottom: solid 1px $light_gray;
+  width: 100%;
+  $left_item_width: 32px;
+  .topick_item_left {
+    flex-basis: $left_item_width;
+    width: $left_item_width;
+    margin-right: 12px;
+    text-align: center;
+  }
+  .topick_item_right {
+    flex-basis: calc(100% - 44px);
+  }
+}
+.topick_item_right {
+  .topick_item_category {
+    font-size: $font_ss;
+    background: $light_gray;
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin-right: 8px;
+  }
+  .topick_item_date {
+    font-size: $font_sp_normal;
+    color: $gray;
+    padding-left: 12px;
+  }
+  .topick_item_txt {
+    @include d_block;
+    font-size: $font_sp_normal;
+    padding-top: 12px;
+  }
+}
+.anounce_arc_link {
+  text-align: center;
+  padding: 10px 0;
+  a {
+    font-size: $font_sp_m;
+    padding-right: 20px;
+  }
+}
+
+/*==============================
+おたよりを募集しようモーダル
+==============================*/
+/*----------モーダルウィンドウ用----------*/
+#modalMessage {
+  display: none;
+}
+
+.message_modal_box {
+  background: $white;
+  padding: 40px 16px;
+  max-width: 480px;
+  width: 92%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 2px;
+  .message_modal_ttl {
+    text-align: center;
+    font-size: $font_ttl_m;
+    font-weight: bold;
+    .line {
+      @include d_inline_block;
+      border-bottom: solid 2px $color_light_pink;
+    }
+    &::before {
+      @include before(32px, 32px, absolute, #{url("../img/batsu.svg")});
+      right: 16px;
+      left: auto;
+      top: 16px;
+    }
+  }
+}
+.q1 {
+  .q_txt {
+    font-weight: bold;
+    @include d_block;
+    font-size: $font_n;
+    text-align: center;
+  }
+  .bosyu_wrap {
+    display: block;
+
+    .message_modal_mailbox_list {
+      font-size: $font_sp_m;
+      .q_sub {
+        font-size: $font_sp_normal;
+        padding-left: 16px;
+        display: inline-block;
+      }
+    }
+  }
+}
+.q2 {
+  input[type="checkbox"] {
+    display: none;
+  }
+  .message_modal_mailbox_list {
+    padding: 12px;
+    @include d_block;
+    color: $white;
+    background: $color_message;
+    margin: 8px;
+  }
+}
+.message_modal_box {
+  .cancel_btn {
+    text-align: center;
+    .cancel {
+      font-size: $font_sp_m;
+      color: $color_message;
+      border-bottom: solid 2px $color_message;
+      padding-bottom: 4px;
+    }
+  }
+  input[type="submit" i] {
+    @include d_block;
+    border: none;
+    @include link_btn_white($white, $color_message);
+  }
+}

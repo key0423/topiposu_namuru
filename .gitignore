@@ -30,3 +30,5 @@ yarn-debug.log*
 # Ignore sitemap file
 /public/sitemap.xml.gz
 /public/sitemaps/sitemap.xml.gz
+
+/css

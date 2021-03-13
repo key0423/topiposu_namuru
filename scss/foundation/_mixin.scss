@@ -1,0 +1,61 @@
+// メディアクエリー
+@mixin mq($breakpoint: sp_sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+// リンクボタン
+@mixin link_btn_white($background: #fff, $font-color: #e6636c, $border_color: #58b3e5) {
+  width: 100%;
+  max-width: 600px;
+  background: $background;
+  color: $font-color;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 12px 10px;
+  border: solid 2px $border_color;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin link_btn_red($background: #e6636c, $font-color: #fff) {
+  width: 100%;
+  max-width: 600px;
+  background: $background;
+  color: $font-color;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 12px 10px;
+  border: solid 2px $color_mailbox;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+// display
+@mixin d_block {
+  display: block;
+}
+@mixin d_inline_block {
+  display: inline-block;
+}
+@mixin d_inline {
+  display: inline;
+}
+@mixin before($width, $height, $position, $background) {
+  content: "";
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: $background;
+  background-size: contain;
+  position: $position;
+}
+@mixin after($width, $height, $position, $background) {
+  content: "";
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: $background;
+  background-size: contain;
+  position: $position;
+}

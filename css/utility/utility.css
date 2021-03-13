@@ -1,0 +1,18 @@
+.u_header_right {
+  max-width: 120px;
+  flex-basis: 15%;
+  padding: 16px 0;
+}
+
+.u_header_right {
+  flex-basis: 10%;
+}
+
+.u_header_right .u_header_right_li {
+  width: 50%;
+  max-width: 42px;
+}
+
+.u_header_right .u_header_right_li .btn_link {
+  padding: 8px;
+}

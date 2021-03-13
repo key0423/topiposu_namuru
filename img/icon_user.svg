@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.151" height="30.151" viewBox="0 0 30.151 30.151">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #666;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.618px;
+      }
+
+      .cls-2 {
+        fill: #666;
+      }
+    </style>
+  </defs>
+  <g id="グループ_4354" data-name="グループ 4354" transform="translate(-318.903 -46.019)">
+    <g id="グループ_59" data-name="グループ 59" transform="translate(319.712 46.828)">
+      <circle id="楕円形_5" data-name="楕円形 5" class="cls-1" cx="4.416" cy="4.416" r="4.416" transform="translate(9.851 4.325)"/>
+      <g id="グループ_17" data-name="グループ 17">
+        <path id="パス_25" data-name="パス 25" class="cls-1" d="M-676.369-1013.027a14.181,14.181,0,0,0,2.614-8.213,14.267,14.267,0,0,0-14.267-14.267,14.267,14.267,0,0,0-14.267,14.267,14.188,14.188,0,0,0,2.614,8.213,16.505,16.505,0,0,1,11.653-4.8A16.505,16.505,0,0,1-676.369-1013.027Z" transform="translate(702.288 1035.506)"/>
+        <path id="パス_26" data-name="パス 26" class="cls-2" d="M-687.619-1004.251a14.239,14.239,0,0,0,11.653-6.054,16.506,16.506,0,0,0-11.653-4.8,16.505,16.505,0,0,0-11.653,4.8A14.238,14.238,0,0,0-687.619-1004.251Z" transform="translate(701.885 1032.784)"/>
+      </g>
+    </g>
+  </g>
+</svg>

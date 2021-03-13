@@ -1,0 +1,63 @@
+.l_header{
+    width: 100%;
+    height:  $header_height;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background:$white;
+    border-bottom: solid 1px $border_black;
+    padding: 12px 0;
+    align-items: center;
+}
+.l_header_inner{
+    width: 100%;
+    max-width: calc(640px + 2%);
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+// headerぶん
+.l_main{
+    padding-top: $header_height;
+}
+/*----------l_account_sec----------*/
+.l_account_sec{
+    border-radius:8px;
+    padding:16px;
+}
+.l_inner{
+    max-width: $sp_wide;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.l_inner_wide{
+    max-width: $sp_wide;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+// ポストレイアウト
+$mailbox_flex_left:80px;
+.l_mailbox{
+    min-height:120px;
+    .l_mailbox_link{
+        @include d_block;
+        .l_mailbox_top{
+        padding-bottom: 16px;
+        align-items: center;
+        }
+    .l_mailbox_left_blc{
+        flex-basis:　$mailbox_flex_left;
+        text-align: center;
+        padding:0 8px;
+    }
+    .l_mailbox_right_blc{
+        flex-basis: calc(100% - #{$mailbox_flex_left});
+    }
+}
+}
+
+

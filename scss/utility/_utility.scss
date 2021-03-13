@@ -1,0 +1,76 @@
+/*==============================
+padding調整
+==============================*/
+@for $i from 0 through 25 {
+  .u_mgt#{$i * 4} {
+    margin-top:#{$i * 4}px;
+  }
+}
+@for $i from 0 through 25 {
+  .u_mgb#{$i * 4} {
+    margin-bottom:#{$i * 4}px;
+  }
+}
+@for $i from 0 through 25 {
+  .u_pdt#{$i * 4} {
+    padding-top:#{$i * 4}px;
+  }
+}
+@for $i from 0 through 25 {
+  .u_pdb#{$i * 4} {
+    padding-bottom:#{$i * 4}px;
+  }
+}
+
+/*==============================
+margin
+==============================*/
+.u_header_wrap{
+  max-width: $sp_wide;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+// アカウント
+.u_account_top {
+  margin-bottom: 24px;
+}
+.u_account_mdl {
+  margin-bottom: 24px;
+}
+
+// プロフィール
+.u_section {
+  margin-bottom: 24px;
+}
+// ログイン後トップ・ポストの背景調整
+$u_bg_up: 78px;
+.u_bg_next_up {
+  padding-top: 16px;
+  padding-bottom: $u_bg_up;
+  max-width:$sp_wide;
+  margin: 0 auto;
+}
+.u_bg_up {
+  max-width: 640px;
+  width: 100%;
+  margin: -80px auto 0;
+  .u_bg_patern_content {
+    margin-top: -4px;
+  }
+}
+
+.u_bg_patern_content {
+  padding-bottom: 40px;
+  border-bottom: solid 7px $color_mailbox;
+}
+.u_mailbox {
+  margin-bottom: 24px;
+}
+
+.u_footer_list {
+  padding: 14px 0 10px;
+  .footer_list_item {
+    margin: 0 8px 10px;
+  }
+}
