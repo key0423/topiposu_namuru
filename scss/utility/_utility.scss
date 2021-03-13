@@ -1,22 +1,34 @@
 /*==============================
 padding調整
 ==============================*/
-.u_pd16 {
-  padding: 16px;
+@for $i from 0 through 25 {
+  .u_mgt#{$i * 4} {
+    margin-top:#{$i * 4}px;
+  }
+}
+@for $i from 0 through 25 {
+  .u_mgb#{$i * 4} {
+    margin-bottom:#{$i * 4}px;
+  }
+}
+@for $i from 0 through 25 {
+  .u_pdt#{$i * 4} {
+    padding-top:#{$i * 4}px;
+  }
+}
+@for $i from 0 through 25 {
+  .u_pdb#{$i * 4} {
+    padding-bottom:#{$i * 4}px;
+  }
 }
 
 /*==============================
 margin
 ==============================*/
-//margin-top
-.u_mt40 {
-  margin-top: 40px;
-}
-.u_mb16 {
-  margin-bottom: 16px;
-}
-.u_mb24 {
-  margin-bottom: 24px;
+.u_header_wrap{
+  max-width: $sp_wide;
+  margin-left:auto;
+  margin-right: auto;
 }
 
 // アカウント
@@ -36,6 +48,8 @@ $u_bg_up: 78px;
 .u_bg_next_up {
   padding-top: 16px;
   padding-bottom: $u_bg_up;
+  max-width:$sp_wide;
+  margin: 0 auto;
 }
 .u_bg_up {
   max-width: 640px;

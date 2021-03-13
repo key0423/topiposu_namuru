@@ -6,8 +6,16 @@
     z-index: 1000;
     background:$white;
     border-bottom: solid 1px $border_black;
-    padding: 12px 2%;
+    padding: 12px 0;
     align-items: center;
+}
+.l_header_inner{
+    width: 100%;
+    max-width: calc(640px + 2%);
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: auto;
+    margin-right: auto;
 }
 // headerぶん
 .l_main{
