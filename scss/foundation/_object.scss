@@ -26,6 +26,12 @@
 }
 
 /*==============================
+文字色
+==============================*/
+.color_white{
+  color: $white;
+}
+/*==============================
 header
 ==============================*/
 .header_left {
@@ -160,6 +166,19 @@ footer
     }
   }
 }
+
+/*==============================
+タイトル
+==============================*/
+.page_ttl{
+  font-size: $font_ttl_m;
+}
+
+// sectionタイトル
+.sec_ttl{
+  font-size: $font_n;
+  font-weight: bold;
+}
 /*----------bg_patern(Yourmailbox調整)----------*/
 // タイトル
 .bg_patern_ttl {
@@ -184,9 +203,6 @@ footer
 }
 
 // ポスト一覧
-.mailbox_blc {
-  padding: 0 4%;
-}
 .mailbox_link {
   color: $white;
   background: $color_mailbox;
@@ -497,5 +513,93 @@ js用
     @include d_block;
     border: none;
     @include link_btn_white($white, $color_message);
+  }
+}
+
+/*==============================
+ポスト内の項目
+==============================*/
+.post_nav{
+  .post_nav_item{
+    color: $white;
+    font-size: $font_sp_m;
+    margin-bottom: 10px;
+    a{
+      margin: 0 8px;
+      padding-bottom: 4px;
+    }
+  }
+  .current{
+    a{
+    border-bottom: solid 2px $white;
+  }
+}
+}
+
+/*==============================
+手紙
+==============================*/
+.letter{
+  padding: 10px;
+  border-radius: 8px;
+  .letter_inner{
+    padding: 16px 4% 10px;
+    .letter_text{  
+      min-height: 140px;
+      line-height: $font_sp_m;
+    }
+    .letter_nav{
+      justify-content: flex-end;
+      position: relative;
+      z-index: 2;
+      a{
+        color: initial;
+        display: inline-block;
+        .icon_space{
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}
+.letter_patern{
+  background: $white;
+  position: relative;
+  &::before{
+    content: "";
+    width: 108px;
+    height: 50px;
+    background: url(../img/bg_letter_patern_top.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  &::after{
+    content: "";
+    width: 108px;
+    height: 50px;
+    background: url(../img/bg_letter_patern_bottom.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  .letter_inner{
+    border-radius: 8px;
+    border: dotted 2px $color_message;
+    .letter_text{
+      font-size: $font_sp_m;
+      color: $color_message;
+      line-height: 2.0;
+    }
+    .letter_nav{
+      .letter_nav_item{
+        margin-right: 16px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- <script src="https://kit.fontawesome.com/6e25f4903c.js" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+  <header class="l_header">
+    <div class="l_header_inner">
+    <div class="flex_side"> 
+      <div class="header_left">
+        <div class="logo">
+          <img src="img/logo.svg" alt="トピぽす">
+        </div>
+      </div>
+      <ul class="header_right flex">
+        <li class="header_right_li btn_user">
+            <a href="#" class="btn_link">
+              <img src="img/icon_faq.svg" alt="faq">
+            </a>
+        </li>
+        <li id="js_announce_btn" class="header_right_li btn_notication" data-modal="modalAnounce">
+          <a href="#" class="d_block btn_link">
+            <img src="img/icon_notification.svg" alt="通知ボタン">
+          </a>
+        </li>
+        <li class="header_right_li btn_user">
+          <a href="#" class="btn_link">
+            <img src="img/icon_user.svg" alt="ユーザーボタン">
+          </a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </header>
+  <main class="l_main">
+    <div class="bg_patern">
+      <div class="l_breadcrumbs_area">
+        <ul class="breadcrumbs l_inner">
+          <li class="breadcrumbs_item"><a href="#">TOP</a></li>
+          <li class="breadcrumbs_item">自分のポスト一覧</li>
+        </ul>
+      </div>
+      <div class="page_ttl_area l_inner u_mgb16">
+        <h1 class="page_ttl">自分のポストに届いたおたより一覧</h1>
+      </div>
+      <div class="bg_patern u_bg_patern_content">
+        <div class="mailbox_blc l_inner">
+          <div class="l_mailbox u_mailbox">
+            <div class="l_mailbox_link mailbox_link">
+              <div class="flex">
+                <div class="l_mailbox_left_blc">
+                  <span class="topick_icon mailbox_icon">
+                    <!-- ポストのアイコン -->
+                    <img src="img/mailbox_icon01.png" alt="">
+                  </span>
+                </div>
+                <div class="l_mailbox_right_blc">
+                  <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
+                  <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                  </p>
+                </div>
+              </div>
+              <ul class="post_nav u_mgb24 flex">
+                <li class="post_nav_item current"><a href="#">一覧</a></li>
+                <li class="post_nav_item"><a href="#">未チェック</a></li>
+                <li class="post_nav_item"><a href="#">チェック済み</a></li>
+                <li class="post_nav_item"><a href="#">お気に入り</a></li>
+                <li class="post_nav_item"><a href="#">ゴミ箱</a></li>
+              </ul>
+              <!-- ここから手紙 -->
+            <h2 class="sec_ttl color_white u_mgb16">ポストに届いたおたより一覧</h2>
+            <div class="letter letter_patern u_mgb24">
+              <div class="letter_inner">
+                <p class="letter_text">初めてメッセージを送ります！最近私がハマっているのはWebラジオです。在宅勤務中に仕事する時、結構人恋しくなったりするので重宝しています笑</p>
+                <ul class="letter_nav flex">
+                  <li class="letter_nav_item"><a href="#"><i class="far fa-check-circle icon_space"></i>チェック済みにする</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div><!-- ./mailbox_link -->
+        </div><!-- ./l_mailbox u_mailbox -->
+        </div><!-- ./mailbox_blc -->
+      </div>
+    </div>
+  </main>
+  <footer class="l_footer">
+    <div class="l_inner bg_gray">
+      <ul class="u_footer_list flex_center">
+        <li class="footer_list_item">
+          <a href="" class="txt_link_black">よくある質問</a>
+        </li>
+        <li class="footer_list_item">
+          <a href="" class="txt_link_black">公式Twitter</a>
+        </li>
+        <li class="footer_list_item">
+          <a href="" class="txt_link_black">利用規約</a>
+        </li>
+        <li class="footer_list_item">
+          <a href="" class="txt_link_black">プライバシーポリシー</a>
+        </li>
+      </ul>
+      <p class="copyright"><small>© RYOZEN Scratch Creations</small></p>
+    </div>
+  </footer>
+
+  <!-- 右下ボタン -->
+  <div class="u_btn_blc">
+    <div id="js_foot_btn01" class="round_link_btn btn01"><a href="#" class="link"><img src="img/round_link_btn01.svg"
+          alt="あたらしいポストを作る">
+      </a></div>
+    <div id="js_foot_btn02" class="round_link_btn btn02"><a href="#" class="link"><img src="img/round_link_btn02.svg"
+          alt="おたよりを募集する">
+      </a></div>
+  </div>
+
+  <!-- ====================新着情報もーだる==================== -->
+  <div class="anounce_box" id="modalAnounce">
+    <div class="anounce_head flex_side">
+      <p class="anounce_ttl">おしらせ</p>
+      <p class=""><a class="anounce_setting" href="#"><i class="fas fa-cog fontawesome_icon"></i>通知の設定を行う</a></p>
+    </div>
+
+    <ul class="head_topick_list">
+      <li class="head_topick_list_item">
+        <a href="" class="txt_link_black flex">
+          <div class="topick_icon topick_item_left">
+            <!-- アイコン -->
+            <img src="img/mailbox_icon01.png" alt="アイコンおると">
+          </div>
+          <div class="topick_item_right">
+            <span class="topick_item_category">不具合</span>
+            <span class="topick_item_date">21.12.30</span>
+            <span class="topick_item_txt">あああああああああ</span>
+          </div>
+        </a>
+      </li>
+      <li class="head_topick_list_item">
+        <a href="" class="txt_link_black flex">
+          <div class="topick_icon topick_item_left">
+            <!-- アイコン -->
+            <img src="img/mailbox_icon01.png" alt="アイコンおると">
+          </div>
+          <div class="topick_item_right">
+            <span class="topick_item_category">不具合</span>
+            <span class="topick_item_date">21.12.30</span>
+            <span class="topick_item_txt">あああああああああああああああああああああああああああ</span>
+          </div>
+        </a>
+      </li>
+      <li class="head_topick_list_item">
+        <a href="" class="txt_link_black flex">
+          <div class="topick_icon topick_item_left">
+            <!-- アイコン -->
+            <img src="img/mailbox_icon01.png" alt="アイコンおると">
+          </div>
+          <div class="topick_item_right">
+            <span class="topick_item_category">不具合</span>
+            <span class="topick_item_date">21.12.30</span>
+            <span class="topick_item_txt">あああああああああ</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <p class="anounce_arc_link"><a class="link_icon_right" href="#">おしらせ一覧を見る</a></p>
+  </div>
+  <!-- ====================新着情報もーだる ここまで==================== -->
+
+
+  <!-- ====================おたより募集モーダル==================== -->
+  <div class="message_modal_box" id="modalMessage">
+    <p class="message_modal_ttl u_mb24"><span class="line">おたよりを募集してみよう</span></p>
+    <form method="" action="#">
+
+      <div class="bg_gray u_pd16">
+        <p class="q1 u_mb24"><span class="q_txt u_mb16">どのポストを募集しますか？※送信後ツイートされます</span><br>
+          <span class="bosyu_wrap u_mb24">
+            <input id="bosyu1" type="radio" name="q1" value="bosyu1"><label for="bosyu1"
+              class="message_modal_mailbox_list">ポストを指定せずに募集をかける</label>
+          </span>
+          <span class="bosyu_wrap u_mb24">
+            <input id="bosyu2" type="radio" name="q1" value="bosyu2" checked>
+            <label for="bosyu2" class="message_modal_mailbox_list">ポストを指定せずに募集をかける<span
+                class="q_sub">※以下から1つ選んでください。</span></label>
+          </span>
+        </p>
+
+        <p class="q2">
+          <input id="mailbox_name1" type="checkbox" name="mailbox_name" value="mailbox_name1" checked="checked" /><label
+            for="mailbox_name1" class="message_modal_mailbox_list">最近ハマったものはなんですか？</label>
+
+          <input id="mailbox_name2" type="checkbox" name="mailbox_name" value="mailbox_name2" />
+          <label for="mailbox_name2" class="message_modal_mailbox_list">【12月のイラスト】描いてほしいテーマを募集します！</label>
+
+          <input id="mailbox_name3" type="checkbox" name="mailbox_name" value="mailbox_name3" checked="checked" /><label
+            for="mailbox_name3" class="message_modal_mailbox_list">普通のおたより、略してふつおた</label>
+        </p>
+
+      </div>
+      <p class="cancel_btn u_mb24 u_mt40"><a class="cancel" href="">キャンセル</a></p>
+      <p><input class="link_icon_right" type="submit" value="送信する"></p>
+    </form>
+  </div>
+  <!-- ====================おたより募集モーダル ここまで==================== -->
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="js/jquery-3.0.1.js" type="text/javascript"></script>
+  <script src="js/common.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -19,7 +19,10 @@
 }
 // headerぶん
 .l_main{
+    width: 100%;
+    max-width: $sp_wide;
     padding-top: $header_height;
+    margin: 0 auto;
 }
 /*----------l_account_sec----------*/
 .l_account_sec{
