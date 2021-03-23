@@ -349,6 +349,7 @@ footer
 .sec_ttl {
   font-size: 16px;
   font-weight: bold;
+  letter-spacing: 0.05em;
 }
 
 /*----------bg_patern(Yourmailbox調整)----------*/
@@ -776,6 +777,20 @@ js用
 }
 
 /*==============================
+自分のポストに届いたおたより一覧
+==============================*/
+.mailbox {
+  color: #ffffff;
+  background: #ef6b75;
+  padding: 30px 16px;
+  border-radius: 12px 12px 0 0;
+}
+
+.mailbox a {
+  color: #ffffff;
+}
+
+/*==============================
 手紙
 ==============================*/
 .letter {
@@ -929,6 +944,20 @@ layout
 }
 
 .l_mailbox .l_mailbox_link .l_mailbox_right_blc {
+  flex-basis: calc(100% - 80px);
+}
+
+.l_mailbox {
+  min-height: 120px;
+}
+
+.l_mailbox .l_mailbox_left_blc {
+  flex-basis: 　 80px;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.l_mailbox .l_mailbox_right_blc {
   flex-basis: calc(100% - 80px);
 }
 

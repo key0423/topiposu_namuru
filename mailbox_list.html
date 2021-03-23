@@ -53,42 +53,45 @@
       </div>
       <div class="bg_patern u_bg_patern_content">
         <div class="mailbox_blc l_inner">
-          <div class="l_mailbox u_mailbox">
-            <div class="l_mailbox_link mailbox_link">
-              <div class="flex">
-                <div class="l_mailbox_left_blc">
-                  <span class="topick_icon mailbox_icon">
-                    <!-- ポストのアイコン -->
-                    <img src="img/mailbox_icon01.png" alt="">
-                  </span>
-                </div>
-                <div class="l_mailbox_right_blc">
-                  <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-                  <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
-                  </p>
-                </div>
+          <div class="l_mailbox u_mailbox mailbox">
+            <div class="flex">
+              <div class="l_mailbox_left_blc">
+                <span class="topick_icon mailbox_icon">
+                  <!-- ポストのアイコン -->
+                  <img src="img/mailbox_icon01.png" alt="">
+                </span>
               </div>
-              <ul class="post_nav u_mgb24 flex">
-                <li class="post_nav_item current"><a href="#">一覧</a></li>
-                <li class="post_nav_item"><a href="#">未チェック</a></li>
-                <li class="post_nav_item"><a href="#">チェック済み</a></li>
-                <li class="post_nav_item"><a href="#">お気に入り</a></li>
-                <li class="post_nav_item"><a href="#">ゴミ箱</a></li>
-              </ul>
-              <!-- ここから手紙 -->
-            <h2 class="sec_ttl color_white u_mgb16">ポストに届いたおたより一覧</h2>
-            <div class="letter letter_patern u_mgb24">
-              <div class="letter_inner">
-                <p class="letter_text">初めてメッセージを送ります！最近私がハマっているのはWebラジオです。在宅勤務中に仕事する時、結構人恋しくなったりするので重宝しています笑</p>
-                <ul class="letter_nav flex">
-                  <li class="letter_nav_item"><a href="#"><i class="far fa-check-circle icon_space"></i>チェック済みにする</a></li>
-                </ul>
+              <div class="l_mailbox_right_blc">
+                <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
+                <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                </p>
               </div>
             </div>
+            <ul class="post_nav u_mgb24 flex">
+              <li class="post_nav_item current"><a href="#">一覧</a></li>
+              <li class="post_nav_item"><a href="#">未チェック</a></li>
+              <li class="post_nav_item"><a href="#">チェック済み</a></li>
+              <li class="post_nav_item"><a href="#">お気に入り</a></li>
+              <li class="post_nav_item"><a href="#">ゴミ箱</a></li>
+            </ul>
+            <!-- ここから手紙 -->
+          <h2 class="sec_ttl color_white u_mgb16">ポストに届いたおたより一覧</h2>
 
-          </div><!-- ./mailbox_link -->
+          <!-- ここからループ -->
+          <div class="letter letter_patern u_mgb24">
+            <div class="letter_inner">
+              <p class="letter_text">初めてメッセージを送ります！最近私がハマっているのはWebラジオです。在宅勤務中に仕事する時、結構人恋しくなったりするので重宝しています笑</p>
+              <ul class="letter_nav flex">
+                <li class="letter_nav_item"><a href="#"><i class="far fa-check-circle icon_space"></i>チェック済みにする</a></li>
+              </ul>
+            </div>
+          </div>
+<!-- ここまでループ -->
+
         </div><!-- ./l_mailbox u_mailbox -->
         </div><!-- ./mailbox_blc -->
+        <p class="link_btn"><a class="link_btn_white link_icon_right" href="#">おたよりをもっと見る<span class="position_right"><i class="fas fa-arrow-right"></i></span></a>
+        </p>
       </div>
     </div>
   </main>
