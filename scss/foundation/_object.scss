@@ -28,7 +28,7 @@
 /*==============================
 文字色
 ==============================*/
-.color_white{
+.color_white {
   color: $white;
 }
 /*==============================
@@ -136,7 +136,7 @@ footer
       left: 10px;
       transform: translateY(-50%);
     }
-    .right_icon{
+    .right_icon {
       position: absolute;
       right: 14px;
       top: 50%;
@@ -170,12 +170,12 @@ footer
 /*==============================
 タイトル
 ==============================*/
-.page_ttl{
+.page_ttl {
   font-size: $font_ttl_m;
 }
 
 // sectionタイトル
-.sec_ttl{
+.sec_ttl {
   font-size: $font_n;
   font-weight: bold;
   letter-spacing: 0.05em;
@@ -248,32 +248,32 @@ footer
   .mailbox_link_icon {
     display: block;
     flex-basis: 28px;
-    margin:0 8px;
+    margin: 0 8px;
   }
 }
 /*==============================
 ページネーション
 ==============================*/
-.pagenation{
+.pagenation {
   display: flex;
   justify-content: center;
-  .page{
+  .page {
     border: 1px solid $color_mailbox;
     background: #ffffff;
     border-radius: 4px;
     margin-right: 8px;
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
-    a{
+    a {
       display: inline-block;
       color: $color_mailbox;
       padding: 8px 12px;
       text-decoration: none;
     }
   }
-  .page.active{
-    a{
+  .page.active {
+    a {
       color: #ffffff;
       background-color: $color_mailbox;
     }
@@ -283,12 +283,12 @@ footer
 /*==============================
 パーツ関係(ボタン・アイコン)
 ==============================*/
-.link_btn{
+.link_btn {
   position: relative;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  .position_right{
+  .position_right {
     position: absolute;
     right: 16px;
     top: 50%;
@@ -323,7 +323,7 @@ footer
   &.btn02 {
     @include round_link_btn(calc(50% - 310px), 16px);
     @include mq(sp_max) {
-    @include round_link_btn(2%, 16px);
+      @include round_link_btn(2%, 16px);
     }
   }
   .link {
@@ -520,26 +520,26 @@ js用
 /*==============================
 ポスト内の項目
 ==============================*/
-.post_nav{
-  .post_nav_item{
+.post_nav {
+  .post_nav_item {
     color: $white;
     font-size: $font_sp_m;
     margin-bottom: 10px;
-    a{
+    a {
       margin: 0 8px;
       padding-bottom: 4px;
     }
   }
-  .current{
-    a{
-    border-bottom: solid 2px $white;
+  .current {
+    a {
+      border-bottom: solid 2px $white;
+    }
   }
-}
 }
 /*==============================
 自分のポストに届いたおたより一覧
 ==============================*/
-.mailbox{
+.mailbox {
   color: $white;
   background: $color_mailbox;
   padding: 30px 16px;
@@ -551,33 +551,33 @@ js用
 /*==============================
 手紙
 ==============================*/
-.letter{
+.letter {
   padding: 10px;
   border-radius: 8px;
-  .letter_inner{
+  .letter_inner {
     padding: 16px 4% 10px;
-    .letter_text{  
+    .letter_text {
       min-height: 140px;
       line-height: $font_sp_m;
     }
-    .letter_nav{
+    .letter_nav {
       justify-content: flex-end;
       position: relative;
       z-index: 2;
-      a{
+      a {
         color: initial;
         display: inline-block;
-        .icon_space{
+        .icon_space {
           margin-right: 2px;
         }
       }
     }
   }
 }
-.letter_patern{
+.letter_patern {
   background: $white;
   position: relative;
-  &::before{
+  &::before {
     content: "";
     width: 108px;
     height: 50px;
@@ -587,7 +587,7 @@ js用
     left: 10px;
     top: 10px;
   }
-  &::after{
+  &::after {
     content: "";
     width: 108px;
     height: 50px;
@@ -597,18 +597,18 @@ js用
     right: 10px;
     bottom: 10px;
   }
-  .letter_inner{
+  .letter_inner {
     border-radius: 8px;
     border: dotted 2px $color_message;
-    .letter_text{
+    .letter_text {
       font-size: $font_sp_m;
       color: $color_message;
-      line-height: 2.0;
+      line-height: 2;
     }
-    .letter_nav{
-      .letter_nav_item{
+    .letter_nav {
+      .letter_nav_item {
         margin-right: 16px;
-        &:last-child{
+        &:last-child {
           margin-right: 0;
         }
       }
