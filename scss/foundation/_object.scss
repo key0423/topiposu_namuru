@@ -11,17 +11,17 @@
 .bg_gray {
   background: $light_gray;
 }
-.bg_patern_top {
-  background: url(../img/bg_patern_ttl.png) no-repeat;
+.bg_pattern_top {
+  background: url(../img/bg_pattern_ttl.png) no-repeat;
   background-position: top center;
   background-size: 100%;
 }
-.bg_patern_ttl {
+.bg_pattern_ttl {
   position: relative;
   height: 130px;
 }
-.bg_patern {
-  background: url(../img/bg_patern.png) repeat-y;
+.bg_pattern {
+  background: url(../img/bg_pattern.png) repeat-y;
   background-size: contain;
 }
 
@@ -196,9 +196,9 @@ footer
   font-weight: bold;
   letter-spacing: 0.05em;
 }
-/*----------bg_patern(Yourmailbox調整)----------*/
+/*----------bg_pattern(Yourmailbox調整)----------*/
 // タイトル
-.bg_patern_ttl {
+.bg_pattern_ttl {
   .sec_ttl {
     z-index: 20;
     text-align: center;
@@ -623,14 +623,14 @@ js用
     }
   }
 }
-.letter_patern {
+.letter_pattern {
   background: $white;
   position: relative;
   &::before {
     content: "";
     width: 108px;
     height: 50px;
-    background: url(../img/bg_letter_patern_top.svg) no-repeat;
+    background: url(../img/bg_letter_pattern_top.svg) no-repeat;
     background-size: cover;
     position: absolute;
     left: 10px;
@@ -640,7 +640,7 @@ js用
     content: "";
     width: 108px;
     height: 50px;
-    background: url(../img/bg_letter_patern_bottom.svg) no-repeat;
+    background: url(../img/bg_letter_pattern_bottom.svg) no-repeat;
     background-size: cover;
     position: absolute;
     right: 10px;

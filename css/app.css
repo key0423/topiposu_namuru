@@ -152,19 +152,19 @@ a {
   background: #efefef;
 }
 
-.bg_patern_top {
-  background: url(../img/bg_patern_ttl.png) no-repeat;
+.bg_pattern_top {
+  background: url(../img/bg_pattern_ttl.png) no-repeat;
   background-position: top center;
   background-size: 100%;
 }
 
-.bg_patern_ttl {
+.bg_pattern_ttl {
   position: relative;
   height: 130px;
 }
 
-.bg_patern {
-  background: url(../img/bg_patern.png) repeat-y;
+.bg_pattern {
+  background: url(../img/bg_pattern.png) repeat-y;
   background-size: contain;
 }
 
@@ -378,15 +378,15 @@ footer
   letter-spacing: 0.05em;
 }
 
-/*----------bg_patern(Yourmailbox調整)----------*/
-.bg_patern_ttl .sec_ttl {
+/*----------bg_pattern(Yourmailbox調整)----------*/
+.bg_pattern_ttl .sec_ttl {
   z-index: 20;
   text-align: center;
   font-size: 16px;
   position: relative;
 }
 
-.bg_patern_ttl .ttl_en {
+.bg_pattern_ttl .ttl_en {
   display: block;
   text-align: center;
   max-width: 16%;
@@ -394,7 +394,7 @@ footer
   margin: 0 auto;
 }
 
-.bg_patern_ttl .ttl_jp {
+.bg_pattern_ttl .ttl_jp {
   display: block;
   text-align: center;
   padding-top: 10px;
@@ -881,49 +881,49 @@ js用
   margin-right: 2px;
 }
 
-.letter_patern {
+.letter_pattern {
   background: #ffffff;
   position: relative;
 }
 
-.letter_patern::before {
+.letter_pattern::before {
   content: "";
   width: 108px;
   height: 50px;
-  background: url(../img/bg_letter_patern_top.svg) no-repeat;
+  background: url(../img/bg_letter_pattern_top.svg) no-repeat;
   background-size: cover;
   position: absolute;
   left: 10px;
   top: 10px;
 }
 
-.letter_patern::after {
+.letter_pattern::after {
   content: "";
   width: 108px;
   height: 50px;
-  background: url(../img/bg_letter_patern_bottom.svg) no-repeat;
+  background: url(../img/bg_letter_pattern_bottom.svg) no-repeat;
   background-size: cover;
   position: absolute;
   right: 10px;
   bottom: 10px;
 }
 
-.letter_patern .letter_inner {
+.letter_pattern .letter_inner {
   border-radius: 8px;
   border: dotted 2px #58b3e5;
 }
 
-.letter_patern .letter_inner .letter_text {
+.letter_pattern .letter_inner .letter_text {
   font-size: 14px;
   color: #58b3e5;
   line-height: 2;
 }
 
-.letter_patern .letter_inner .letter_nav .letter_nav_item {
+.letter_pattern .letter_inner .letter_nav .letter_nav_item {
   margin-right: 16px;
 }
 
-.letter_patern .letter_inner .letter_nav .letter_nav_item:last-child {
+.letter_pattern .letter_inner .letter_nav .letter_nav_item:last-child {
   margin-right: 0;
 }
 
@@ -1479,11 +1479,11 @@ margin
   margin: -80px auto 0;
 }
 
-.u_bg_up .u_bg_patern_content {
+.u_bg_up .u_bg_pattern_content {
   margin-top: -4px;
 }
 
-.u_bg_patern_content {
+.u_bg_pattern_content {
   padding-bottom: 40px;
   border-bottom: solid 7px #ef6b75;
 }
