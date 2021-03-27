@@ -34,6 +34,9 @@
 /*==============================
 header
 ==============================*/
+.header_side{
+  align-items: center;
+}
 .header_left {
   max-width: 120px;
   width: 100%;
@@ -61,7 +64,19 @@ header
     }
   }
 }
-
+/*==============================
+パンくず
+==============================*/
+.breadcrumbs{
+  display: flex;
+  .breadcrumbs_item:not(:last-child)::after{
+    content: ">";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 4px; 
+  }
+}
 /*==============================
 footer
 ==============================*/
@@ -105,14 +120,12 @@ footer
   padding-bottom: 4px;
   color: $gray;
 }
-
 // アカウントテキスト
 .account_link_box {
   .account_link {
     text-align: right;
   }
 }
-
 // コンバージョンボタン
 .cvr_btn_row {
   max-width: 640px;
@@ -172,8 +185,11 @@ footer
 ==============================*/
 .page_ttl {
   font-size: $font_ttl_m;
+  @include mq(sp_md) {
+    font-size: calc(1rem + ((1vw - 3.2px) * -2.1201));
+    min-height: 0vw;
+  }
 }
-
 // sectionタイトル
 .sec_ttl {
   font-size: $font_n;
@@ -202,7 +218,6 @@ footer
     padding-top: 10px;
   }
 }
-
 // ポスト一覧
 .mailbox_link {
   color: $white;
@@ -546,6 +561,22 @@ js用
   border-radius: 12px 12px 0 0;
   a {
     color: $white;
+  }
+}
+/*==============================
+ポストを編集するボタン
+==============================*/
+.post_setting{
+  width: 100%;
+  max-width:140px;
+  margin-left: auto;
+  .post_setting_link{
+    display: block;
+    border: solid 1px $white;
+    padding: 10px;
+    .icon{
+      margin-right:8px;
+    }
   }
 }
 /*==============================

@@ -83,7 +83,7 @@ table {
 
 body {
   color: #333333;
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", 游ゴシック体, "Yu Gothic", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", sans-serif;
   font-size: 12px;
   line-height: 1.4;
   box-sizing: border-box;
@@ -178,6 +178,10 @@ a {
 /*==============================
 header
 ==============================*/
+.header_side {
+  align-items: center;
+}
+
 .header_left {
   max-width: 120px;
   width: 100%;
@@ -211,6 +215,21 @@ header
   .header_right .header_right_li:first-child {
     margin-right: 10px;
   }
+}
+
+/*==============================
+パンくず
+==============================*/
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumbs .breadcrumbs_item:not(:last-child)::after {
+  content: ">";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
 }
 
 /*==============================
@@ -344,6 +363,13 @@ footer
 ==============================*/
 .page_ttl {
   font-size: 22px;
+}
+
+@media screen and (max-width: 375px) {
+  .page_ttl {
+    font-size: calc(1rem + ((1vw - 3.2px) * -2.1201));
+    min-height: 0vw;
+  }
 }
 
 .sec_ttl {
@@ -791,6 +817,25 @@ js用
 }
 
 /*==============================
+ポストを編集するボタン
+==============================*/
+.post_setting {
+  width: 100%;
+  max-width: 140px;
+  margin-left: auto;
+}
+
+.post_setting .post_setting_link {
+  display: block;
+  border: solid 1px #ffffff;
+  padding: 10px;
+}
+
+.post_setting .post_setting_link .icon {
+  margin-right: 8px;
+}
+
+/*==============================
 手紙
 ==============================*/
 .letter {
@@ -857,7 +902,7 @@ js用
 .letter_patern .letter_inner .letter_text {
   font-size: 14px;
   color: #58b3e5;
-  line-height: 2.0;
+  line-height: 2;
 }
 
 .letter_patern .letter_inner .letter_nav .letter_nav_item {
