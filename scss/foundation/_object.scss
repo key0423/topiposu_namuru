@@ -321,6 +321,12 @@ footer
     top: 50%;
     transform: translateY(-50%);
   }
+  .position_left {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 .link_btn_red {
   @include link_btn_red;

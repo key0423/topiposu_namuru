@@ -511,6 +511,13 @@ footer
   transform: translateY(-50%);
 }
 
+.link_btn .position_left {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .link_btn_red {
   width: 100%;
   max-width: 600px;
