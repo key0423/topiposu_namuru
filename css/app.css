@@ -462,12 +462,10 @@ footer
 .pagenation {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .pagenation .page {
-  border: 1px solid #ef6b75;
-  background: #ffffff;
-  border-radius: 4px;
   margin-right: 8px;
 }
 
@@ -478,13 +476,22 @@ footer
 .pagenation .page a {
   display: inline-block;
   color: #ef6b75;
+  background: #ffffff;
   padding: 8px 12px;
+  border: 1px solid #ef6b75;
+  border-radius: 4px;
   text-decoration: none;
 }
 
 .pagenation .page.active a {
   color: #ffffff;
   background-color: #ef6b75;
+}
+
+.mailbox .pagenation .page.active a {
+  color: #ffffff;
+  background-color: #ef6b75;
+  border: solid 1px #ffffff;
 }
 
 /*==============================
