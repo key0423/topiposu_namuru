@@ -57,7 +57,11 @@ $(function () {
       foot_btn01.hide();
       foot_btn02.hide();
     } else {
-      pageTopBtn.css({
+      foot_btn01.css({
+        "position": "fixed",
+        "bottom": "72px"
+      });
+      foot_btn02.css({
         "position": "fixed",
         "bottom": "20px"
       });
