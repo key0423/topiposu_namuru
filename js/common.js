@@ -29,6 +29,20 @@ $(function () {
       });
     });
   });
+  $('#js_message_enter_btn').click(function () {
+    $('body').append('<div class="js_overlay"></div>');//#js_recruitment_btnをクリックでオーバーレイを挿入
+    $('.js_overlay').fadeIn('slow');//オーバーレイを表示
+    var modal = '#' + $(this).attr('data-enter');
+    $(modal).fadeIn('slow');
+    //ここまでで表示
+    $('.js_overlay,.message_close').off().click(function () {
+      $(modal).fadeOut('slow');
+      //コールバック関数でフェードアウトと要素の削除
+      $('.js_overlay').fadeOut('slow', function () {
+        $(this).remove();
+      });
+    });
+  });
 });
 
 //トップへ戻るボタン

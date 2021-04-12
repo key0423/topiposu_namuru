@@ -26,7 +26,7 @@
               <img src="img/icon_faq.svg" alt="faq">
             </a>
           </li>
-          <li id="js_announce_btn" class="header_right_li btn_notication" data-modal="modalAnounce">
+          <li id="js_announce_btn" class="header_right_li btn_notication" data-modal="modalannounce">
             <a href="#" class="d_block btn_link">
               <img src="img/icon_notification.svg" alt="通知ボタン">
             </a>
@@ -95,11 +95,11 @@
                   オススメのWebラジオなんかがあれば、ぜひまた教えてください！</p>
               </div>
               <p class="text_count u_mgt8">
-                <span class="number"><!-- 　ここの数字がカウントされる -->
+                <span class="number"><!-- ここの数字がカウントされる -->
                 400
               </span>/<span class="max_number">1000</span></p>
             </div>
-            <p class="link_btn"><a class="link_btn_white link_btn_blue_line link_icon_right" href="#">送信する<span class="position_right"><i class="fas fa-arrow-right"></i></span></a>
+            <p class="link_btn"><span id="js_message_enter_btn" data-enter="message_enter_box" class="link_btn_white link_btn_blue_line link_icon_right" href="#">送信する<span class="position_right"><i class="fas fa-arrow-right"></i></span></span>
             </p>
           </div><!-- ./l_mailbox u_mailbox -->
         </div><!-- ./mailbox_blc -->
@@ -139,10 +139,10 @@
   </div>
 
   <!-- ====================新着情報もーだる==================== -->
-  <div class="anounce_box" id="modalAnounce">
-    <div class="anounce_head flex_side">
-      <p class="anounce_ttl">おしらせ</p>
-      <p class=""><a class="anounce_setting" href="#"><i class="fas fa-cog fontawesome_icon"></i>通知の設定を行う</a></p>
+  <div class="announce_box" id="modalannounce">
+    <div class="announce_head flex_side">
+      <p class="announce_ttl">おしらせ</p>
+      <p class=""><a class="announce_setting" href="#"><i class="fas fa-cog fontawesome_icon"></i>通知の設定を行う</a></p>
     </div>
 
     <ul class="head_topick_list">
@@ -186,7 +186,7 @@
         </a>
       </li>
     </ul>
-    <p class="anounce_arc_link"><a class="link_icon_right" href="#">おしらせ一覧を見る</a></p>
+    <p class="announce_arc_link"><a class="link_icon_right" href="#">おしらせ一覧を見る</a></p>
   </div>
   <!-- ====================新着情報もーだる ここまで==================== -->
 
@@ -227,7 +227,17 @@
   </div>
   <!-- ====================おたより募集モーダル ここまで==================== -->
 
-
+<div class="message_enter_box" id="message_enter_box">
+  <p class="inner">
+      <i class="message_close u_mb16"><img src="img/batsu.svg" alt="close"></i>
+    <p class="mini_ttl u_mgb40">この回答をポストに送りますか？</p>
+    <div class="message_verification u_mgb40">
+        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+    </div>
+    <p class="message_cancel u_mgb24"><a class="message_cancel" href="#">キャンセル</a></p>
+    <p class="link_btn"><span class="link_btn_white link_btn_blue_line link_icon_right" href="#">送信する<sspan class="position_right"><i class="fas fa-arrow-right"></i></sspan></span>
+    </p>
+  </div>
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="

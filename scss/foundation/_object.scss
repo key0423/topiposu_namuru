@@ -196,6 +196,13 @@ footer
   font-weight: bold;
   letter-spacing: 0.05em;
 }
+//小見出し
+.mini_ttl{
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: solid 2px $color_light_pink;
+  padding: 0 0 4px;
+}
 /*----------bg_pattern(Yourmailbox調整)----------*/
 // タイトル
 .bg_pattern_ttl {
@@ -264,6 +271,42 @@ footer
     display: block;
     flex-basis: 28px;
     margin: 0 8px;
+  }
+}
+/*==============================
+送信確認画面
+==============================*/
+.message_enter_box{
+  .message_close{
+    display: block;
+    max-width: 24px;
+    width: 100%;
+    margin-left: auto;
+  }
+  display: none;
+  max-width: 600px;
+  width: 96%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 9999;
+  background: $white;
+  padding: 20px;
+  .message_verification {
+    min-height: 120px;
+    color: $color_light_pink_font;
+    border: solid 4px $color_mailbox;
+    border-radius: 4px;
+    padding: 16px;
+  }
+  .message_cancel{
+    text-align: center;
+      a{
+      color: $color_message;
+      border-bottom: 1px solid $color_message;
+      padding-bottom: 2px;
+    }
   }
 }
 /*==============================
@@ -391,14 +434,14 @@ js用
   background-color: rgba(0, 0, 0, 0.8);
   transition: all 0.3s;
 }
-#modalAnounce {
+#modalannounce {
   display: none;
 }
 
 /*==============================
 お知らせモーダル中身
 ==============================*/
-.anounce_box {
+.announce_box {
   max-width: 430px;
   width: 80%;
   position: fixed;
@@ -409,14 +452,14 @@ js用
   padding: 10px;
   border-radius: 4px;
 }
-.anounce_head {
+.announce_head {
   align-items: center;
   padding-bottom: 10px;
-  .anounce_ttl {
+  .announce_ttl {
     font-size: $font_n;
     font-weight: bold;
   }
-  .anounce_setting {
+  .announce_setting {
     position: relative;
     padding-left: 16px;
   }
@@ -461,7 +504,7 @@ js用
     padding-top: 12px;
   }
 }
-.anounce_arc_link {
+.announce_arc_link {
   text-align: center;
   padding: 10px 0;
   a {
