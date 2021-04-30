@@ -69,9 +69,9 @@
             <p class="post_setting u_mgb16"><a class="post_setting_link" href="#"><i class="fas fa-cog fontawesome_icon icon"></i>ポストを編集する</a></p>
             <ul class="post_nav u_mgb24 flex">
               <li class="post_nav_item current"><a href="#">一覧</a></li>
-              <li class="post_nav_item"><a href="#">未チェック</a></li>
-              <li class="post_nav_item"><a href="#">チェック済み</a></li>
-              <li class="post_nav_item"><a href="#">お気に入り</a></li>
+              <li class="post_nav_item" id="category_not_et_check"><a href="#">未チェック</a></li>
+              <li class="post_nav_item" id="category_checked"><a href="#">チェック済み</a></li>
+              <li class="post_nav_item" id="category_favorite"><a href="#">お気に入り</a></li>
             </ul>
             <!-- ここから手紙 -->
             <h2 class="sec_ttl color_white u_mgb16">ポストに届いたおたより一覧</h2>
@@ -81,9 +81,9 @@
               <div class="message_inner">
                 <p class="message_text">初めてメッセージを送ります！最近私がハマっているのはWebラジオです。在宅勤務中に仕事する時、結構人恋しくなったりするので重宝しています笑</p>
                 <ul class="message_nav flex">
-                  <li class="message_nav_item"><a href="#"><i class="far fa-star"></i>お気に入りに追加する</a>
+                  <li class="message_nav_item" id="add_favorite"><a href="#"><i class="far fa-star"></i>お気に入りに追加する</a>
                   </li>
-                  <li class="message_nav_item"><a href="#"><i class="far fa-check-circle icon_space"></i>チェック済みにする</a>
+                  <li class="message_nav_item" id="add_checked"><a href="#"><i class="far fa-check-circle icon_space"></i>チェック済みにする</a>
                   </li>
                 </ul>
               </div>
