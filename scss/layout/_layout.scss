@@ -19,7 +19,10 @@
 }
 // headerぶん
 .l_main{
+    width: 100%;
+    max-width: $sp_wide;
     padding-top: $header_height;
+    margin: 0 auto;
 }
 /*----------l_account_sec----------*/
 .l_account_sec{
@@ -61,3 +64,16 @@ $mailbox_flex_left:80px;
 }
 
 
+// 自分のポストに届いたおたより一覧
+$mailbox_flex_left:80px;
+.l_mailbox{
+    min-height:120px;
+    .l_mailbox_left_blc{
+        flex-basis: $mailbox_flex_left;
+        text-align: center;
+        padding: 0 8px;
+    }
+    .l_mailbox_right_blc{
+        flex-basis: calc(100% - #{$mailbox_flex_left});
+    }
+}

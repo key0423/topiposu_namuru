@@ -83,7 +83,7 @@ table {
 
 body {
   color: #333333;
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", 游ゴシック体, "Yu Gothic", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", sans-serif;
   font-size: 12px;
   line-height: 1.4;
   box-sizing: border-box;
@@ -152,25 +152,36 @@ a {
   background: #efefef;
 }
 
-.bg_patern_top {
-  background: url(../img/bg_patern_ttl.png) no-repeat;
+.bg_pattern_top {
+  background: url(../img/bg_pattern_ttl.png) no-repeat;
   background-position: top center;
   background-size: 100%;
 }
 
-.bg_patern_ttl {
+.bg_pattern_ttl {
   position: relative;
   height: 130px;
 }
 
-.bg_patern {
-  background: url(../img/bg_patern.png) repeat-y;
+.bg_pattern {
+  background: url(../img/bg_pattern.png) repeat-y;
   background-size: contain;
+}
+
+/*==============================
+文字色
+==============================*/
+.color_white {
+  color: #ffffff;
 }
 
 /*==============================
 header
 ==============================*/
+.header_side {
+  align-items: center;
+}
+
 .header_left {
   max-width: 120px;
   width: 100%;
@@ -204,6 +215,21 @@ header
   .header_right .header_right_li:first-child {
     margin-right: 10px;
   }
+}
+
+/*==============================
+パンくず
+==============================*/
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumbs .breadcrumbs_item:not(:last-child)::after {
+  content: ">";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
 }
 
 /*==============================
@@ -332,15 +358,42 @@ footer
   position: absolute;
 }
 
-/*----------bg_patern(Yourmailbox調整)----------*/
-.bg_patern_ttl .sec_ttl {
+/*==============================
+タイトル
+==============================*/
+.page_ttl {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 375px) {
+  .page_ttl {
+    font-size: calc(1rem + ((1vw - 3.2px) * -2.1201));
+    min-height: 0vw;
+  }
+}
+
+.sec_ttl {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.mini_ttl {
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: solid 2px #fab0b2;
+  padding: 0 0 4px;
+}
+
+/*----------bg_pattern(Yourmailbox調整)----------*/
+.bg_pattern_ttl .sec_ttl {
   z-index: 20;
   text-align: center;
   font-size: 16px;
   position: relative;
 }
 
-.bg_patern_ttl .ttl_en {
+.bg_pattern_ttl .ttl_en {
   display: block;
   text-align: center;
   max-width: 16%;
@@ -348,14 +401,10 @@ footer
   margin: 0 auto;
 }
 
-.bg_patern_ttl .ttl_jp {
+.bg_pattern_ttl .ttl_jp {
   display: block;
   text-align: center;
   padding-top: 10px;
-}
-
-.mailbox_blc {
-  padding: 0 4%;
 }
 
 .mailbox_link {
@@ -415,17 +464,56 @@ footer
 }
 
 /*==============================
+送信確認画面
+==============================*/
+.message_enter_box {
+  display: none;
+  max-width: 600px;
+  width: 96%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.message_enter_box .message_close {
+  display: block;
+  max-width: 24px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.message_enter_box .message_verification {
+  min-height: 120px;
+  color: #FD9F9F;
+  border: solid 4px #ef6b75;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.message_enter_box .message_cancel {
+  text-align: center;
+}
+
+.message_enter_box .message_cancel a {
+  color: #58b3e5;
+  border-bottom: 1px solid #58b3e5;
+  padding-bottom: 2px;
+}
+
+/*==============================
 ページネーション
 ==============================*/
 .pagenation {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .pagenation .page {
-  border: 1px solid #ef6b75;
-  background: #ffffff;
-  border-radius: 4px;
   margin-right: 8px;
 }
 
@@ -436,13 +524,22 @@ footer
 .pagenation .page a {
   display: inline-block;
   color: #ef6b75;
+  background: #ffffff;
   padding: 8px 12px;
+  border: 1px solid #ef6b75;
+  border-radius: 4px;
   text-decoration: none;
 }
 
 .pagenation .page.active a {
   color: #ffffff;
   background-color: #ef6b75;
+}
+
+.mailbox .pagenation .page.active a {
+  color: #ffffff;
+  background-color: #ef6b75;
+  border: solid 1px #ffffff;
 }
 
 /*==============================
@@ -458,6 +555,13 @@ footer
 .link_btn .position_right {
   position: absolute;
   right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.link_btn .position_left {
+  position: absolute;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -486,6 +590,21 @@ footer
   letter-spacing: 0.1em;
   padding: 12px 10px;
   border: solid 2px #e6636c;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.link_btn_blue_line {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  color: #6EB2E0;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 12px 10px;
+  border: solid 2px #6EB2E0;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -548,14 +667,14 @@ js用
   transition: all 0.3s;
 }
 
-#modalAnounce {
+#modalannounce {
   display: none;
 }
 
 /*==============================
 お知らせモーダル中身
 ==============================*/
-.anounce_box {
+.announce_box {
   max-width: 430px;
   width: 80%;
   position: fixed;
@@ -564,20 +683,20 @@ js用
   z-index: 9999;
   background: #ffffff;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
-.anounce_head {
+.announce_head {
   align-items: center;
   padding-bottom: 10px;
 }
 
-.anounce_head .anounce_ttl {
+.announce_head .announce_ttl {
   font-size: 16px;
   font-weight: bold;
 }
 
-.anounce_head .anounce_setting {
+.announce_head .announce_setting {
   position: relative;
   padding-left: 16px;
 }
@@ -627,12 +746,12 @@ js用
   padding-top: 12px;
 }
 
-.anounce_arc_link {
+.announce_arc_link {
   text-align: center;
   padding: 10px 0;
 }
 
-.anounce_arc_link a {
+.announce_arc_link a {
   font-size: 14px;
   padding-right: 20px;
 }
@@ -742,6 +861,168 @@ js用
   margin-right: auto;
 }
 
+/*==============================
+ポスト内の項目
+==============================*/
+.post_nav .post_nav_item {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.post_nav .post_nav_item a {
+  color: #ffffff;
+  margin: 0 8px;
+  padding-bottom: 4px;
+}
+
+.post_nav .current a {
+  border-bottom: solid 2px #ffffff;
+}
+
+/*==============================
+自分のポストに届いたおたより一覧
+==============================*/
+.mailbox {
+  color: #ffffff;
+  background: #ef6b75;
+  padding: 30px 16px;
+  border-radius: 12px 12px 0 0;
+}
+
+/*==============================
+ポストを編集するボタン
+==============================*/
+.post_setting {
+  width: 100%;
+  max-width: 140px;
+  margin-left: auto;
+}
+
+.post_setting .post_setting_link {
+  display: block;
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  padding: 10px;
+}
+
+.post_setting .post_setting_link .icon {
+  margin-right: 8px;
+}
+
+/*==============================
+手紙
+==============================*/
+.message {
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.message .message_inner {
+  padding: 16px 4% 10px;
+}
+
+.message .message_inner .message_text {
+  min-height: 140px;
+  line-height: 14px;
+}
+
+.message .message_inner .message_nav {
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+.message .message_inner .message_nav a {
+  color: initial;
+  display: inline-block;
+}
+
+.message .message_inner .message_nav a .icon_space {
+  margin-right: 2px;
+}
+
+.message_pattern {
+  background: #ffffff;
+  position: relative;
+}
+
+.message_pattern::before {
+  content: "";
+  width: 108px;
+  height: 50px;
+  background: url(../img/bg_letter_pattern_top.svg) no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.message_pattern::after {
+  content: "";
+  width: 108px;
+  height: 50px;
+  background: url(../img/bg_letter_pattern_bottom.svg) no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.message_pattern .message_inner {
+  border-radius: 4px;
+  border: dotted 2px #58b3e5;
+}
+
+.message_pattern .message_inner .message_text {
+  font-size: 14px;
+  color: #58b3e5;
+  line-height: 2;
+}
+
+.message_pattern .message_inner .message_nav .message_nav_item {
+  margin-right: 16px;
+}
+
+.message_pattern .message_inner .message_nav .message_nav_item:last-child {
+  margin-right: 0;
+}
+
+/*==============================
+手紙への返信
+==============================*/
+.answer .answer_inner {
+  background: #FD9F9F;
+  padding: 16px 4% 10px;
+  border-radius: 4px;
+}
+
+.answer .answer_inner .answer_text {
+  min-height: 140px;
+  line-height: 2.0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.answer .answer_inner .answer_nav {
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+.answer .answer_inner .answer_nav a {
+  color: initial;
+  display: inline-block;
+}
+
+.answer .answer_inner .answer_nav a .icon_space {
+  margin-right: 2px;
+}
+
+.text_count {
+  text-align: right;
+  color: #ffffff;
+}
+
 .border_solid {
   display: inline-block;
   border-bottom: dashed 1px #666666;
@@ -772,7 +1053,10 @@ layout
 }
 
 .l_main {
+  width: 100%;
+  max-width: 640px;
   padding-top: 64px;
+  margin: 0 auto;
 }
 
 /*----------l_account_sec----------*/
@@ -815,6 +1099,20 @@ layout
 }
 
 .l_mailbox .l_mailbox_link .l_mailbox_right_blc {
+  flex-basis: calc(100% - 80px);
+}
+
+.l_mailbox {
+  min-height: 120px;
+}
+
+.l_mailbox .l_mailbox_left_blc {
+  flex-basis: 80px;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.l_mailbox .l_mailbox_right_blc {
   flex-basis: calc(100% - 80px);
 }
 
@@ -1277,11 +1575,11 @@ margin
   margin: -80px auto 0;
 }
 
-.u_bg_up .u_bg_patern_content {
+.u_bg_up .u_bg_pattern_content {
   margin-top: -4px;
 }
 
-.u_bg_patern_content {
+.u_bg_pattern_content {
   padding-bottom: 40px;
   border-bottom: solid 7px #ef6b75;
 }

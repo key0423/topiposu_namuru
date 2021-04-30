@@ -14,7 +14,7 @@
 <body>
   <header class="l_header">
     <div class="l_header_inner">
-    <div class="flex_side"> 
+    <div class="flex_side header_side"> 
       <div class="header_left">
         <div class="logo">
           <img src="img/logo.svg" alt="トピぽす">
@@ -26,7 +26,7 @@
               <img src="img/icon_faq.svg" alt="faq">
             </a>
         </li>
-        <li id="js_announce_btn" class="header_right_li btn_notication" data-modal="modalAnounce">
+        <li id="js_announce_btn" class="header_right_li btn_notication" data-modal="modalannounce">
           <a href="#" class="d_block btn_link">
             <img src="img/icon_notification.svg" alt="通知ボタン">
           </a>
@@ -81,13 +81,13 @@
       </div>
     </div>
     <div class="u_bg_up">
-      <div class="bg_patern_top">
-        <div class="bg_patern_ttl">
+      <div class="bg_pattern_top">
+        <div class="bg_pattern_ttl">
           <h2 class="sec_ttl"><span class="ttl_en"><img src="img/sec_mailbox_ttl.png" alt="Your mailbox"></span><span
               class="ttl_jp">作成したポスト</span></h2>
         </div>
-        <div class="bg_patern u_bg_patern_content">
-          <ul class="mailbox_blc">
+        <div class="bg_pattern u_bg_pattern_content">
+          <ul class="mailbox_blc l_inner">
             <!-- ここからループ -->
             <li class="l_mailbox u_mailbox">
               <div class="l_mailbox_link mailbox_link">
@@ -107,8 +107,8 @@
                     </span>
                   </div>
                   <div class="l_mailbox_right_blc">
-                    <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-                    <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                    <p class="mailbox_ttl"><a href="mailbox_list.html">最近ハマったものはなんですか？</a></p>
+                    <p class="mailbox_txt"><a href="mailbox_list.html">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
                   </div>
                 </div>
@@ -133,8 +133,8 @@
                     </span>
                   </div>
                   <div class="l_mailbox_right_blc">
-                    <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-                    <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                    <p class="mailbox_ttl"><a href="mailbox_list.html">最近ハマったものはなんですか？</a></p>
+                    <p class="mailbox_txt"><a href="mailbox_list.html">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
                   </div>
                 </div>
@@ -161,8 +161,8 @@
                     </span>
                   </div>
                   <div class="l_mailbox_right_blc">
-                    <p class="mailbox_ttl"><a href="#">最近ハマったものはなんですか？</a></p>
-                    <p class="mailbox_txt"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
+                    <p class="mailbox_ttl"><a href="mailbox_list.html">最近ハマったものはなんですか？</a></p>
+                    <p class="mailbox_txt"><a href="mailbox_list.html">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a>
                     </p>
                   </div>
                 </div>
@@ -284,12 +284,12 @@
               <li class="page"><a href="/topics?page=2">2</a></li>
               <li class="page"><a href="/topics?page=3">3</a></li>
               <li class="page"><a href="#"><i class="fas fa-angle-right"></i></a></li>
-      </ul>
+          </ul>
         </div>
       </div>
-      <p class="link_btn"><a class="link_btn_red link_icon_right" href="#">おたよりをもっと見る<span class="position_right"><i class="fas fa-arrow-right"></i></span></a></p>
+      <!-- <p class="link_btn"><a class="link_btn_red link_icon_right" href="#">おたよりをもっと見る<span class="position_right"><i class="fas fa-arrow-right"></i></span></a></p>
       <p class="link_btn"><a class="link_btn_white link_icon_right" href="#">おたよりをもっと見る<span class="position_right"><i class="fas fa-arrow-right"></i></span></a>
-      </p>
+      </p> -->
     </div>
   </main>
   <footer class="l_footer">
@@ -308,7 +308,7 @@
           <a href="" class="txt_link_black">プライバシーポリシー</a>
         </li>
       </ul>
-      <p class="copyright"><small>© RYOZEN Scratch Creations</small></p>
+      <p class="copyright u_pdb20"><small>© RYOZEN Scratch Creations</small></p>
     </div>
   </footer>
 
@@ -323,10 +323,10 @@
   </div>
 
   <!-- ====================新着情報もーだる==================== -->
-  <div class="anounce_box" id="modalAnounce">
-    <div class="anounce_head flex_side">
-      <p class="anounce_ttl">おしらせ</p>
-      <p class=""><a class="anounce_setting" href="#"><i class="fas fa-cog fontawesome_icon"></i>通知の設定を行う</a></p>
+  <div class="announce_box" id="modalannounce">
+    <div class="announce_head flex_side">
+      <p class="announce_ttl">おしらせ</p>
+      <p class=""><a class="announce_setting" href="#"><i class="fas fa-cog fontawesome_icon"></i>通知の設定を行う</a></p>
     </div>
 
     <ul class="head_topick_list">
@@ -370,7 +370,7 @@
         </a>
       </li>
     </ul>
-    <p class="anounce_arc_link"><a class="link_icon_right" href="#">おしらせ一覧を見る</a></p>
+    <p class="announce_arc_link"><a class="link_icon_right" href="#">おしらせ一覧を見る</a></p>
   </div>
   <!-- ====================新着情報もーだる ここまで==================== -->
 
