@@ -137,6 +137,44 @@ a {
 }
 
 /*==============================
+formリセット
+==============================*/
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}
+
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/*==============================
 背景設定(レイアウト)
 ==============================*/
 /*----------背景設定----------*/
@@ -861,6 +899,39 @@ js用
   margin-right: auto;
 }
 
+/*----------アイコン選択----------*/
+.topick_setting_icon {
+  display: block;
+  background: #868686;
+  padding: 8px;
+}
+
+.select_icon_blc {
+  background: #ffffff;
+  padding: 16px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.select_icon_item {
+  width: 64px;
+  height: 64px;
+  margin: 0 2%;
+}
+
+.select_icon_item .select_icon_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  background: #868686;
+  border: solid 3px #868686;
+}
+
+input[type="radio"]:checked + .select_icon_img {
+  border: solid 3px #ef6b75;
+}
+
 /*==============================
 ポスト内の項目
 ==============================*/
@@ -1021,6 +1092,91 @@ js用
 .text_count {
   text-align: right;
   color: #ffffff;
+}
+
+/*==============================
+ポストの設定画面
+==============================*/
+.select_icon_btn {
+  max-width: 104px;
+  width: 100%;
+  background: #efefef;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.select_icon_btn .select_icon_btn_link {
+  width: 100%;
+  text-align: center;
+}
+
+.post_setting_ttl {
+  display: block;
+}
+
+.post_setting_txt {
+  width: 100%;
+  background: #ffffff;
+  padding: 4px;
+}
+
+.post_setting_txt_area {
+  width: 100%;
+  background: #ffffff;
+  min-height: 56px;
+  height: auto;
+  padding: 4px;
+}
+
+/* チェックボックス */
+input[type=checkbox] {
+  display: none;
+}
+
+.wanted {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 30px;
+  position: relative;
+  width: auto;
+  color: #ffffff;
+}
+
+.wanted::before {
+  background: #fff;
+  border: 1px solid #231815;
+  content: '';
+  display: block;
+  height: 16px;
+  left: 5px;
+  margin-top: -8px;
+  position: absolute;
+  top: 50%;
+  width: 16px;
+}
+
+.wanted::after {
+  border-right: 3px solid #ed7a9c;
+  border-bottom: 3px solid #ed7a9c;
+  content: '';
+  display: block;
+  height: 9px;
+  left: 10px;
+  margin-top: -7px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 5px;
+}
+
+input[type=checkbox]:checked + .wanted::after {
+  opacity: 1;
+}
+
+.color_mailbox {
+  color: #ef6b75;
 }
 
 .border_solid {
