@@ -63,7 +63,6 @@ $mailbox_flex_left:80px;
 }
 }
 
-
 // 自分のポストに届いたおたより一覧
 $mailbox_flex_left:80px;
 .l_mailbox{
@@ -76,4 +75,9 @@ $mailbox_flex_left:80px;
     .l_mailbox_right_blc{
         flex-basis: calc(100% - #{$mailbox_flex_left});
     }
+}
+
+//設定ページにあるようなborder-radiusのセクション
+.l_setting_sec{
+    border-radius: 8px;
 }

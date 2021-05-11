@@ -31,6 +31,33 @@
 .color_white {
   color: $white;
 }
+.color_gray{
+  color: $gray;
+}
+.color_red{
+  color: $color_mailbox;
+}
+/*==============================
+ボーダー設定
+==============================*/
+.border_bottom_red{
+  border-bottom: solid 2px $color_mailbox;
+}
+/*==============================
+中央揃え
+==============================*/
+.tc{
+  text-align: center;
+}
+.tr{
+  text-align: right;
+}
+/*==============================
+font-weight
+==============================*/
+.bold{
+  font-weight: bold;
+}
 /*==============================
 header
 ==============================*/
@@ -83,7 +110,6 @@ footer
 .footer_list_item {
   padding: 0 8px;
 }
-
 /*==============================
 レイアウト内の要素
 ==============================*/
@@ -132,7 +158,9 @@ footer
   margin: 0 auto 32px;
 }
 
-/*----------おたより・ポストcvrボタン----------*/
+/*============================
+おたより・ポストcvrボタン
+============================*/
 .cvr_item {
   flex-basis: 50%;
   .cvr_btn {
@@ -203,7 +231,8 @@ footer
   border-bottom: solid 2px $color_light_pink;
   padding: 0 0 4px;
 }
-/*----------bg_pattern(Yourmailbox調整)----------*/
+
+/*bg_pattern(Yourmailbox調整)*/
 // タイトル
 .bg_pattern_ttl {
   .sec_ttl {
@@ -338,7 +367,6 @@ footer
     }
   }
 }
-
 .mailbox{
   .pagenation {
     .page.active {
@@ -350,6 +378,17 @@ footer
     }
   }
 }
+/*==============================
+ページ内リンク
+==============================*/
+.page_link_item{
+  font-weight: bold;
+  border-bottom: solid 1px $light_gray;
+  .page_link_item_link{
+    display: block;
+  }
+}
+
 /*==============================
 パーツ関係(ボタン・アイコン)
 ==============================*/
@@ -415,6 +454,13 @@ footer
     height: auto;
   }
 }
+// 各種設定フォーム追加するボタン
+.red_mini_button{
+  color: #ffffff;
+  background: $color_mailbox;
+  padding:12px;
+}
+
 
 .copyright {
   text-align: center;
@@ -796,7 +842,7 @@ input[type="radio"]:checked + .select_icon_img{
 .post_setting_txt{
   width: 100%;
   background: $white;
-  padding: 4px;
+  padding: 8px;
 }
 .post_setting_txt_area{
   width: 100%;
@@ -850,4 +896,85 @@ input[type=checkbox]:checked + .wanted::after {
 
 .color_mailbox{
   color: $color_mailbox;
+}
+
+/*==============================
+画像のアップロードのグレー
+==============================*/
+.upload_img{
+  display: block;
+  overflow: hidden;
+  position: relative;
+  &::before{
+    display:inline-block;
+    content:'';
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background:rgba(0,0,0,0.6);
+    top:0;
+    left:0;
+    z-index:1;
+  }
+  &::after{
+    display:inline-block;
+    content:'';
+    width: 40%;
+    height: 40%;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 
+    background: url(../img/upload_camera.svg) no-repeat;
+    background-size: contain;
+    z-index:2;
+  }
+}
+
+/*========枠のあるテキストボックス========*/
+.border_box{
+  border: solid 1px $light_gray;
+}
+
+/*========Webサイト登録部分========*/
+.account_web_box:nth-child(n+2){
+  border-top: dotted 2px $gray;
+}
+.account_txt_box_ttl{
+  font-size: $font_sp_m;
+}
+.acccount_minus_btn{
+  .acccount_minus_btn_link{
+    color: $gray;
+    font-size: $font_m;
+    &:hover{
+      color: #ffffff;
+    }
+  }
+}
+.account_plus_btn{
+  width: 18px;
+  text-align: center;
+  margin: 0 auto;
+}
+// 各種設定のラジオボタン
+.setting_checkitem_txt{
+  background: $light_gray;
+  padding: 12px 18px;
+  border-bottom: solid 2px $gray;
+}
+.post_setting_btn:checked + .setting_checkitem_txt{
+  background: $color_mailbox;
+  color: #ffffff;
+  border-bottom: solid 2px #ffffff;
+}
+// ミュートワード
+.setting_mute_flex{
+  .post_setting_txt{
+    flex-basis: calc(100% - 80px);
+  }
+  .red_mini_button{
+    flex-basis: 80px;
+    width: 80px;
+  }
 }
