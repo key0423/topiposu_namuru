@@ -739,11 +739,11 @@ js用
   padding-left: 16px;
 }
 
-.head_topick_list_item {
+.head_topic_list_item {
   padding: 0 2%;
 }
 
-.head_topick_list_item:first-child {
+.head_topic_list_item:first-child {
   border-top: solid 1px #efefef;
 }
 
@@ -753,18 +753,18 @@ js用
   width: 100%;
 }
 
-.txt_link_black .topick_item_left {
+.txt_link_black .topic_item_left {
   flex-basis: 32px;
   width: 32px;
   margin-right: 12px;
   text-align: center;
 }
 
-.txt_link_black .topick_item_right {
+.txt_link_black .topic_item_right {
   flex-basis: calc(100% - 44px);
 }
 
-.topick_item_right .topick_item_category {
+.topic_item_right .topic_item_category {
   font-size: 10px;
   background: #efefef;
   padding: 4px 8px;
@@ -772,13 +772,13 @@ js用
   margin-right: 8px;
 }
 
-.topick_item_right .topick_item_date {
+.topic_item_right .topic_item_date {
   font-size: 12px;
   color: #666666;
   padding-left: 12px;
 }
 
-.topick_item_right .topick_item_txt {
+.topic_item_right .topic_item_txt {
   display: block;
   font-size: 12px;
   padding-top: 12px;
@@ -900,7 +900,7 @@ js用
 }
 
 /*----------アイコン選択----------*/
-.topick_setting_icon {
+.topic_setting_icon {
   display: block;
   background: #868686;
   padding: 8px;
@@ -910,7 +910,6 @@ js用
   background: #ffffff;
   padding: 16px;
   position: relative;
-  border-radius: 4px;
 }
 
 .select_icon_item {
@@ -1123,7 +1122,7 @@ input[type="radio"]:checked + .select_icon_img {
 .post_setting_txt_area {
   width: 100%;
   background: #ffffff;
-  min-height: 56px;
+  min-height: 160px;
   height: auto;
   padding: 4px;
 }
