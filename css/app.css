@@ -137,6 +137,44 @@ a {
 }
 
 /*==============================
+formリセット
+==============================*/
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}
+
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/*==============================
 背景設定(レイアウト)
 ==============================*/
 /*----------背景設定----------*/
@@ -447,9 +485,6 @@ footer
 }
 
 .mailbox_txt {
-  color: #ffffff;
-  padding-top: 12px;
-  padding-bottom: 12px;
   line-height: 1.6;
 }
 
@@ -701,11 +736,11 @@ js用
   padding-left: 16px;
 }
 
-.head_topick_list_item {
+.head_topic_list_item {
   padding: 0 2%;
 }
 
-.head_topick_list_item:first-child {
+.head_topic_list_item:first-child {
   border-top: solid 1px #efefef;
 }
 
@@ -715,18 +750,18 @@ js用
   width: 100%;
 }
 
-.txt_link_black .topick_item_left {
+.txt_link_black .topic_item_left {
   flex-basis: 32px;
   width: 32px;
   margin-right: 12px;
   text-align: center;
 }
 
-.txt_link_black .topick_item_right {
+.txt_link_black .topic_item_right {
   flex-basis: calc(100% - 44px);
 }
 
-.topick_item_right .topick_item_category {
+.topic_item_right .topic_item_category {
   font-size: 10px;
   background: #efefef;
   padding: 4px 8px;
@@ -734,13 +769,13 @@ js用
   margin-right: 8px;
 }
 
-.topick_item_right .topick_item_date {
+.topic_item_right .topic_item_date {
   font-size: 12px;
   color: #666666;
   padding-left: 12px;
 }
 
-.topick_item_right .topick_item_txt {
+.topic_item_right .topic_item_txt {
   display: block;
   font-size: 12px;
   padding-top: 12px;
@@ -861,21 +896,55 @@ js用
   margin-right: auto;
 }
 
+/*----------アイコン選択----------*/
+.topic_setting_icon {
+  display: block;
+  background: #868686;
+  padding: 8px;
+}
+
+.select_icon_blc {
+  background: #ffffff;
+  padding: 16px;
+  position: relative;
+}
+
+.select_icon_item {
+  margin: 0 2%;
+}
+
+.select_icon_item .select_icon_img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  padding: 8px;
+  background: #868686;
+  border: solid 3px #868686;
+}
+
+.select_icon_item .icon_name {
+  text-align: center;
+}
+
+input[type="radio"]:checked + .select_icon_img {
+  border: solid 3px #ef6b75;
+}
+
 /*==============================
 ポスト内の項目
 ==============================*/
-.post_nav .post_nav_item {
+.message_nav .message_nav_item {
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.post_nav .post_nav_item a {
+.message_nav .message_nav_item a {
   color: #ffffff;
   margin: 0 8px;
   padding-bottom: 4px;
 }
 
-.post_nav .current a {
+.message_nav .current a {
   border-bottom: solid 2px #ffffff;
 }
 
@@ -892,21 +961,67 @@ js用
 /*==============================
 ポストを編集するボタン
 ==============================*/
-.post_setting {
+.message_setting {
   width: 100%;
   max-width: 140px;
   margin-left: auto;
 }
 
-.post_setting .post_setting_link {
+.message_setting .message_setting_link {
   display: block;
   color: #ffffff;
   border: solid 1px #ffffff;
   padding: 10px;
 }
 
-.post_setting .post_setting_link .icon {
+.message_setting .message_setting_link .icon {
   margin-right: 8px;
+}
+
+.message_setting_radio_btn {
+  margin: 0.5rem;
+  position: relative;
+}
+
+.message_setting_radio_btn input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.message_setting_radio_btn input[type="radio"] + label:before {
+  content: '';
+  background: #ffffff;
+  border-radius: 100%;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  position: relative;
+  top: -0.2em;
+  margin-right: 1em;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  transition: all 250ms ease;
+}
+
+.message_setting_radio_btn input[type="radio"]:checked + label:before {
+  background-color: #ef6b75;
+  box-shadow: inset 0 0 0 4px #ffffff;
+}
+
+.message_setting_radio_btn input[type="radio"]:focus + label:before {
+  outline: none;
+  border-color: #666666;
+}
+
+.message_setting_radio_btn input[type="radio"]:disabled + label:before {
+  box-shadow: inset 0 0 0 4px #ef6b75;
+  border-color: #c51523;
+  background: #c51523;
+}
+
+.message_setting_radio_btn input[type="radio"] + .radio-label:empty:before {
+  margin-right: 0;
 }
 
 /*==============================
@@ -1023,6 +1138,91 @@ js用
   color: #ffffff;
 }
 
+/*==============================
+ポストの設定画面
+==============================*/
+.select_icon_btn {
+  max-width: 104px;
+  width: 100%;
+  background: #efefef;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.select_icon_btn .select_icon_btn_link {
+  width: 100%;
+  text-align: center;
+}
+
+.message_setting_ttl {
+  display: block;
+}
+
+.message_setting_txt {
+  width: 100%;
+  background: #ffffff;
+  padding: 4px;
+}
+
+.message_setting_txt_area {
+  width: 100%;
+  background: #ffffff;
+  min-height: 160px;
+  height: auto;
+  padding: 4px;
+}
+
+/* チェックボックス */
+input[type=checkbox] {
+  display: none;
+}
+
+.wanted {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 30px;
+  position: relative;
+  width: auto;
+  color: #ffffff;
+}
+
+.wanted::before {
+  background: #fff;
+  border: 1px solid #231815;
+  content: '';
+  display: block;
+  height: 16px;
+  left: 5px;
+  margin-top: -8px;
+  position: absolute;
+  top: 50%;
+  width: 16px;
+}
+
+.wanted::after {
+  border-right: 3px solid #ed7a9c;
+  border-bottom: 3px solid #ed7a9c;
+  content: '';
+  display: block;
+  height: 9px;
+  left: 10px;
+  margin-top: -7px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 5px;
+}
+
+input[type=checkbox]:checked + .wanted::after {
+  opacity: 1;
+}
+
+.color_mailbox {
+  color: #ef6b75;
+}
+
 .border_solid {
   display: inline-block;
   border-bottom: dashed 1px #666666;
@@ -1093,7 +1293,7 @@ layout
 }
 
 .l_mailbox .l_mailbox_link .l_mailbox_left_blc {
-  flex-basis: 　 80px;
+  flex-basis: 80px;
   text-align: center;
   padding: 0 8px;
 }

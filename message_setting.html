@@ -45,66 +45,96 @@
       <div class="l_breadcrumbs_area u_mgb8">
         <ul class="breadcrumbs l_inner">
           <li class="breadcrumbs_item"><a href="mypage.html">TOP</a></li>
-          <li class="breadcrumbs_item">ポストに届いたおたより一覧</li>
+          <li class="breadcrumbs_item"><a href="mypage_list.html">ポストに届いたおたより一覧</a></li>
+          <li class="breadcrumbs_item">ポスト編集</li>
         </ul>
       </div>
       <div class="page_ttl_area l_inner u_mgb12">
-        <h1 class="page_ttl">ポストに届いたおたより一覧</h1>
+        <h1 class="page_ttl">ポスト編集</h1>
       </div>
       <div class="bg_pattern u_bg_pattern_content">
         <div class="mailbox_blc l_inner">
           <div class="l_mailbox u_mailbox mailbox">
-            <div class="flex">
-              <div class="l_mailbox_left_blc">
-                <span class="topic_icon mailbox_icon">
-                  <!-- ポストのアイコン -->
-                  <img src="img/mailbox_icon01.png" alt="">
-                </span>
+            <form method="message">
+              <!-- ====================アイコン選択==================== -->
+              <div class="select_icon_blc u_mgb24" id="select_icon_blc">
+                <h2 class="message_setting_ttl u_mgb8">アイコンを選択する</h2>
+                <p class="mailbox_txt u_mgb8">ポストの内容に合わせて好きなアイコンを設定することができます。</p>
+                <div class="select_icon_list flex">
+                  <div class="select_icon_item">
+                    <input id="icon01" type="radio" name="icon" value="icon01">
+                    <label for="icon01" class="select_icon_img u_mgb4">
+                      <img src="img/select_icons/icon01.svg">
+                    </label>
+                    <p class="icon_name">質問</p>
+                  </div>
+                  <div class="select_icon_item">
+                    <input id="icon02" type="radio" name="icon" value="icon02">
+                    <label for="icon02" class="select_icon_img u_mgb4">
+                      <img src="img/select_icons/icon02.svg">
+                    </label>
+                    <p class="icon_name">おたより</p>
+                  </div>
+                  <div class="select_icon_item">
+                    <input id="icon03" type="radio" name="icon" value="icon03">
+                    <label for="icon03" class="select_icon_img u_mgb4">
+                      <img src="img/select_icons/icon03.svg">
+                    </label>
+                    <p class="icon_name">〇〇募集</p>
+                  </div>
+                  <div class="select_icon_item">
+                    <input id="icon04" type="radio" name="icon" value="icon04">
+                    <label for="icon04" class="select_icon_img u_mgb4">
+                      <img src="img/select_icons/icon04.svg">
+                    </label>
+                    <p class="icon_name">大喜利</p>
+                  </div>
+                  <div class="select_icon_item">
+                    <input id="icon05" type="radio" name="icon" value="icon05">
+                    <label for="icon05" class="select_icon_img u_mgb4">
+                      <img src="img/select_icons/icon05.svg">
+                    </label>
+                    <p class="icon_name">その他</p>
+                  </div>
+                </div>
               </div>
-              <div class="l_mailbox_right_blc">
-                <p class="mailbox_ttl">最近ハマったものはなんですか？</p>
-                <p class="mailbox_txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <!-- ====================アイコン選択==================== -->
+              <div class="u_mgb24">
+                  <label for="name" class="message_setting_ttl u_mgb8">ポスト名</label>
+                  <input type="text" id="name" class="d_block message_setting_txt" name="name">
+                  <p class="text_count u_mgt8">
+                    <span class="number"><!-- ここの数字がカウントされる -->30</span>/<span class="max_number">50</span>
+                  </p>
               </div>
-            </div>
-            <p class="message_setting u_mgb16"><a class="message_setting_link" href="message_setting.html"><i class="fas fa-cog fontawesome_icon icon"></i>ポストを編集する</a></p>
-            <ul class="message_nav u_mgb24 flex">
-              <li class="message_nav_item current"><a href="#">一覧</a></li>
-              <li class="message_nav_item" id="category_not_et_check"><a href="#">未チェック</a></li>
-              <li class="message_nav_item" id="category_checked"><a href="#">チェック済み</a></li>
-              <li class="message_nav_item" id="category_favorite"><a href="#">お気に入り</a></li>
-            </ul>
-            <!-- ここから手紙 -->
-            <h2 class="sec_ttl color_white u_mgb16">ポストに届いたおたより一覧</h2>
-            <div class="message message_pattern u_mgb24">
-              <div class="message_inner">
-                <p class="message_text">初めてメッセージを送ります！最近私がハマっているのはWebラジオです。在宅勤務中に仕事する時、結構人恋しくなったりするので重宝しています笑</p>
-                <ul class="message_nav flex">
-                  <li class="message_nav_item" id="add_favorite"><a href="#"><i class="far fa-star"></i>お気に入りに追加する</a>
-                  </li>
-                  <li class="message_nav_item" id="add_checked"><a href="#"><i class="far fa-check-circle icon_space"></i>チェック済みにする</a>
-                  </li>
-                </ul>
+              <div class="u_mgb24">
+                <label for="explanatory_text" class="message_setting_ttl u_mgb8">ポストの説明</label>
+                <textarea id="explanatory_text" name="explanatory_text" class="message_setting_txt_area"></textarea>
+                <p class="text_count u_mgt8">
+                  <span class="number"><!-- ここの数字がカウントされる -->30</span>/<span class="max_number">100</span>
+                </p>
               </div>
-            </div>
-            <h2 class="sec_ttl color_white u_mgb16">おたよりに回答する</h2>
-            <div class="answer u_mgb24">
-              <div class="answer_inner">
-                <p class="answer_text">ユーザーさん、こんにちは〜！メッセージありがとうございます！Web
-                  ラジオは自分もまだあまり知らない領域でした…！在宅勤務が続いてるの
-                  で、人と話したくなりますよね〜！自分も作業中に聴きたいなと思うので、
-                  オススメのWebラジオなんかがあれば、ぜひまた教えてください！</p>
+              <div class="u_mgb24 message_setting_radio_box">
+                <div class="u_mgb8 message_setting_radio_btn">
+                  <input type="radio" id="message_setting_checkitem1" class="u_mgb20" name="setting_checkbox" checked="checked"/>
+                  <label for="message_setting_checkitem1" class="setting_checkitem_txt u_mgb4">全てのおたよりを公開する</label>
+                </div>
+                <div class="u_mgb8 message_setting_radio_btn">
+                  <input type="radio" id="message_setting_checkitem2" class="u_mgb20" name="setting_checkbox"/>
+                  <label for="message_setting_checkitem2" class="setting_checkitem_txt u_mgb4">全てのおたよりと返信を公開する</label>
+                </div>
+                <div class="u_mgb8 message_setting_radio_btn">
+                  <input type="radio" id="message_setting_checkitem3" class="u_mgb20" name="setting_checkbox"/>
+                  <label for="message_setting_checkitem3" class="setting_checkitem_txt u_mgb4">返信をしたおたよりのみ公開する</label>
+                </div>
+                <div class="message_setting_radio_btn">
+                  <input type="radio" id="message_setting_checkitem4" class="u_mgb20" name="setting_checkbox"/>
+                  <label for="message_setting_checkitem4" class="setting_checkitem_txt u_mgb4">全てのおたよりと返信を公開しない</label>
+                </div>
               </div>
-              <p class="text_count u_mgt8">
-                <span class="number"><!-- ここの数字がカウントされる -->
-                400
-              </span>/<span class="max_number">1000</span></p>
-            </div>
-            <p class="link_btn"><span id="js_message_enter_btn" data-enter="message_enter_box" class="link_btn_white link_btn_blue_line link_icon_right" href="#">送信する<span class="position_right"><i class="fas fa-arrow-right"></i></span></span>
-            </p>
+              <p class="message_setting_enter link_btn"><input type="submit" value="ポストを更新する" id="js_message_enter_btn" class="link_btn_white link_icon_right" href="#"><span class="position_right"><i class="fas fa-arrow-right color_mailbox"></i></span></p>
+            </form>
           </div><!-- ./l_mailbox u_mailbox -->
         </div><!-- ./mailbox_blc -->
-        <p class="link_btn"><a class="link_btn_white link_icon_right" href="#">ポスト一覧に戻る<span class="position_left"><i class="fas fa-arrow-left"></i></span></a>
-        </p>
       </div>
     </div>
   </main>
