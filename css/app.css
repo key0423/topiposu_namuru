@@ -213,6 +213,39 @@ select::-ms-expand {
   color: #ffffff;
 }
 
+.color_gray {
+  color: #666666;
+}
+
+.color_red {
+  color: #ef6b75;
+}
+
+/*==============================
+ボーダー設定
+==============================*/
+.border_bottom_red {
+  border-bottom: solid 2px #ef6b75;
+}
+
+/*==============================
+中央揃え
+==============================*/
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+/*==============================
+font-weight
+==============================*/
+.bold {
+  font-weight: bold;
+}
+
 /*==============================
 header
 ==============================*/
@@ -326,7 +359,9 @@ footer
   margin: 0 auto 32px;
 }
 
-/*----------おたより・ポストcvrボタン----------*/
+/*============================
+おたより・ポストcvrボタン
+============================*/
 .cvr_item {
   flex-basis: 50%;
 }
@@ -423,7 +458,7 @@ footer
   padding: 0 0 4px;
 }
 
-/*----------bg_pattern(Yourmailbox調整)----------*/
+/*bg_pattern(Yourmailbox調整)*/
 .bg_pattern_ttl .sec_ttl {
   z-index: 20;
   text-align: center;
@@ -578,6 +613,18 @@ footer
 }
 
 /*==============================
+ページ内リンク
+==============================*/
+.page_link_item {
+  font-weight: bold;
+  border-bottom: solid 1px #efefef;
+}
+
+.page_link_item .page_link_item_link {
+  display: block;
+}
+
+/*==============================
 パーツ関係(ボタン・アイコン)
 ==============================*/
 .link_btn {
@@ -681,6 +728,12 @@ footer
   height: 48px;
   border-radius: 50%;
   height: auto;
+}
+
+.red_mini_button {
+  color: #ffffff;
+  background: #ef6b75;
+  padding: 12px;
 }
 
 .copyright {
@@ -1161,7 +1214,7 @@ input[type="radio"]:checked + .select_icon_img {
 .message_setting_txt {
   width: 100%;
   background: #ffffff;
-  padding: 4px;
+  padding: 8px;
 }
 
 .message_setting_txt_area {
@@ -1221,6 +1274,91 @@ input[type=checkbox]:checked + .wanted::after {
 
 .color_mailbox {
   color: #ef6b75;
+}
+
+/*==============================
+画像のアップロードのグレー
+==============================*/
+.upload_img {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.upload_img::before {
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.upload_img::after {
+  display: inline-block;
+  content: '';
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/upload_camera.svg) no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+/*========枠のあるテキストボックス========*/
+.border_box {
+  border: solid 1px #efefef;
+}
+
+/*========Webサイト登録部分========*/
+.account_web_box:nth-child(n+2) {
+  border-top: dotted 2px #666666;
+}
+
+.account_txt_box_ttl {
+  font-size: 14px;
+}
+
+.acccount_minus_btn .acccount_minus_btn_link {
+  color: #666666;
+  font-size: 18px;
+}
+
+.acccount_minus_btn .acccount_minus_btn_link:hover {
+  color: #ffffff;
+}
+
+.account_plus_btn {
+  width: 18px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.setting_checkitem_txt {
+  background: #efefef;
+  padding: 12px 18px;
+  border-bottom: solid 2px #666666;
+}
+
+.post_setting_btn:checked + .setting_checkitem_txt {
+  background: #ef6b75;
+  color: #ffffff;
+  border-bottom: solid 2px #ffffff;
+}
+
+.setting_mute_flex .post_setting_txt {
+  flex-basis: calc(100% - 80px);
+}
+
+.setting_mute_flex .red_mini_button {
+  flex-basis: 80px;
+  width: 80px;
 }
 
 .border_solid {
@@ -1314,6 +1452,10 @@ layout
 
 .l_mailbox .l_mailbox_right_blc {
   flex-basis: calc(100% - 80px);
+}
+
+.l_setting_sec {
+  border-radius: 8px;
 }
 
 /*==============================
