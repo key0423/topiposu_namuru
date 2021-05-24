@@ -260,9 +260,6 @@ footer
   border-bottom: dotted 2px $light_gray;
 }
 .mailbox_txt {
-  color: $white;
-  padding-top: 12px;
-  padding-bottom: 12px;
   line-height: 1.6;
 }
 .mailbox_link_area {
@@ -629,8 +626,8 @@ input[type="radio"]:checked + .select_icon_img{
 /*==============================
 ポスト内の項目
 ==============================*/
-.post_nav {
-  .post_nav_item {
+.message_nav {
+  .message_nav_item {
     font-size: $font_sp_m;
     margin-bottom: 10px;
     a {

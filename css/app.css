@@ -485,9 +485,6 @@ footer
 }
 
 .mailbox_txt {
-  color: #ffffff;
-  padding-top: 12px;
-  padding-bottom: 12px;
   line-height: 1.6;
 }
 
@@ -936,18 +933,18 @@ input[type="radio"]:checked + .select_icon_img {
 /*==============================
 ポスト内の項目
 ==============================*/
-.post_nav .post_nav_item {
+.message_nav .message_nav_item {
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.post_nav .post_nav_item a {
+.message_nav .message_nav_item a {
   color: #ffffff;
   margin: 0 8px;
   padding-bottom: 4px;
 }
 
-.post_nav .current a {
+.message_nav .current a {
   border-bottom: solid 2px #ffffff;
 }
 
