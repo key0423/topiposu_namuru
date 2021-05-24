@@ -1014,14 +1014,14 @@ input[type=checkbox]:checked + .wanted::after {
   padding: 12px 18px;
   border-bottom: solid 2px $gray;
 }
-.post_setting_btn:checked + .setting_checkitem_txt{
+.message_setting_btn:checked + .setting_checkitem_txt{
   background: $color_mailbox;
   color: #ffffff;
   border-bottom: solid 2px #ffffff;
 }
 // ミュートワード
 .setting_mute_flex{
-  .post_setting_txt{
+  .message_setting_txt{
     flex-basis: calc(100% - 80px);
   }
   .red_mini_button{

@@ -1346,13 +1346,13 @@ input[type=checkbox]:checked + .wanted::after {
   border-bottom: solid 2px #666666;
 }
 
-.post_setting_btn:checked + .setting_checkitem_txt {
+.message_setting_btn:checked + .setting_checkitem_txt {
   background: #ef6b75;
   color: #ffffff;
   border-bottom: solid 2px #ffffff;
 }
 
-.setting_mute_flex .post_setting_txt {
+.setting_mute_flex .message_setting_txt {
   flex-basis: calc(100% - 80px);
 }
 
