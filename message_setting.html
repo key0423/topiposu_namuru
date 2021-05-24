@@ -69,58 +69,79 @@
               </div>
               <!-- ====================アイコン選択==================== -->
               <div class="select_icon_blc u_mgb24" id="select_icon_blc">
-                <h2 class="post_setting_ttl u_mgb8">アイコンを選択する</h2>
+                <h2 class="message_setting_ttl u_mgb8">アイコンを選択する</h2>
                 <div class="select_icon_list flex">
                   <div class="select_icon_item">
                     <input id="icon01" type="radio" name="icon" value="icon01">
-                    <label for="icon01" class="select_icon_img">
+                    <label for="icon01" class="select_icon_img u_mgb4">
                       <img src="img/select_icons/icon01.svg">
                     </label>
+                    <p class="icon_name">質問</p>
                   </div>
                   <div class="select_icon_item">
                     <input id="icon02" type="radio" name="icon" value="icon02">
-                    <label for="icon02" class="select_icon_img">
+                    <label for="icon02" class="select_icon_img u_mgb4">
                       <img src="img/select_icons/icon02.svg">
                     </label>
+                    <p class="icon_name">おたより</p>
                   </div>
                   <div class="select_icon_item">
                     <input id="icon03" type="radio" name="icon" value="icon03">
-                    <label for="icon03" class="select_icon_img">
+                    <label for="icon03" class="select_icon_img u_mgb4">
                       <img src="img/select_icons/icon03.svg">
                     </label>
+                    <p class="icon_name">〇〇募集</p>
                   </div>
                   <div class="select_icon_item">
                     <input id="icon04" type="radio" name="icon" value="icon04">
-                    <label for="icon04" class="select_icon_img">
+                    <label for="icon04" class="select_icon_img u_mgb4">
                       <img src="img/select_icons/icon04.svg">
                     </label>
+                    <p class="icon_name">大喜利</p>
                   </div>
                   <div class="select_icon_item">
                     <input id="icon05" type="radio" name="icon" value="icon05">
-                    <label for="icon05" class="select_icon_img">
+                    <label for="icon05" class="select_icon_img u_mgb4">
                       <img src="img/select_icons/icon05.svg">
                     </label>
+                    <p class="icon_name">その他</p>
                   </div>
                 </div>
               </div>
               <!-- ====================アイコン選択==================== -->
               <div class="u_mgb24">
-                  <label for="name" class="post_setting_ttl u_mgb8">ポスト名</label>
-                  <input type="text" id="name" class="d_block post_setting_txt" name="name">
+                  <label for="name" class="message_setting_ttl u_mgb8">ポスト名</label>
+                  <input type="text" id="name" class="d_block message_setting_txt" name="name">
                   <p class="text_count u_mgt8">
                     <span class="number"><!-- ここの数字がカウントされる -->30</span>/<span class="max_number">50</span>
                   </p>
               </div>
               <div class="u_mgb24">
-                <label for="explanatory_text" class="post_setting_ttl u_mgb8">ポストの説明</label>
-                <textarea id="explanatory_text" name="explanatory_text" class="post_setting_txt_area"></textarea>
+                <label for="explanatory_text" class="message_setting_ttl u_mgb8">ポストの説明</label>
+                <textarea id="explanatory_text" name="explanatory_text" class="message_setting_txt_area"></textarea>
                 <p class="text_count u_mgt8">
                   <span class="number"><!-- ここの数字がカウントされる -->30</span>/<span class="max_number">100</span>
                 </p>
               </div>
-              <p class="u_mgb24"><input type="checkbox" name="wanted" id="wanted" value="おたよりを募集中にする" checked>
-              <label for="wanted" class="wanted">おたよりを募集中にする（チェックを外すと募集を一時停止します）</label></p>
-              <p class="post_setting_enter link_btn"><input type="submit" value="送信する" id="js_message_enter_btn" class="link_btn_white link_icon_right" href="#"><span class="position_right"><i class="fas fa-arrow-right color_mailbox"></i></span></p>
+              <div class="u_mgb24 message_setting_radio_box">
+                <div class="u_mgb8 message_setting_radio_btn">
+                  <input type="radio" id="message_setting_checkitem1" class="u_mgb20" name="setting_checkbox" checked="checked"/>
+                  <label for="message_setting_checkitem1" class="setting_checkitem_txt u_mgb4">全てのおたよりを公開する</label>
+                </div>
+                <div class="u_mgb8 message_setting_radio_btn">
+                  <input type="radio" id="message_setting_checkitem2" class="u_mgb20" name="setting_checkbox"/>
+                  <label for="message_setting_checkitem2" class="setting_checkitem_txt u_mgb4">全てのおたよりと返信を公開する</label>
+                </div>
+                <div class="u_mgb8 message_setting_radio_btn">
+                  <input type="radio" id="message_setting_checkitem3" class="u_mgb20" name="setting_checkbox"/>
+                  <label for="message_setting_checkitem3" class="setting_checkitem_txt u_mgb4">返信をしたおたよりのみ公開する</label>
+                </div>
+                <div class="message_setting_radio_btn">
+                  <input type="radio" id="message_setting_checkitem4" class="u_mgb20" name="setting_checkbox"/>
+                  <label for="message_setting_checkitem4" class="setting_checkitem_txt u_mgb4">全てのおたよりと返信を公開しない</label>
+                </div>
+              </div>
+              <p class="message_setting_enter link_btn"><input type="submit" value="ポストを更新する" id="js_message_enter_btn" class="link_btn_white link_icon_right" href="#"><span class="position_right"><i class="fas fa-arrow-right color_mailbox"></i></span></p>
             </form>
           </div><!-- ./l_mailbox u_mailbox -->
         </div><!-- ./mailbox_blc -->
