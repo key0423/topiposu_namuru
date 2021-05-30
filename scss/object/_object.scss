@@ -255,7 +255,9 @@ footer
     padding-top: 10px;
   }
 }
-// ポスト一覧
+/*==============================
+ポスト一覧
+==============================*/
 .mailbox_link {
   color: $white;
   background: $color_mailbox;
@@ -301,6 +303,19 @@ footer
     margin: 0 8px;
   }
 }
+
+/*==============================
+誰かのポスト一覧
+==============================*/
+.mailbox_enter{
+  text-align: right;
+  .mailbox_enter_link{
+    border-bottom: solid 1px #ffffff;
+    padding-bottom: 4px;
+    color: #ffffff;
+  }
+}
+
 /*==============================
 送信確認画面
 ==============================*/
@@ -592,7 +607,7 @@ js用
     }
   }
 }
-.q1 {
+.question1 {
   .q_txt {
     font-weight: bold;
     @include d_block;
@@ -612,7 +627,7 @@ js用
     }
   }
 }
-.q2 {
+.question2 {
   input[type="checkbox"] {
     display: none;
   }

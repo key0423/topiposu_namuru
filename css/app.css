@@ -481,6 +481,9 @@ footer
   padding-top: 10px;
 }
 
+/*==============================
+ポスト一覧
+==============================*/
 .mailbox_link {
   color: #ffffff;
   background: #ef6b75;
@@ -533,6 +536,19 @@ footer
   display: block;
   flex-basis: 28px;
   margin: 0 8px;
+}
+
+/*==============================
+誰かのポスト一覧
+==============================*/
+.mailbox_enter {
+  text-align: right;
+}
+
+.mailbox_enter .mailbox_enter_link {
+  border-bottom: solid 1px #ffffff;
+  padding-bottom: 4px;
+  color: #ffffff;
 }
 
 /*==============================
@@ -891,32 +907,32 @@ js用
   top: 16px;
 }
 
-.q1 .q_txt {
+.question1 .q_txt {
   font-weight: bold;
   display: block;
   font-size: 16px;
   text-align: center;
 }
 
-.q1 .bosyu_wrap {
+.question1 .bosyu_wrap {
   display: block;
 }
 
-.q1 .bosyu_wrap .message_modal_mailbox_list {
+.question1 .bosyu_wrap .message_modal_mailbox_list {
   font-size: 14px;
 }
 
-.q1 .bosyu_wrap .message_modal_mailbox_list .q_sub {
+.question1 .bosyu_wrap .message_modal_mailbox_list .q_sub {
   font-size: 12px;
   padding-left: 16px;
   display: inline-block;
 }
 
-.q2 input[type="checkbox"] {
+.question2 input[type="checkbox"] {
   display: none;
 }
 
-.q2 .message_modal_mailbox_list {
+.question2 .message_modal_mailbox_list {
   padding: 12px;
   display: block;
   color: #ffffff;
