@@ -1031,7 +1031,10 @@ input[type="checkbox"]:checked + .wanted::after {
   }
 }
 
-// 退会モーダル
+/*==============================
+退会処理のモーダル
+==============================*/
+/*========退会確認画面========*/
 .withdrawal_blc {
   width: 90%;
   max-width: 600px;
@@ -1084,6 +1087,49 @@ input[type="checkbox"]:checked + .wanted::after {
             border-right: solid 2px #ffffff;
           }
         }
+      }
+    }
+  }
+}
+/*========退会完了画面========*/
+.withdrawaled_blc {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  border: solid 2px $color_message;
+  background: #ffffff;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .withdrawaled_inner {
+    padding: 16px;
+    .withdrawaled_ttl {
+      font-size: 18px;
+      color: $color_message;
+      .withdrawaled_ttl_icon{
+        padding-left: 24px;
+        position: relative;  
+        &::before {
+          content: "";
+          display: inline-block;
+          background: url(../img/icon_checked.svg) no-repeat;
+          background-size: contain;
+          width: 18px;
+          height: 18px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .withdrawaled_txt {
+      line-height: 2;
+      .withdrawaled_link {
+        border-bottom: solid 2px $basic_color;
+        padding-bottom: 4px;
       }
     }
   }
