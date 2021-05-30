@@ -54,9 +54,9 @@
             <h1 class="page_ttl">設定</h1>
           </div>
           <ul class="u_page_link_list l_inner u_mgb24">
-            <li class="page_link_item"><a href="#profile" class="page_link_item_link u_pdb8 u_pdt8">プロフィール編集</a></li>
-            <li class="page_link_item"><a href="#other_settings" class="page_link_item_link u_pdb8 u_pdt8">各種設定</a></li>
-            <li class="page_link_item"><a href="#withdrawal" class="page_link_item_link u_pdb8 u_pdt8">退会手続き</a></li>
+            <li class="page_link_item"><a href="#profile" class="page_link_item_link u_pdb8 u_pdt8">プロフィール編集 <i class="fas fa-chevron-right"></i></a></li>
+            <li class="page_link_item"><a href="#other_settings" class="page_link_item_link u_pdb8 u_pdt8">各種設定 <i class="fas fa-chevron-right"></i></a></li>
+            <li class="page_link_item"><a href="#withdrawal" class="page_link_item_link u_pdb8 u_pdt8">退会手続き <i class="fas fa-chevron-right"></i></a></li>
           </ul>
         </section>
         <section class="u_mgb24 bg_white">
@@ -73,7 +73,7 @@
                 <p class="account_id"><a class="" href="#">ファイルをアップロード</a></p>
               </div>
               <div class="account_txt_box u_mgb24">
-                <label for="name" class="color_gray message_setting_ttl u_mgb4">ポスト名</label>
+                <label for="name" class="color_gray message_setting_ttl u_mgb4">名前</label>
                 <input type="text" id="name" class="border_box d_block message_setting_txt" name="name">
               </div>
               <div class="account_txt_box  u_mgb24">
@@ -127,7 +127,7 @@
             <form>
               <fieldset class="u_mgb24">
                 <div class="flex_side">
-                  <span class="color_gray message_setting_ttl u_mgb4">メールを通知しますか？</span>
+                  <span class="color_gray message_setting_ttl u_mgb4">通知のメールを送付しますか？</span>
                   <div class="flex">
                     <div>
                       <input type="radio" id="setting_checkitem1" class="message_setting_btn u_mgb20" name="setting_checkbox" checked="checked"/>
@@ -164,6 +164,21 @@
       </div>
     </div>
   </main>
+  <!-- 退会のポップアップ -->
+  <div class="withdrawal_blc">
+    <div class="withdrawal_inner">
+      <p class="withdrawal_ttl u_mgb32 tc"><span class="withdrawal_ttl_icon">退会の注意点</span></p>
+      <p class="withdrawal_txt u_mgb24">トピポスを退会しますか？<br>退会の場合は作成したポストや受け取ったおたよりは全て削除されます。<br>下記から<span class="bold">メールの設定</span>や<span class="bold">運営に問い合わせる</span>ことも可能です。</p>
+      <div class="withdrawal_btn_area flex u_mgb24">
+        <p class="withdrawal_btn"><a class="withdrawal_link" href="#">メールの設定</a></p>
+        <p class="withdrawal_btn"><a class="withdrawal_link" href="#">問い合わせる</a></p>
+      </div>
+      <p class="link_btn"><a class="link_btn_white link_icon_right" href="#">それでも退会をする</a>
+      </p>
+    </div>
+  </div>
+
+
   <footer class="l_footer">
     <div class="l_inner bg_gray">
       <ul class="u_footer_list flex_center">

@@ -329,7 +329,8 @@ footer
 }
 
 .account_img_flame {
-  max-width: 80px;
+  width: 80px;
+  height: 80px;
   padding: 20px;
   margin: 0 auto;
   border-radius: 50%;
@@ -682,11 +683,11 @@ footer
   width: 100%;
   max-width: 600px;
   background: #fff;
-  color: #6EB2E0;
+  color: #6eb2e0;
   text-align: center;
   letter-spacing: 0.1em;
   padding: 12px 10px;
-  border: solid 2px #6EB2E0;
+  border: solid 2px #6eb2e0;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -1042,7 +1043,7 @@ input[type="radio"]:checked + .select_icon_img {
 }
 
 .message_setting_radio_btn input[type="radio"] + label:before {
-  content: '';
+  content: "";
   background: #ffffff;
   border-radius: 100%;
   display: inline-block;
@@ -1159,14 +1160,14 @@ input[type="radio"]:checked + .select_icon_img {
 手紙への返信
 ==============================*/
 .answer .answer_inner {
-  background: #FD9F9F;
+  background: #fd9f9f;
   padding: 16px 4% 10px;
   border-radius: 4px;
 }
 
 .answer .answer_inner .answer_text {
   min-height: 140px;
-  line-height: 2.0;
+  line-height: 2;
   color: #ffffff;
   font-weight: bold;
 }
@@ -1226,7 +1227,7 @@ input[type="radio"]:checked + .select_icon_img {
 }
 
 /* チェックボックス */
-input[type=checkbox] {
+input[type="checkbox"] {
   display: none;
 }
 
@@ -1243,7 +1244,7 @@ input[type=checkbox] {
 .wanted::before {
   background: #fff;
   border: 1px solid #231815;
-  content: '';
+  content: "";
   display: block;
   height: 16px;
   left: 5px;
@@ -1256,7 +1257,7 @@ input[type=checkbox] {
 .wanted::after {
   border-right: 3px solid #ed7a9c;
   border-bottom: 3px solid #ed7a9c;
-  content: '';
+  content: "";
   display: block;
   height: 9px;
   left: 10px;
@@ -1268,7 +1269,7 @@ input[type=checkbox] {
   width: 5px;
 }
 
-input[type=checkbox]:checked + .wanted::after {
+input[type="checkbox"]:checked + .wanted::after {
   opacity: 1;
 }
 
@@ -1287,7 +1288,7 @@ input[type=checkbox]:checked + .wanted::after {
 
 .upload_img::before {
   display: inline-block;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1299,7 +1300,7 @@ input[type=checkbox]:checked + .wanted::after {
 
 .upload_img::after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 40%;
   height: 40%;
   position: absolute;
@@ -1317,7 +1318,7 @@ input[type=checkbox]:checked + .wanted::after {
 }
 
 /*========Webサイト登録部分========*/
-.account_web_box:nth-child(n+2) {
+.account_web_box:nth-child(n + 2) {
   border-top: dotted 2px #666666;
 }
 
@@ -1359,6 +1360,72 @@ input[type=checkbox]:checked + .wanted::after {
 .setting_mute_flex .red_mini_button {
   flex-basis: 80px;
   width: 80px;
+}
+
+.withdrawal_blc {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  border: solid 2px #ef6b75;
+  background: #ffffff;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.withdrawal_blc .withdrawal_inner {
+  padding: 16px;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_ttl {
+  font-size: 18px;
+  color: #ef6b75;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_ttl .withdrawal_ttl_icon {
+  padding-left: 24px;
+  position: relative;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_ttl .withdrawal_ttl_icon::before {
+  content: "";
+  display: inline-block;
+  background: url(../img/icon_exclamation.svg) no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_txt {
+  color: #ef6b75;
+  line-height: 2;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_btn_area {
+  justify-content: center;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_btn_area .withdrawal_btn {
+  flex-basis: 48%;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_btn_area .withdrawal_btn .withdrawal_link {
+  color: #ffffff;
+  background: #ef6b75;
+  display: block;
+  text-align: center;
+  padding: 8px;
+  border-radius: 30px;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_btn_area .withdrawal_btn .withdrawal_link:first-child {
+  border-right: solid 2px #ffffff;
 }
 
 .border_solid {
