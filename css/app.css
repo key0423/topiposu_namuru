@@ -521,6 +521,7 @@ footer
 }
 
 .mailbox_txt {
+  color: #ffffff;
   line-height: 1.6;
 }
 
@@ -985,14 +986,14 @@ input[type="radio"]:checked + .select_icon_img {
 }
 
 /*==============================
-ポスト内の項目
+ポスト内
 ==============================*/
 .message_nav .message_nav_item {
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.message_nav .message_nav_item a {
+.message_nav .message_nav_item .message_nav_item_link {
   color: #ffffff;
   margin: 0 8px;
   padding-bottom: 4px;
@@ -1081,79 +1082,82 @@ input[type="radio"]:checked + .select_icon_img {
 /*==============================
 手紙
 ==============================*/
-.message {
+.letter {
   padding: 10px;
   border-radius: 4px;
 }
 
-.message .message_inner {
+.letter .letter_inner {
+  display: block;
   padding: 16px 4% 10px;
 }
 
-.message .message_inner .message_text {
+.letter .letter_inner .letter_text {
   min-height: 140px;
   line-height: 14px;
 }
 
-.message .message_inner .message_nav {
-  justify-content: flex-end;
-  position: relative;
-  z-index: 2;
-}
-
-.message .message_inner .message_nav a {
-  color: initial;
-  display: inline-block;
-}
-
-.message .message_inner .message_nav a .icon_space {
-  margin-right: 2px;
-}
-
-.message_pattern {
+.letter_pattern {
   background: #ffffff;
   position: relative;
 }
 
-.message_pattern::before {
+.letter_pattern::before {
   content: "";
+  display: inline-block;
   width: 108px;
   height: 50px;
-  background: url(../img/bg_letter_pattern_top.svg) no-repeat;
+  background: url(../img/bg_letter_patern_top.svg) no-repeat;
   background-size: cover;
   position: absolute;
   left: 10px;
   top: 10px;
 }
 
-.message_pattern::after {
+.letter_pattern::after {
   content: "";
+  display: inline-block;
   width: 108px;
   height: 50px;
-  background: url(../img/bg_letter_pattern_bottom.svg) no-repeat;
+  background: url(../img/bg_letter_patern_top.svg) no-repeat;
   background-size: cover;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 0;
+  bottom: 38px;
 }
 
-.message_pattern .message_inner {
+.letter_pattern .letter_inner {
   border-radius: 4px;
-  border: dotted 2px #58b3e5;
+  border-bottom: dotted 2px #58b3e5;
 }
 
-.message_pattern .message_inner .message_text {
+.letter_pattern .letter_inner .letter_text {
   font-size: 14px;
   color: #58b3e5;
   line-height: 2;
 }
 
-.message_pattern .message_inner .message_nav .message_nav_item {
+.letter_nav {
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+.letter_nav .letter_nav_item {
   margin-right: 16px;
 }
 
-.message_pattern .message_inner .message_nav .message_nav_item:last-child {
+.letter_nav .letter_nav_item:last-child {
   margin-right: 0;
+}
+
+.letter_nav .letter_nav_item_link {
+  color: #666666;
+  display: inline-block;
+}
+
+.letter_nav .letter_nav_item_link .icon_space {
+  margin-right: 2px;
 }
 
 /*==============================
