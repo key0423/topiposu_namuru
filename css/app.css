@@ -1213,6 +1213,28 @@ input[type="radio"]:checked + .select_icon_img {
 }
 
 /*==============================
+他人のポストに手紙を送信する
+==============================*/
+.send_comment .send_comment_inner {
+  background: #fd9f9f;
+  padding: 16px 4% 10px;
+  border-radius: 4px;
+}
+
+.send_comment .send_comment_inner .send_comment_text {
+  width: 100%;
+  min-height: 140px;
+  line-height: 2;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.text_count {
+  text-align: right;
+  color: #ffffff;
+}
+
+/*==============================
 ポストの設定画面
 ==============================*/
 .select_icon_btn {
