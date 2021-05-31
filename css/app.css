@@ -213,6 +213,39 @@ select::-ms-expand {
   color: #ffffff;
 }
 
+.color_gray {
+  color: #666666;
+}
+
+.color_red {
+  color: #ef6b75;
+}
+
+/*==============================
+ボーダー設定
+==============================*/
+.border_bottom_red {
+  border-bottom: solid 2px #ef6b75;
+}
+
+/*==============================
+中央揃え
+==============================*/
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+/*==============================
+font-weight
+==============================*/
+.bold {
+  font-weight: bold;
+}
+
 /*==============================
 header
 ==============================*/
@@ -296,7 +329,8 @@ footer
 }
 
 .account_img_flame {
-  max-width: 80px;
+  width: 80px;
+  height: 80px;
   padding: 20px;
   margin: 0 auto;
   border-radius: 50%;
@@ -326,7 +360,9 @@ footer
   margin: 0 auto 32px;
 }
 
-/*----------おたより・ポストcvrボタン----------*/
+/*============================
+おたより・ポストcvrボタン
+============================*/
 .cvr_item {
   flex-basis: 50%;
 }
@@ -423,7 +459,7 @@ footer
   padding: 0 0 4px;
 }
 
-/*----------bg_pattern(Yourmailbox調整)----------*/
+/*bg_pattern(Yourmailbox調整)*/
 .bg_pattern_ttl .sec_ttl {
   z-index: 20;
   text-align: center;
@@ -445,6 +481,9 @@ footer
   padding-top: 10px;
 }
 
+/*==============================
+ポスト一覧
+==============================*/
 .mailbox_link {
   color: #ffffff;
   background: #ef6b75;
@@ -485,6 +524,7 @@ footer
 }
 
 .mailbox_txt {
+  color: #ffffff;
   line-height: 1.6;
 }
 
@@ -496,6 +536,19 @@ footer
   display: block;
   flex-basis: 28px;
   margin: 0 8px;
+}
+
+/*==============================
+誰かのポスト一覧
+==============================*/
+.mailbox_enter {
+  text-align: right;
+}
+
+.mailbox_enter .mailbox_enter_link {
+  border-bottom: solid 1px #ffffff;
+  padding-bottom: 4px;
+  color: #ffffff;
 }
 
 /*==============================
@@ -578,6 +631,18 @@ footer
 }
 
 /*==============================
+ページ内リンク
+==============================*/
+.page_link_item {
+  font-weight: bold;
+  border-bottom: solid 1px #efefef;
+}
+
+.page_link_item .page_link_item_link {
+  display: block;
+}
+
+/*==============================
 パーツ関係(ボタン・アイコン)
 ==============================*/
 .link_btn {
@@ -635,11 +700,11 @@ footer
   width: 100%;
   max-width: 600px;
   background: #fff;
-  color: #6EB2E0;
+  color: #6eb2e0;
   text-align: center;
   letter-spacing: 0.1em;
   padding: 12px 10px;
-  border: solid 2px #6EB2E0;
+  border: solid 2px #6eb2e0;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -681,6 +746,12 @@ footer
   height: 48px;
   border-radius: 50%;
   height: auto;
+}
+
+.red_mini_button {
+  color: #ffffff;
+  background: #ef6b75;
+  padding: 12px;
 }
 
 .copyright {
@@ -836,32 +907,32 @@ js用
   top: 16px;
 }
 
-.q1 .q_txt {
+.question1 .q_txt {
   font-weight: bold;
   display: block;
   font-size: 16px;
   text-align: center;
 }
 
-.q1 .bosyu_wrap {
+.question1 .bosyu_wrap {
   display: block;
 }
 
-.q1 .bosyu_wrap .message_modal_mailbox_list {
+.question1 .bosyu_wrap .message_modal_mailbox_list {
   font-size: 14px;
 }
 
-.q1 .bosyu_wrap .message_modal_mailbox_list .q_sub {
+.question1 .bosyu_wrap .message_modal_mailbox_list .q_sub {
   font-size: 12px;
   padding-left: 16px;
   display: inline-block;
 }
 
-.q2 input[type="checkbox"] {
+.question2 input[type="checkbox"] {
   display: none;
 }
 
-.q2 .message_modal_mailbox_list {
+.question2 .message_modal_mailbox_list {
   padding: 12px;
   display: block;
   color: #ffffff;
@@ -931,14 +1002,14 @@ input[type="radio"]:checked + .select_icon_img {
 }
 
 /*==============================
-ポスト内の項目
+ポスト内
 ==============================*/
 .message_nav .message_nav_item {
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.message_nav .message_nav_item a {
+.message_nav .message_nav_item .message_nav_item_link {
   color: #ffffff;
   margin: 0 8px;
   padding-bottom: 4px;
@@ -989,7 +1060,7 @@ input[type="radio"]:checked + .select_icon_img {
 }
 
 .message_setting_radio_btn input[type="radio"] + label:before {
-  content: '';
+  content: "";
   background: #ffffff;
   border-radius: 100%;
   display: inline-block;
@@ -1027,93 +1098,96 @@ input[type="radio"]:checked + .select_icon_img {
 /*==============================
 手紙
 ==============================*/
-.message {
+.letter {
   padding: 10px;
   border-radius: 4px;
 }
 
-.message .message_inner {
+.letter .letter_inner {
+  display: block;
   padding: 16px 4% 10px;
 }
 
-.message .message_inner .message_text {
+.letter .letter_inner .letter_text {
   min-height: 140px;
   line-height: 14px;
 }
 
-.message .message_inner .message_nav {
-  justify-content: flex-end;
-  position: relative;
-  z-index: 2;
-}
-
-.message .message_inner .message_nav a {
-  color: initial;
-  display: inline-block;
-}
-
-.message .message_inner .message_nav a .icon_space {
-  margin-right: 2px;
-}
-
-.message_pattern {
+.letter_pattern {
   background: #ffffff;
   position: relative;
 }
 
-.message_pattern::before {
+.letter_pattern::before {
   content: "";
+  display: inline-block;
   width: 108px;
   height: 50px;
-  background: url(../img/bg_letter_pattern_top.svg) no-repeat;
+  background: url(../img/bg_letter_patern_top.svg) no-repeat;
   background-size: cover;
   position: absolute;
   left: 10px;
   top: 10px;
 }
 
-.message_pattern::after {
+.letter_pattern::after {
   content: "";
+  display: inline-block;
   width: 108px;
   height: 50px;
-  background: url(../img/bg_letter_pattern_bottom.svg) no-repeat;
+  background: url(../img/bg_letter_patern_top.svg) no-repeat;
   background-size: cover;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 0;
+  bottom: 38px;
 }
 
-.message_pattern .message_inner {
+.letter_pattern .letter_inner {
   border-radius: 4px;
-  border: dotted 2px #58b3e5;
+  border-bottom: dotted 2px #58b3e5;
 }
 
-.message_pattern .message_inner .message_text {
+.letter_pattern .letter_inner .letter_text {
   font-size: 14px;
   color: #58b3e5;
   line-height: 2;
 }
 
-.message_pattern .message_inner .message_nav .message_nav_item {
+.letter_nav {
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+.letter_nav .letter_nav_item {
   margin-right: 16px;
 }
 
-.message_pattern .message_inner .message_nav .message_nav_item:last-child {
+.letter_nav .letter_nav_item:last-child {
   margin-right: 0;
+}
+
+.letter_nav .letter_nav_item_link {
+  color: #666666;
+  display: inline-block;
+}
+
+.letter_nav .letter_nav_item_link .icon_space {
+  margin-right: 2px;
 }
 
 /*==============================
 手紙への返信
 ==============================*/
 .answer .answer_inner {
-  background: #FD9F9F;
+  background: #fd9f9f;
   padding: 16px 4% 10px;
   border-radius: 4px;
 }
 
 .answer .answer_inner .answer_text {
   min-height: 140px;
-  line-height: 2.0;
+  line-height: 2;
   color: #ffffff;
   font-weight: bold;
 }
@@ -1161,7 +1235,7 @@ input[type="radio"]:checked + .select_icon_img {
 .message_setting_txt {
   width: 100%;
   background: #ffffff;
-  padding: 4px;
+  padding: 8px;
 }
 
 .message_setting_txt_area {
@@ -1173,7 +1247,7 @@ input[type="radio"]:checked + .select_icon_img {
 }
 
 /* チェックボックス */
-input[type=checkbox] {
+input[type="checkbox"] {
   display: none;
 }
 
@@ -1190,7 +1264,7 @@ input[type=checkbox] {
 .wanted::before {
   background: #fff;
   border: 1px solid #231815;
-  content: '';
+  content: "";
   display: block;
   height: 16px;
   left: 5px;
@@ -1203,7 +1277,7 @@ input[type=checkbox] {
 .wanted::after {
   border-right: 3px solid #ed7a9c;
   border-bottom: 3px solid #ed7a9c;
-  content: '';
+  content: "";
   display: block;
   height: 9px;
   left: 10px;
@@ -1215,12 +1289,217 @@ input[type=checkbox] {
   width: 5px;
 }
 
-input[type=checkbox]:checked + .wanted::after {
+input[type="checkbox"]:checked + .wanted::after {
   opacity: 1;
 }
 
 .color_mailbox {
   color: #ef6b75;
+}
+
+/*==============================
+画像のアップロードのグレー
+==============================*/
+.upload_img {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.upload_img::before {
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.upload_img::after {
+  display: inline-block;
+  content: "";
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/upload_camera.svg) no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+/*========枠のあるテキストボックス========*/
+.border_box {
+  border: solid 1px #efefef;
+}
+
+/*========Webサイト登録部分========*/
+.account_web_box:nth-child(n + 2) {
+  border-top: dotted 2px #666666;
+}
+
+.account_txt_box_ttl {
+  font-size: 14px;
+}
+
+.acccount_minus_btn .acccount_minus_btn_link {
+  color: #666666;
+  font-size: 18px;
+}
+
+.acccount_minus_btn .acccount_minus_btn_link:hover {
+  color: #ffffff;
+}
+
+.account_plus_btn {
+  width: 18px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.setting_checkitem_txt {
+  background: #efefef;
+  padding: 12px 18px;
+  border-bottom: solid 2px #666666;
+}
+
+.message_setting_btn:checked + .setting_checkitem_txt {
+  background: #ef6b75;
+  color: #ffffff;
+  border-bottom: solid 2px #ffffff;
+}
+
+.setting_mute_flex .message_setting_txt {
+  flex-basis: calc(100% - 80px);
+}
+
+.setting_mute_flex .red_mini_button {
+  flex-basis: 80px;
+  width: 80px;
+}
+
+/*==============================
+退会処理のモーダル
+==============================*/
+/*========退会確認画面========*/
+.withdrawal_blc {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  border: solid 2px #ef6b75;
+  background: #ffffff;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.withdrawal_blc .withdrawal_inner {
+  padding: 16px;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_ttl {
+  font-size: 18px;
+  color: #ef6b75;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_ttl .withdrawal_ttl_icon {
+  padding-left: 24px;
+  position: relative;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_ttl .withdrawal_ttl_icon::before {
+  content: "";
+  display: inline-block;
+  background: url(../img/icon_exclamation.svg) no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_txt {
+  color: #ef6b75;
+  line-height: 2;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_btn_area {
+  justify-content: center;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_btn_area .withdrawal_btn {
+  flex-basis: 48%;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_btn_area .withdrawal_btn .withdrawal_link {
+  color: #ffffff;
+  background: #ef6b75;
+  display: block;
+  text-align: center;
+  padding: 8px;
+  border-radius: 30px;
+}
+
+.withdrawal_blc .withdrawal_inner .withdrawal_btn_area .withdrawal_btn .withdrawal_link:first-child {
+  border-right: solid 2px #ffffff;
+}
+
+/*========退会完了画面========*/
+.withdrawaled_blc {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  border: solid 2px #58b3e5;
+  background: #ffffff;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.withdrawaled_blc .withdrawaled_inner {
+  padding: 16px;
+}
+
+.withdrawaled_blc .withdrawaled_inner .withdrawaled_ttl {
+  font-size: 18px;
+  color: #58b3e5;
+}
+
+.withdrawaled_blc .withdrawaled_inner .withdrawaled_ttl .withdrawaled_ttl_icon {
+  padding-left: 24px;
+  position: relative;
+}
+
+.withdrawaled_blc .withdrawaled_inner .withdrawaled_ttl .withdrawaled_ttl_icon::before {
+  content: "";
+  display: inline-block;
+  background: url(../img/icon_checked.svg) no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.withdrawaled_blc .withdrawaled_inner .withdrawaled_txt {
+  line-height: 2;
+}
+
+.withdrawaled_blc .withdrawaled_inner .withdrawaled_txt .withdrawaled_link {
+  border-bottom: solid 2px #333333;
+  padding-bottom: 4px;
 }
 
 .border_solid {
@@ -1314,6 +1593,10 @@ layout
 
 .l_mailbox .l_mailbox_right_blc {
   flex-basis: calc(100% - 80px);
+}
+
+.l_setting_sec {
+  border-radius: 8px;
 }
 
 /*==============================

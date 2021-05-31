@@ -31,10 +31,37 @@
 .color_white {
   color: $white;
 }
+.color_gray {
+  color: $gray;
+}
+.color_red {
+  color: $color_mailbox;
+}
+/*==============================
+ボーダー設定
+==============================*/
+.border_bottom_red {
+  border-bottom: solid 2px $color_mailbox;
+}
+/*==============================
+中央揃え
+==============================*/
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+/*==============================
+font-weight
+==============================*/
+.bold {
+  font-weight: bold;
+}
 /*==============================
 header
 ==============================*/
-.header_side{
+.header_side {
   align-items: center;
 }
 .header_left {
@@ -67,14 +94,14 @@ header
 /*==============================
 パンくず
 ==============================*/
-.breadcrumbs{
+.breadcrumbs {
   display: flex;
-  .breadcrumbs_item:not(:last-child)::after{
+  .breadcrumbs_item:not(:last-child)::after {
     content: ">";
     display: inline-block;
     width: 12px;
     height: 12px;
-    margin-left: 4px; 
+    margin-left: 4px;
   }
 }
 /*==============================
@@ -83,7 +110,6 @@ footer
 .footer_list_item {
   padding: 0 8px;
 }
-
 /*==============================
 レイアウト内の要素
 ==============================*/
@@ -101,7 +127,8 @@ footer
 }
 // アカウントイメージ
 .account_img_flame {
-  max-width: 80px;
+  width: 80px;
+  height: 80px;
   padding: 20px;
   margin: 0 auto;
   border-radius: 50%;
@@ -132,7 +159,9 @@ footer
   margin: 0 auto 32px;
 }
 
-/*----------おたより・ポストcvrボタン----------*/
+/*============================
+おたより・ポストcvrボタン
+============================*/
 .cvr_item {
   flex-basis: 50%;
   .cvr_btn {
@@ -197,13 +226,14 @@ footer
   letter-spacing: 0.05em;
 }
 //小見出し
-.mini_ttl{
+.mini_ttl {
   font-size: 14px;
   font-weight: bold;
   border-bottom: solid 2px $color_light_pink;
   padding: 0 0 4px;
 }
-/*----------bg_pattern(Yourmailbox調整)----------*/
+
+/*bg_pattern(Yourmailbox調整)*/
 // タイトル
 .bg_pattern_ttl {
   .sec_ttl {
@@ -225,7 +255,9 @@ footer
     padding-top: 10px;
   }
 }
-// ポスト一覧
+/*==============================
+ポスト一覧
+==============================*/
 .mailbox_link {
   color: $white;
   background: $color_mailbox;
@@ -260,6 +292,7 @@ footer
   border-bottom: dotted 2px $light_gray;
 }
 .mailbox_txt {
+  color: $white;
   line-height: 1.6;
 }
 .mailbox_link_area {
@@ -270,11 +303,24 @@ footer
     margin: 0 8px;
   }
 }
+
+/*==============================
+誰かのポスト一覧
+==============================*/
+.mailbox_enter{
+  text-align: right;
+  .mailbox_enter_link{
+    border-bottom: solid 1px #ffffff;
+    padding-bottom: 4px;
+    color: #ffffff;
+  }
+}
+
 /*==============================
 送信確認画面
 ==============================*/
-.message_enter_box{
-  .message_close{
+.message_enter_box {
+  .message_close {
     display: block;
     max-width: 24px;
     width: 100%;
@@ -286,7 +332,7 @@ footer
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 9999;
   background: $white;
   padding: 20px;
@@ -297,9 +343,9 @@ footer
     border-radius: 4px;
     padding: 16px;
   }
-  .message_cancel{
+  .message_cancel {
     text-align: center;
-      a{
+    a {
       color: $color_message;
       border-bottom: 1px solid $color_message;
       padding-bottom: 2px;
@@ -335,8 +381,7 @@ footer
     }
   }
 }
-
-.mailbox{
+.mailbox {
   .pagenation {
     .page.active {
       a {
@@ -347,6 +392,17 @@ footer
     }
   }
 }
+/*==============================
+ページ内リンク
+==============================*/
+.page_link_item {
+  font-weight: bold;
+  border-bottom: solid 1px $light_gray;
+  .page_link_item_link {
+    display: block;
+  }
+}
+
 /*==============================
 パーツ関係(ボタン・アイコン)
 ==============================*/
@@ -380,7 +436,7 @@ footer
 }
 // 青枠リンクボタン
 .link_btn_blue_line {
-  @include link_btn_white($border_color: #6EB2E0,$font-color: #6EB2E0);
+  @include link_btn_white($border_color: #6eb2e0, $font-color: #6eb2e0);
   @include d_block;
 }
 @mixin round_link_btn($right: 2%, $bottom: 16px) {
@@ -411,6 +467,12 @@ footer
     border-radius: 50%;
     height: auto;
   }
+}
+// 各種設定フォーム追加するボタン
+.red_mini_button {
+  color: #ffffff;
+  background: $color_mailbox;
+  padding: 12px;
 }
 
 .copyright {
@@ -545,7 +607,7 @@ js用
     }
   }
 }
-.q1 {
+.question1 {
   .q_txt {
     font-weight: bold;
     @include d_block;
@@ -565,7 +627,7 @@ js用
     }
   }
 }
-.q2 {
+.question2 {
   input[type="checkbox"] {
     display: none;
   }
@@ -595,19 +657,19 @@ js用
 }
 
 /*----------アイコン選択----------*/
-.topic_setting_icon{
+.topic_setting_icon {
   display: block;
   background: $icon_bg;
   padding: 8px;
 }
-.select_icon_blc{
-  background:$white;
+.select_icon_blc {
+  background: $white;
   padding: 16px;
   position: relative;
 }
-.select_icon_item{
-  margin:0 2%;
-  .select_icon_img{
+.select_icon_item {
+  margin: 0 2%;
+  .select_icon_img {
     display: block;
     width: 64px;
     height: 64px;
@@ -615,23 +677,23 @@ js用
     background: $icon_bg;
     border: solid 3px $icon_bg;
   }
-  .icon_name{
+  .icon_name {
     text-align: center;
   }
 }
-input[type="radio"]:checked + .select_icon_img{
+input[type="radio"]:checked + .select_icon_img {
   border: solid 3px $color_mailbox;
 }
 
 /*==============================
-ポスト内の項目
+ポスト内
 ==============================*/
 .message_nav {
   .message_nav_item {
     font-size: $font_sp_m;
     margin-bottom: 10px;
-    a {
-      color: $white;
+    .message_nav_item_link {
+      color: #ffffff;
       margin: 0 8px;
       padding-bottom: 4px;
     }
@@ -654,29 +716,29 @@ input[type="radio"]:checked + .select_icon_img{
 /*==============================
 ポストを編集するボタン
 ==============================*/
-.message_setting{
+.message_setting {
   width: 100%;
-  max-width:140px;
+  max-width: 140px;
   margin-left: auto;
-  .message_setting_link{
+  .message_setting_link {
     display: block;
     color: $white;
     border: solid 1px $white;
     padding: 10px;
-    .icon{
-      margin-right:8px;
+    .icon {
+      margin-right: 8px;
     }
   }
 }
-.message_setting_radio_btn{
+.message_setting_radio_btn {
   margin: 0.5rem;
   position: relative;
-  input[type="radio"]{
+  input[type="radio"] {
     position: absolute;
     opacity: 0;
-    + label{
-      &:before{
-        content: '';
+    + label {
+      &:before {
+        content: "";
         background: #ffffff;
         border-radius: 100%;
         display: inline-block;
@@ -684,31 +746,31 @@ input[type="radio"]:checked + .select_icon_img{
         height: 1.4em;
         position: relative;
         top: -0.2em;
-        margin-right: 1em; 
+        margin-right: 1em;
         vertical-align: top;
         cursor: pointer;
         text-align: center;
         transition: all 250ms ease;
       }
     }
-    &:checked{
-      + label{
-        &:before{
+    &:checked {
+      + label {
+        &:before {
           background-color: $color_mailbox;
           box-shadow: inset 0 0 0 4px #ffffff;
         }
       }
     }
-    &:focus{
-      + label{
-        &:before{
+    &:focus {
+      + label {
+        &:before {
           outline: none;
           border-color: $gray;
         }
       }
     }
-    &:disabled{
-      + label{
+    &:disabled {
+      + label {
         &:before {
           box-shadow: inset 0 0 0 4px $color_mailbox;
           border-color: darken($color_mailbox, 25%);
@@ -728,37 +790,27 @@ input[type="radio"]:checked + .select_icon_img{
 /*==============================
 手紙
 ==============================*/
-.message {
+.letter {
   padding: 10px;
   border-radius: 4px;
-  .message_inner {
+  .letter_inner {
+    display: block;
     padding: 16px 4% 10px;
-    .message_text {
+    .letter_text {
       min-height: 140px;
       line-height: $font_sp_m;
     }
-    .message_nav {
-      justify-content: flex-end;
-      position: relative;
-      z-index: 2;
-      a {
-        color: initial;
-        display: inline-block;
-        .icon_space {
-          margin-right: 2px;
-        }
-      }
-    }
   }
 }
-.message_pattern {
+.letter_pattern {
   background: $white;
   position: relative;
   &::before {
     content: "";
+    display: inline-block;
     width: 108px;
     height: 50px;
-    background: url(../img/bg_letter_pattern_top.svg) no-repeat;
+    background: url(../img/bg_letter_patern_top.svg) no-repeat;
     background-size: cover;
     position: absolute;
     left: 10px;
@@ -766,44 +818,54 @@ input[type="radio"]:checked + .select_icon_img{
   }
   &::after {
     content: "";
+    display: inline-block;
     width: 108px;
     height: 50px;
-    background: url(../img/bg_letter_pattern_bottom.svg) no-repeat;
+    background: url(../img/bg_letter_patern_top.svg) no-repeat;
     background-size: cover;
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    right: 0;
+    bottom: 38px;
   }
-  .message_inner {
+  .letter_inner {
     border-radius: 4px;
-    border: dotted 2px $color_message;
-    .message_text {
+    border-bottom: dotted 2px $color_message;
+    .letter_text {
       font-size: $font_sp_m;
       color: $color_message;
       line-height: 2;
     }
-    .message_nav {
-      .message_nav_item {
-        margin-right: 16px;
-        &:last-child {
-          margin-right: 0;
-        }
-      }
+  }
+}
+.letter_nav {
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+  .letter_nav_item {
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .letter_nav_item_link {
+    color: $gray;
+    display: inline-block;
+    .icon_space {
+      margin-right: 2px;
     }
   }
 }
-
 /*==============================
 手紙への返信
 ==============================*/
-.answer{
+.answer {
   .answer_inner {
-    background: #FD9F9F;
+    background: #fd9f9f;
     padding: 16px 4% 10px;
     border-radius: 4px;
     .answer_text {
       min-height: 140px;
-      line-height: 2.0;
+      line-height: 2;
       color: $white;
       font-weight: bold;
     }
@@ -822,7 +884,7 @@ input[type="radio"]:checked + .select_icon_img{
   }
 }
 // 文字数カウント
-.text_count{
+.text_count {
   text-align: right;
   color: $white;
 }
@@ -830,34 +892,34 @@ input[type="radio"]:checked + .select_icon_img{
 /*==============================
 ポストの設定画面
 ==============================*/
-.select_icon_btn{
+.select_icon_btn {
   max-width: 104px;
   width: 100%;
   background: $light_gray;
   border-radius: 4px;
   padding: 4px;
-  .select_icon_btn_link{
+  .select_icon_btn_link {
     width: 100%;
     text-align: center;
   }
 }
-.message_setting_ttl{
+.message_setting_ttl {
   display: block;
 }
-.message_setting_txt{
+.message_setting_txt {
   width: 100%;
   background: $white;
-  padding: 4px;
+  padding: 8px;
 }
-.message_setting_txt_area{
+.message_setting_txt_area {
   width: 100%;
   background: $white;
-  min-height:160px;
+  min-height: 160px;
   height: auto;
   padding: 4px;
 }
 /* チェックボックス */
-input[type=checkbox] {
+input[type="checkbox"] {
   display: none;
 }
 .wanted {
@@ -872,7 +934,7 @@ input[type=checkbox] {
 .wanted::before {
   background: #fff;
   border: 1px solid #231815;
-  content: '';
+  content: "";
   display: block;
   height: 16px;
   left: 5px;
@@ -884,7 +946,7 @@ input[type=checkbox] {
 .wanted::after {
   border-right: 3px solid #ed7a9c;
   border-bottom: 3px solid #ed7a9c;
-  content: '';
+  content: "";
   display: block;
   height: 9px;
   left: 10px;
@@ -895,10 +957,195 @@ input[type=checkbox] {
   transform: rotate(45deg);
   width: 5px;
 }
-input[type=checkbox]:checked + .wanted::after {
+input[type="checkbox"]:checked + .wanted::after {
   opacity: 1;
 }
 
-.color_mailbox{
+.color_mailbox {
   color: $color_mailbox;
+}
+
+/*==============================
+画像のアップロードのグレー
+==============================*/
+.upload_img {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  &::after {
+    display: inline-block;
+    content: "";
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../img/upload_camera.svg) no-repeat;
+    background-size: contain;
+    z-index: 2;
+  }
+}
+
+/*========枠のあるテキストボックス========*/
+.border_box {
+  border: solid 1px $light_gray;
+}
+
+/*========Webサイト登録部分========*/
+.account_web_box:nth-child(n + 2) {
+  border-top: dotted 2px $gray;
+}
+.account_txt_box_ttl {
+  font-size: $font_sp_m;
+}
+.acccount_minus_btn {
+  .acccount_minus_btn_link {
+    color: $gray;
+    font-size: $font_m;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+.account_plus_btn {
+  width: 18px;
+  text-align: center;
+  margin: 0 auto;
+}
+// 各種設定のラジオボタン
+.setting_checkitem_txt {
+  background: $light_gray;
+  padding: 12px 18px;
+  border-bottom: solid 2px $gray;
+}
+.message_setting_btn:checked + .setting_checkitem_txt {
+  background: $color_mailbox;
+  color: #ffffff;
+  border-bottom: solid 2px #ffffff;
+}
+// ミュートワード
+.setting_mute_flex {
+  .message_setting_txt {
+    flex-basis: calc(100% - 80px);
+  }
+  .red_mini_button {
+    flex-basis: 80px;
+    width: 80px;
+  }
+}
+
+/*==============================
+退会処理のモーダル
+==============================*/
+/*========退会確認画面========*/
+.withdrawal_blc {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  border: solid 2px $color_mailbox;
+  background: #ffffff;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .withdrawal_inner {
+    padding: 16px;
+    .withdrawal_ttl {
+      font-size: 18px;
+      color: $color_mailbox;
+      .withdrawal_ttl_icon{
+        padding-left: 24px;
+        position: relative;  
+        &::before {
+          content: "";
+          display: inline-block;
+          background: url(../img/icon_exclamation.svg) no-repeat;
+          background-size: contain;
+          width: 18px;
+          height: 18px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .withdrawal_txt {
+      color: $color_mailbox;
+      line-height: 2;
+    }
+    .withdrawal_btn_area {
+      justify-content: center;
+      .withdrawal_btn {
+        flex-basis: 48%;
+        .withdrawal_link {
+          color: #ffffff;
+          background: $color_mailbox;
+          display: block;
+          text-align: center;
+          padding: 8px;
+          border-radius: 30px;
+          &:first-child {
+            border-right: solid 2px #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+/*========退会完了画面========*/
+.withdrawaled_blc {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  border: solid 2px $color_message;
+  background: #ffffff;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .withdrawaled_inner {
+    padding: 16px;
+    .withdrawaled_ttl {
+      font-size: 18px;
+      color: $color_message;
+      .withdrawaled_ttl_icon{
+        padding-left: 24px;
+        position: relative;  
+        &::before {
+          content: "";
+          display: inline-block;
+          background: url(../img/icon_checked.svg) no-repeat;
+          background-size: contain;
+          width: 18px;
+          height: 18px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .withdrawaled_txt {
+      line-height: 2;
+      .withdrawaled_link {
+        border-bottom: solid 2px $basic_color;
+        padding-bottom: 4px;
+      }
+    }
+  }
 }

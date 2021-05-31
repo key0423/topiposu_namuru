@@ -45,48 +45,30 @@
       <div class="l_breadcrumbs_area u_mgb8">
         <ul class="breadcrumbs l_inner">
           <li class="breadcrumbs_item"><a href="mypage.html">TOP</a></li>
-          <li class="breadcrumbs_item">ポストに届いたおたより一覧</li>
+          <li class="breadcrumbs_item"><a href="message_list.html">ポストに届いたおたより一覧</a></li>
+          <li class="breadcrumbs_item">おたよりに返信する</li>
         </ul>
       </div>
       <div class="page_ttl_area l_inner u_mgb12">
-        <h1 class="page_ttl">ポストに届いたおたより一覧</h1>
+        <h1 class="page_ttl">おたよりに返信する</h1>
       </div>
       <div class="bg_pattern u_bg_pattern_content">
         <div class="mailbox_blc l_inner">
           <div class="l_mailbox u_mailbox mailbox">
-            <div class="flex">
-              <div class="l_mailbox_left_blc">
-                <span class="topic_icon mailbox_icon">
-                  <!-- ポストのアイコン -->
-                  <img src="img/mailbox_icon01.png" alt="">
-                </span>
-              </div>
-              <div class="l_mailbox_right_blc">
-                <p class="mailbox_ttl">最近ハマったものはなんですか？</p>
-                <p class="mailbox_txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </div>
-            </div>
-            <p class="message_setting u_mgb16"><a class="message_setting_link" href="message_setting.html"><i class="fas fa-cog fontawesome_icon icon"></i>ポストを編集する</a></p>
-            <ul class="message_nav u_mgb24 flex">
-              <li class="message_nav_item current"><a href="#">一覧</a></li>
-              <li class="message_nav_item" id="category_not_et_check"><a href="#">未チェック</a></li>
-              <li class="message_nav_item" id="category_checked"><a href="#">チェック済み</a></li>
-              <li class="message_nav_item" id="category_favorite"><a href="#">お気に入り</a></li>
-            </ul>
             <!-- ここから手紙 -->
-            <h2 class="sec_ttl color_white u_mgb16">ポストに届いたおたより一覧</h2>
-            <div class="message message_pattern u_mgb24">
-              <div class="message_inner">
-                <p class="message_text">初めてメッセージを送ります！最近私がハマっているのはWebラジオです。在宅勤務中に仕事する時、結構人恋しくなったりするので重宝しています笑</p>
-                <ul class="message_nav flex">
-                  <li class="message_nav_item" id="add_favorite"><a href="#"><i class="far fa-star"></i>お気に入りに追加する</a>
-                  </li>
-                  <li class="message_nav_item" id="add_checked"><a href="#"><i class="far fa-check-circle icon_space"></i>チェック済みにする</a>
-                  </li>
+            <div class="letter letter_pattern u_mgb24">
+                <div class="letter_inner u_mgb16">
+                  <p class="letter_text">初めてメッセージを送ります！最近私がハマっているのはWebラジオです。在宅勤務中に仕事する時、結構人恋しくなったりするので重宝しています笑</p>
+                </div>
+                <ul class="letter_nav flex">
+                    <li class="letter_nav_item" id="add_favorite"><a href="#" class="letter_nav_item_link"><i class="far fa-star"></i>お気に入りに追加する</a>
+                    </li>
+                    <li class="letter_nav_item" id="add_checked"><a href="#" class="letter_nav_item_link"><i
+                          class="far fa-check-circle icon_space"></i>チェック済みにする</a>
+                    </li>
                 </ul>
               </div>
-            </div>
-            <h2 class="sec_ttl color_white u_mgb16">おたよりに回答する</h2>
+            <h2 class="sec_ttl tc color_white u_mgb16">おたよりに回答する</h2>
             <div class="answer u_mgb24">
               <div class="answer_inner">
                 <p class="answer_text">ユーザーさん、こんにちは〜！メッセージありがとうございます！Web
@@ -99,7 +81,7 @@
                 400
               </span>/<span class="max_number">1000</span></p>
             </div>
-            <p class="link_btn"><span id="js_message_enter_btn" data-enter="message_enter_box" class="link_btn_white link_btn_blue_line link_icon_right" href="#">送信する<span class="position_right"><i class="fas fa-arrow-right"></i></span></span>
+            <p class="link_btn"><span id="js_message_enter_btn" data-enter="message_enter_box" class="link_btn_white link_btn_blue_line link_icon_right" href="#">回答を送信する<span class="position_right"><i class="fas fa-arrow-right"></i></span></span>
             </p>
           </div><!-- ./l_mailbox u_mailbox -->
         </div><!-- ./mailbox_blc -->
@@ -197,19 +179,19 @@
     <form method="" action="#">
 
       <div class="bg_gray u_pd16">
-        <p class="q1 u_mb24"><span class="q_txt u_mb16">どのポストを募集しますか？※送信後ツイートされます</span><br>
+        <p class="question1 u_mb24"><span class="q_txt u_mb16">どのポストを募集しますか？※送信後ツイートされます</span><br>
           <span class="bosyu_wrap u_mb24">
-            <input id="bosyu1" type="radio" name="q1" value="bosyu1"><label for="bosyu1"
+            <input id="bosyu1" type="radio" name="question1" value="bosyu1"><label for="bosyu1"
               class="message_modal_mailbox_list">ポストを指定せずに募集をかける</label>
           </span>
           <span class="bosyu_wrap u_mb24">
-            <input id="bosyu2" type="radio" name="q1" value="bosyu2" checked>
+            <input id="bosyu2" type="radio" name="question1" value="bosyu2" checked>
             <label for="bosyu2" class="message_modal_mailbox_list">ポストを指定せずに募集をかける<span
                 class="q_sub">※以下から1つ選んでください。</span></label>
           </span>
         </p>
 
-        <p class="q2">
+        <p class="question2">
           <input id="mailbox_name1" type="checkbox" name="mailbox_name" value="mailbox_name1" checked="checked" /><label
             for="mailbox_name1" class="message_modal_mailbox_list">最近ハマったものはなんですか？</label>
 
